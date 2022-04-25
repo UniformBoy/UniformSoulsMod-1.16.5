@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:asriel_chaos_saber"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:asriel_soul",
+    "count": 1
+  },
+  "group": "chaos_saber_to_soul"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:chiseled_stone_bricks"
+  },
+  "result": "uniformsouls:omega_stone_bricks1",
+  "group": "omega_stone_bricks",
+  "count": 1
+}

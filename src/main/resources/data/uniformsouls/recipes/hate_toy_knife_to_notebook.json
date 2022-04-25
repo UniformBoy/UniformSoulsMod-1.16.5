@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:hate_toy_knife"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:hate_torn_notebook",
+    "count": 1
+  },
+  "group": "hate_toy_knife_to_notebook"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:terror_soul"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:terror_scythe",
+    "count": 1
+  },
+  "group": "terror_soul_to_scythe"
+}

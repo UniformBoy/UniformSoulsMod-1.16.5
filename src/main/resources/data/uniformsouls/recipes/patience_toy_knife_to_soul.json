@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:patience_toy_knife"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:patience_soul",
+    "count": 1
+  },
+  "group": "patience_toy_knife_to_soul"
+}

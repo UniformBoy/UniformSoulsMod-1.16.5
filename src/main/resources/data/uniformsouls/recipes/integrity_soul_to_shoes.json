@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:integrity_soul"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:integrity_ballet_shoes",
+    "count": 1
+  },
+  "group": "integrity_soul_to_shoes"
+}

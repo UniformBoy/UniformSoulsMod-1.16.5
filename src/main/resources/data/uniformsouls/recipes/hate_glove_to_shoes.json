@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:hate_tough_glove"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:hate_ballet_shoes",
+    "count": 1
+  },
+  "group": "hate_glove_to_shoes"
+}

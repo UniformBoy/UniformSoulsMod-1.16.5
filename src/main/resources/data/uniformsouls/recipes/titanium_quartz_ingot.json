@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:titanium_ingot"
+  },
+  "addition": {
+    "item": "uniformsouls:rainbow_quartz"
+  },
+  "result": {
+    "item": "uniformsouls:titanium_quartz_ingot"
+  }
+}

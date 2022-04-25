@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:apathy_careless_journal"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:apathy_soul",
+    "count": 1
+  },
+  "group": "apathy_journal_to_soul"
+}

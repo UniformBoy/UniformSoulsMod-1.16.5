@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:wrath_double_frying_pan"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:wrath_soul",
+    "count": 1
+  },
+  "group": "wrath_pan_to_soul"
+}

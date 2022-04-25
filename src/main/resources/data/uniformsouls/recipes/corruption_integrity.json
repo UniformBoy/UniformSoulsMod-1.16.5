@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:corruption_soul"
+    },
+    {
+      "item": "uniformsouls:integrity_soul"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:deceit_soul",
+    "count": 1
+  },
+  "group": "corruption_integrity"
+}

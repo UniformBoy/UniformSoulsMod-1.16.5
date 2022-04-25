@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#M#",
+    "CIC",
+    "#M#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:purple_dye"
+    },
+    "M": {
+      "item": "minecraft:mossy_stone_bricks"
+    },
+    "C": {
+      "item": "minecraft:cracked_stone_bricks"
+    },
+    "I": {
+      "item": "uniformsouls:music_disc_blank"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:music_disc_ruins_extended",
+    "count": 1
+  },
+  "group": "music_disc_ruins_extended"
+}

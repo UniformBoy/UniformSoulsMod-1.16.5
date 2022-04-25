@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_helmet"
+  },
+  "addition": {
+    "item": "uniformsouls:quantum_stabilizer"
+  },
+  "result": {
+    "item": "uniformsouls:quantum_helmet"
+  }
+}

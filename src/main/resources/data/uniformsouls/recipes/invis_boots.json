@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_boots"
+  },
+  "addition": {
+    "item": "minecraft:glass"
+  },
+  "result": {
+    "item": "uniformsouls:invis_boots"
+  }
+}

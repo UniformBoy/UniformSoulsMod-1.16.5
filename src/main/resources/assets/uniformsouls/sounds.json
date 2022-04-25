@@ -1,0 +1,344 @@
+{
+  "fallendownreprise": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/fallendownreprise",
+        "stream": false
+      }
+    ]
+  },
+  "fallenpetals": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/fallenpetals",
+        "stream": false
+      }
+    ]
+  },
+  "gastervantablack": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/gastervantablack",
+        "stream": false
+      }
+    ]
+  },
+  "frisktruelove": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/frisktruelove",
+        "stream": false
+      }
+    ]
+  },
+  "frisktruelove_nitro": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/frisktruelove_nitro",
+        "stream": false
+      }
+    ]
+  },
+  "megalovania": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/megalovania",
+        "stream": false
+      }
+    ]
+  },
+  "flowerfellmegalovania": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/flowerfellmegalovania",
+        "stream": false
+      }
+    ]
+  },
+  "frisksty": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/frisksty",
+        "stream": false
+      }
+    ]
+  },
+  "memory": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/memory",
+        "stream": false
+      }
+    ]
+  },
+  "waterfall_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/waterfall",
+        "stream": false
+      }
+    ]
+  },
+  "ruins_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/ruins",
+        "stream": false
+      }
+    ]
+  },
+  "home_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/home",
+        "stream": false
+      }
+    ]
+  },
+  "snowdin_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/snowdin",
+        "stream": false
+      }
+    ]
+  },
+  "another_medium": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/another_medium",
+        "stream": false
+      }
+    ]
+  },
+  "yourbestfriend_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/yourbestfriend_extended",
+        "stream": false
+      }
+    ]
+  },
+  "determination_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/determination_extended",
+        "stream": false
+      }
+    ]
+  },
+  "bergentruckung_asgore_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/bergentruckung_asgore_extended",
+        "stream": false
+      }
+    ]
+  },
+  "dusttalemegalovania_nitro": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/dusttalemegalovania_nitro",
+        "stream": false
+      }
+    ]
+  },
+  "undertale_extended": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/undertale",
+        "stream": false
+      }
+    ]
+  },
+  "gasterblastersoundeffect": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/gasterblastersoundeffect",
+        "stream": false
+      }
+    ]
+  },
+  "gasterblastersoundeffect_trim": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/gasterblastersoundeffect_trim",
+        "stream": false
+      }
+    ]
+  },
+  "determination_sword_slash_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/determination_sword_slash_1",
+        "stream": false
+      }
+    ]
+  },
+  "justice_pistol_gunshot": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/justice_pistol_gunshot",
+        "stream": false
+      }
+    ]
+  },
+  "integrity_sawblade_fire": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/integrity_sawblade_fire",
+        "stream": false
+      }
+    ]
+  },
+  "summon_sword_or_shield_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/summon_sword_or_shield_1",
+        "stream": false
+      }
+    ]
+  },
+  "perseverance_laser_blast": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/perseverance_laser_blast",
+        "stream": false
+      }
+    ]
+  },
+  "patience_string_throw": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/patience_string_throw",
+        "stream": false
+      }
+    ]
+  },
+  "asriel_chaos_saber_lightning_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/asriel_chaos_saber_lightning_1",
+        "stream": false
+      }
+    ]
+  },
+  "monster_generic_death_1": {
+    "category": "entitys",
+    "sounds": [
+      {
+        "name": "uniformsouls:entitys/monster/monster_generic_death_1",
+        "stream": false
+      }
+    ]
+  },
+  "soul_generic_shatter_1": {
+    "category": "entitys",
+    "sounds": [
+      {
+        "name": "uniformsouls:entitys/soul/soul_generic_shatter_1",
+        "stream": false
+      }
+    ]
+  },
+  "shadow_walker_1": {
+    "category": "entitys",
+    "sounds": [
+      {
+        "name": "uniformsouls:entitys/dark/shadow_walker_1",
+        "stream": false
+      }
+    ]
+  },
+  "fear_scythe_slash_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/fear_scythe_slash_1",
+        "stream": false
+      }
+    ]
+  },
+  "asriel_soul_sound_1": {
+    "category": "items",
+    "sounds": [
+      {
+        "name": "uniformsouls:items/souls/asriel_soul_sound_1",
+        "stream": false
+      }
+    ]
+  },
+  "overwrite_soul_sound_1": {
+    "category": "items",
+    "sounds": [
+      {
+        "name": "uniformsouls:items/souls/overwrite_soul_sound_1",
+        "stream": false
+      }
+    ]
+  },
+  "undertale_button_click_sound_1": {
+    "category": "items",
+    "sounds": [
+      {
+        "name": "uniformsouls:items/buttons/undertale_button_click_sound_1",
+        "stream": false
+      }
+    ]
+  },
+  "undertale_intro_sound_1": {
+    "category": "items",
+    "sounds": [
+      {
+        "name": "uniformsouls:items/undertale/undertale_intro_sound_1",
+        "stream": false
+      }
+    ]
+  },
+  "titanium_quartz_armor_equip_1": {
+    "category": "armors",
+    "sounds": [
+      {
+        "name": "uniformsouls:armors/titanium_quartz/titanium_quartz_armor_equip_1",
+        "stream": false
+      }
+    ]
+  },
+  "woosh_normal_out_1": {
+    "category": "misc",
+    "sounds": [
+      {
+        "name": "uniformsouls:misc/woosh/woosh_normal_out_1",
+        "stream": false
+      }
+    ]
+  }
+}

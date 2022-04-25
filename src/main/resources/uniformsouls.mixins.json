@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.uniform.uniformsouls.mixins",
+  "compatibilityLevel": "JAVA_8",
+
+  "mixins": [
+    "TitaniumQuartzArmorItemMixin"
+  ],
+
+  "client": [
+    "UniformSoulsMixins"
+
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

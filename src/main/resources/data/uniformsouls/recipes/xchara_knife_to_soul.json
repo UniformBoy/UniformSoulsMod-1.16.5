@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:xchara_knife"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:overwrite_determination_soul",
+    "count": 1
+  },
+  "group": "xchara_knife_to_soul"
+}

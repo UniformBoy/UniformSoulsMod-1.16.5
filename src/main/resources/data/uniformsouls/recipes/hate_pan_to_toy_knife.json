@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:hate_frying_pan"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:hate_toy_knife",
+    "count": 1
+  },
+  "group": "hate_pan_to_toy_knife"
+}

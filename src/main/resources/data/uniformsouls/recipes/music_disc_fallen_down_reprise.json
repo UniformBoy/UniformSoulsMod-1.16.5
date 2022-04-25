@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#M#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dandelion"
+    },
+    "M": {
+      "item": "uniformsouls:music_disc_blank"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:music_disc_fallen_down_reprise",
+    "count": 1
+  },
+  "group": "music_disc_fallen_down_reprise"
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "GuK",
+    "#E#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "D": {
+      "item": "minecraft:dragon_breath"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "u": {
+      "item": "uniformsouls:rainbow_quartz"
+    },
+    "K": {
+      "item": "minecraft:ghast_tear"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:quantum_stabilizer",
+    "count": 1
+  }
+}

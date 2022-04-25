@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "uniformsouls",
+  "version": "${version}",
+
+  "name": "Uniform Souls Mod",
+  "description": "Darker Yet Darker",
+  "authors": [
+    "UniformBoy"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/uniformsouls/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.uniform.uniformsouls.UniformSouls"
+    ],
+    "client": [
+      "com.uniform.uniformsouls.UniformSoulsClient"
+    ]
+  },
+  "mixins": [
+    "uniformsouls.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

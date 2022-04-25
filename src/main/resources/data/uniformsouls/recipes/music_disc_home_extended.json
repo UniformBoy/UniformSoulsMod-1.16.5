@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#O#",
+    "OMO",
+    "#L#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    },
+    "O": {
+      "item": "minecraft:oak_planks"
+    },
+    "M": {
+      "item": "uniformsouls:music_disc_blank"
+    },
+    "L": {
+      "item": "minecraft:oak_door"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:music_disc_home_extended",
+    "count": 1
+  },
+  "group": "music_disc_home_extended"
+}

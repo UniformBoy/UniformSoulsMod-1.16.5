@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "uniformsouls:blocks/netherground_portal"
+  }
+}

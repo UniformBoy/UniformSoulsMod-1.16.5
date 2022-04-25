@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:kindness_soul"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:kindness_frying_pan",
+    "count": 1
+  },
+  "group": "kindness_soul_to_pan"
+}

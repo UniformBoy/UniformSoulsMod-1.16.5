@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:hate_sword"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:hate_scythe",
+    "count": 1
+  },
+  "group": "hate_sword_to_scythe"
+}

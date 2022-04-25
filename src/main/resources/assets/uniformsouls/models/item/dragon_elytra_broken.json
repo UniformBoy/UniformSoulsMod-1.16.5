@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "uniformsouls:items/dragon_elytra"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "uniformsouls:items/dragon_elytra_broken"
+    }
+  ]
+}

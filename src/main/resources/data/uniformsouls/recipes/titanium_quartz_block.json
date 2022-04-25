@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "uniformsouls:titanium_quartz_ingot"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:titanium_quartz_block",
+    "count": 1
+  },
+  "group": "titanium_quartz_block"
+}

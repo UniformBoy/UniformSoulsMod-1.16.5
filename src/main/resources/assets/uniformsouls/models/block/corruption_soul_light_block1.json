@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "uniformsouls:blocks/corruption_soul_light_block1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:recklessness_ballistic_knife"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:recklessness_soul",
+    "count": 1
+  },
+  "group": "recklessness_ballistic_knife_to_soul"
+}

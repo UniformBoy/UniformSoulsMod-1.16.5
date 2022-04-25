@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#B#",
+    "BMB",
+    "#B#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dandelion"
+    },
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "M": {
+      "item": "uniformsouls:music_disc_fallen_down_reprise"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:music_disc_fallen_petals",
+    "count": 1
+  },
+  "group": "music_disc_fallen_petals"
+}

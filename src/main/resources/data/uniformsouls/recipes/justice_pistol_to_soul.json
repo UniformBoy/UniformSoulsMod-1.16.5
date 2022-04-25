@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:justice_pistol"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:justice_soul",
+    "count": 1
+  },
+  "group": "justice_pistol_to_soul"
+}

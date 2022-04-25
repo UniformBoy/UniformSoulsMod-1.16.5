@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:titanium_quartz_block"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:titanium_quartz_ingot",
+    "count": 9
+  },
+  "group": "titanium_quartz_block_to_ingot"
+}

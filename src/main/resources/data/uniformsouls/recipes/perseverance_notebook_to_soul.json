@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:perseverance_torn_notebook"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:perseverance_soul",
+    "count": 1
+  },
+  "group": "perseverance_notebook_to_soul"
+}

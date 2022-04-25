@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "uniformsouls:blocks/the_ruins_dirt",
+    "down": "uniformsouls:blocks/the_ruins_dirt",
+    "up": "uniformsouls:blocks/the_ruins_grass_block_top",
+    "east": "uniformsouls:blocks/the_ruins_grass_block_side",
+    "west": "uniformsouls:blocks/the_ruins_grass_block_side",
+    "overlay": "uniformsouls:blocks/the_ruins_grass_block_side_overlay",
+    "north": "uniformsouls:blocks/the_ruins_grass_block_side",
+    "south": "uniformsouls:blocks/the_ruins_grass_block_side"
+  }
+}

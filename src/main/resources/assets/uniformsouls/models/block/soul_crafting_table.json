@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "uniformsouls:blocks/soul_crafting_table_front",
+    "north": "uniformsouls:blocks/soul_crafting_table_front",
+    "south": "uniformsouls:blocks/soul_crafting_table_side",
+    "east": "uniformsouls:blocks/soul_crafting_table_side",
+    "west": "uniformsouls:blocks/soul_crafting_table_front",
+    "up": "uniformsouls:blocks/soul_crafting_table_top",
+    "down": "uniformsouls:blocks/soul_crafting_table_bottom"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:determination_sword"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:determination_soul",
+    "count": 1
+  },
+  "group": "determination_sword_to_soul"
+}

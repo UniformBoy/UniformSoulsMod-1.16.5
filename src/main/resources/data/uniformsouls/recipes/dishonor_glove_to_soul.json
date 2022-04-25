@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:dishonor_sturdy_glove"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:dishonor_soul",
+    "count": 1
+  },
+  "group": "dishonor_glove_to_soul"
+}
