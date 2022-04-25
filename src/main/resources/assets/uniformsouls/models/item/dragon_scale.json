@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "uniformsouls:items/titanium_ingot"
+    "layer0": "uniformsouls:items/dragon_scale"
   }
 
 }

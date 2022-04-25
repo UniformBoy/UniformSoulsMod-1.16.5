@@ -5,6 +5,7 @@ import com.uniform.uniformsouls.enchantments.*;
 import com.uniform.uniformsouls.entity.damage.UniDamageSource;
 import com.uniform.uniformsouls.entity.misc.LightningRedEntity;
 import com.uniform.uniformsouls.entity.mob.*;
+import com.uniform.uniformsouls.entity.model.CorruptionEntityModelGeo;
 import com.uniform.uniformsouls.entity.passive.*;
 import com.uniform.uniformsouls.entity.projectile.*;
 import com.uniform.uniformsouls.registry.ModBlocks;

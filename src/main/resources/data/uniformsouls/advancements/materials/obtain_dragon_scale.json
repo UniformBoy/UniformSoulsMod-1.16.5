@@ -1,40 +1,27 @@
 {
-  "parent": "minecraft:nether/obtain_ancient_debris",
+  "parent": "minecraft:end/kill_dragon",
   "display": {
     "icon": {
-      "item": "uniformsouls:titanium_quartz_chestplate",
-      "nbt": "{Damage:0}"
+      "item": "uniformsouls:dragon_scale"
     },
     "title": {
-      "translate": "advancements.armor.titanium_quartz_armor.title"
+      "translate": "advancements.materials.obtain_dragon_scale.title"
     },
     "description": {
-      "translate": "advancements.armor.titanium_quartz_armor.description"
+      "translate": "advancements.materials.obtain_dragon_scale.description"
     },
-    "frame": "challenge",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "rewards": {
-    "experience": 100
-  },
   "criteria": {
-    "titanium_quartz_armor": {
+    "dragon_scale": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "uniformsouls:titanium_quartz_helmet"
-          },
-          {
-            "item": "uniformsouls:titanium_quartz_chestplate"
-          },
-          {
-            "item": "uniformsouls:titanium_quartz_leggings"
-          },
-          {
-            "item": "uniformsouls:titanium_quartz_boots"
+            "item": "uniformsouls:dragon_scale"
           }
         ]
       }
@@ -42,7 +29,7 @@
   },
   "requirements": [
     [
-      "titanium_quartz_armor"
+      "dragon_scale"
     ]
   ]
 }

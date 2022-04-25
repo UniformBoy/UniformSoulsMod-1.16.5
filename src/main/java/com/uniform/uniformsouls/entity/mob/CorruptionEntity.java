@@ -32,10 +32,17 @@ import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.*;
 import net.minecraft.world.explosion.Explosion;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.Random;
 
-public class CorruptionEntity extends HostileEntity {
+public class CorruptionEntity extends HostileEntity implements IAnimatable{
 
 
     public CorruptionEntity(EntityType<? extends CorruptionEntity> entityType, World world) {
@@ -152,6 +159,48 @@ public class CorruptionEntity extends HostileEntity {
             corruptionEntity.refreshPositionAndAngles(this.getX(), this.getY(), this.getZ(), this.yaw, 0.0F);
             this.world.spawnEntity(corruptionEntity);
         }
+
+        //geckolib
+
+            private final AnimationFactory factory = new AnimationFactory(this);
+            @Override
+    public void registerControllers(AnimationData animationData) {
+                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 5, this::idle));
+                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 5, this::walk));
+                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 0, this::attack1));
+                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "death", 0, this::death));
+            }
+
+            private <E extends IAnimatable> PlayState idle(AnimationEvent<E> event) {
+                if  (!event.isMoving())
+                    event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.idle", true));
+                return PlayState.CONTINUE;
+            }
+
+    private <E extends IAnimatable> PlayState walk(AnimationEvent<E> event) {
+        if  (event.isMoving())
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.walk", true));
+        return PlayState.CONTINUE;
+    }
+
+    private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
+        if  (isAttacking())
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", false));
+        return PlayState.CONTINUE;
+    }
+
+    private <E extends IAnimatable> PlayState death(AnimationEvent<E> event) {
+        if  (dead);
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.death", false));
+        return PlayState.CONTINUE;
+    }
+
+
+    @Override
+    public  AnimationFactory getFactory() {
+                return this.factory;
+    }
+
             }
 
 

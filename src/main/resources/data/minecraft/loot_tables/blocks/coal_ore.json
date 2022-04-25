@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:lapis_ore",
+              "name": "minecraft:coal_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -28,15 +28,8 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:lapis_lazuli",
+              "name": "minecraft:coal",
               "functions": [
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "min": 4,
-                    "max": 8
-                  }
-                },
                 {
                   "function": "minecraft:apply_bonus",
                   "enchantment": "uniformsouls:fortune",

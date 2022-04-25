@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "uniformsouls:blocks/yellow_flower_bed"
+    "all": "uniformsouls:blocks/red_flower_bed"
   }
 }

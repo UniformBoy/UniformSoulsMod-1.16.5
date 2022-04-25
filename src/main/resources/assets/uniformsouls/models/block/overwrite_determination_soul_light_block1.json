@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "uniformsouls:blocks/apathy_soul_light_block1"
+    "all": "uniformsouls:blocks/overwrite_determination_soul_light_block1"
   }
 }

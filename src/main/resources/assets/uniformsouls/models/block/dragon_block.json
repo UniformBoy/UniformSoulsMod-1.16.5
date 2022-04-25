@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "uniformsouls:blocks/titanium_block"
+    "all": "uniformsouls:blocks/dragon_block"
   }
 }

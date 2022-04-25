@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:netherite_helmet"
+    "item": "uniformsouls:titanium_quartz_helmet"
   },
   "addition": {
-    "item": "uniformsouls:titanium_quartz_ingot"
+    "item": "uniformsouls:dragon_ingot"
   },
   "result": {
-    "item": "uniformsouls:titanium_quartz_helmet"
+    "item": "uniformsouls:dragon_helmet"
   }
 }

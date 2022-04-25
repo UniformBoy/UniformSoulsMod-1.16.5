@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "uniformsouls:titanium_ingot"
+      "item": "uniformsouls:dragon_ingot"
     }
   },
   "result": {
-    "item": "uniformsouls:titanium_block",
+    "item": "uniformsouls:dragon_block",
     "count": 1
   },
   "group": "titanium_block"

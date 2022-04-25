@@ -1,21 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "#S#",
-    "###"
+    "#E#",
+    "ESE",
+    "#E#"
   ],
   "key": {
     "#": {
-      "item": "minecraft:white_wool"
+      "item": "minecraft:totem_of_undying"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
     },
     "S": {
-      "item": "minecraft:slime_ball"
+      "item": "minecraft:snowball"
     }
   },
   "result": {
-    "item": "uniformsouls:aether_cloud_block_white_1",
-    "count": 8
-  },
-  "group": "aether_cloud_block_white_1"
+    "item": "uniformsouls:snowmanpiece",
+    "count": 1
+  }
 }

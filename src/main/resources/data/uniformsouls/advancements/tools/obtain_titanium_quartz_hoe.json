@@ -1,15 +1,15 @@
 {
-  "parent": "minecraft:husbandry/plant_seed",
+  "parent": "minecraft:husbandry/obtain_netherite_hoe",
   "display": {
     "icon": {
-      "item": "minecraft:netherite_hoe",
+      "item": "uniformsouls:titanium_quartz_hoe",
       "nbt": "{Damage:0}"
     },
     "title": {
-      "translate": "advancements.husbandry.netherite_hoe.title"
+      "translate": "advancements.tools.obtain_titanium_quartz_hoe.title"
     },
     "description": {
-      "translate": "advancements.husbandry.netherite_hoe.description"
+      "translate": "advancements.tools.obtain_titanium_quartz_hoe.description"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -17,15 +17,15 @@
     "hidden": false
   },
   "rewards": {
-    "experience": 100
+    "experience": 150
   },
   "criteria": {
-    "netherite_hoe": {
+    "titanium_quartz_hoe": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:netherite_hoe"
+            "item": "uniformsouls:titanium_quartz_hoe"
           }
         ]
       }
@@ -33,7 +33,7 @@
   },
   "requirements": [
     [
-      "netherite_hoe"
+      "titanium_quartz_hoe"
     ]
   ]
 }

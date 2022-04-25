@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "uniformsouls:titanium_ingot"
+    "item": "uniformsouls:titanium_quartz_ingot"
   },
   "addition": {
-    "item": "uniformsouls:rainbow_quartz"
+    "item": "uniformsouls:dragon_scale"
   },
   "result": {
-    "item": "uniformsouls:titanium_quartz_ingot"
+    "item": "uniformsouls:dragon_ingot"
   }
 }

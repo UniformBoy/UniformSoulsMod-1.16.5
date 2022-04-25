@@ -1,15 +1,15 @@
 {
-  "parent": "minecraft:nether/netherite_armor",
+  "parent": "uniformsouls:materials/obtain_dragon_scale",
   "display": {
     "icon": {
-      "item": "uniformsouls:titanium_quartz_chestplate",
+      "item": "uniformsouls:dragon_chestplate",
       "nbt": "{Damage:0}"
     },
     "title": {
-      "translate": "advancements.armor.titanium_quartz_armor.title"
+      "translate": "advancements.armor.dragon_armor.title"
     },
     "description": {
-      "translate": "advancements.armor.titanium_quartz_armor.description"
+      "translate": "advancements.armor.dragon_armor.description"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -17,24 +17,24 @@
     "hidden": false
   },
   "rewards": {
-    "experience": 100
+    "experience": 300
   },
   "criteria": {
-    "titanium_quartz_armor": {
+    "dragon_armor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "uniformsouls:titanium_quartz_helmet"
+            "item": "uniformsouls:dragon_helmet"
           },
           {
-            "item": "uniformsouls:titanium_quartz_chestplate"
+            "item": "uniformsouls:dragon_chestplate"
           },
           {
-            "item": "uniformsouls:titanium_quartz_leggings"
+            "item": "uniformsouls:dragon_leggings"
           },
           {
-            "item": "uniformsouls:titanium_quartz_boots"
+            "item": "uniformsouls:dragon_boots"
           }
         ]
       }
@@ -42,7 +42,7 @@
   },
   "requirements": [
     [
-      "titanium_quartz_armor"
+      "dragon_armor"
     ]
   ]
 }

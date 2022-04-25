@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
-    "uniformsouls:justice_soul"
-
+    "uniformsouls:titanium_quartz_helmet",
+    "uniformsouls:titanium_quartz_chestplate",
+    "uniformsouls:titanium_quartz_leggings",
+    "uniformsouls:titanium_quartz_boots"
   ]
 }

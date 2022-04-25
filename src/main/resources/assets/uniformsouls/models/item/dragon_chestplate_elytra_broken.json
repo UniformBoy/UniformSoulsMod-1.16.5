@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "uniformsouls:items/dragon_elytra_broken"
+    "layer0": "uniformsouls:items/dragon_chestplate_elytra_broken"
   }
 }

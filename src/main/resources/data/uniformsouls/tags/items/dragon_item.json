@@ -1,9 +1,10 @@
 {
   "replace": false,
   "values": [
-    "uniformsouls:titanium_quartz_helmet",
-    "uniformsouls:titanium_quartz_chestplate",
-    "uniformsouls:titanium_quartz_leggings",
-    "uniformsouls:titanium_quartz_boots"
+    "uniformsouls:dragon_helmet",
+    "uniformsouls:dragon_chestplate",
+    "uniformsouls:dragon_leggings",
+    "uniformsouls:dragon_boots",
+    "uniformsouls:dragon_chestplate_elytra"
   ]
 }

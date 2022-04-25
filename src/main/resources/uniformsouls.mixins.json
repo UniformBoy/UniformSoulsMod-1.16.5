@@ -3,14 +3,21 @@
   "minVersion": "0.8",
   "package": "com.uniform.uniformsouls.mixins",
   "compatibilityLevel": "JAVA_8",
-
   "mixins": [
-    "TitaniumQuartzArmorItemMixin"
+    "DragonArmorItemEffectMixin",
+    "DragonArmorItemMixin",
+    "DragonElytraLivingEntityMixin",
+    "DragonElytraPlayerEntityMixin",
+    "PatienceSoulItemEffectMixin",
+    "SoulDropMixin",
+    "TitaniumQuartzArmorItemEffectMixin",
+    "TitaniumQuartzArmorItemMixin",
+    "UniEfficiencyMixin"
   ],
-
   "client": [
+    "DragonElytraClientPlayerEntityMixin",
+    "DragonElytraFeatureRendererMixin",
     "UniformSoulsMixins"
-
   ],
   "server": [],
   "injectors": {

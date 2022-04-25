@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:netherite_boots"
+    "item": "uniformsouls:titanium_quartz_boots"
   },
   "addition": {
-    "item": "uniformsouls:titanium_quartz_ingot"
+    "item": "uniformsouls:dragon_ingot"
   },
   "result": {
-    "item": "uniformsouls:titanium_quartz_boots"
+    "item": "uniformsouls:dragon_boots"
   }
 }

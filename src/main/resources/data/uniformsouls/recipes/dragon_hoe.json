@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:netherite_hoe"
+    "item": "uniformsouls:titanium_quartz_hoe"
   },
   "addition": {
-    "item": "uniformsouls:titanium_quartz_ingot"
+    "item": "uniformsouls:dragon_ingot"
   },
   "result": {
-    "item": "uniformsouls:titanium_quartz_hoe"
+    "item": "uniformsouls:dragon_hoe"
   }
 }

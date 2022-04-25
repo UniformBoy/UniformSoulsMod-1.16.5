@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:netherite_chestplate"
+    "item": "uniformsouls:titanium_quartz_chestplate"
   },
   "addition": {
-    "item": "uniformsouls:titanium_quartz_ingot"
+    "item": "uniformsouls:dragon_ingot"
   },
   "result": {
-    "item": "uniformsouls:titanium_quartz_chestplate"
+    "item": "uniformsouls:dragon_chestplate"
   }
 }

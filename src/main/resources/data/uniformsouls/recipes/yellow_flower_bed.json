@@ -1,13 +1,20 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "uniformsouls:xchara_knife"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
   ],
-  "result": {
-    "item": "uniformsouls:overwrite_determination_soul",
-    "count": 1
+  "key": {
+    "#": {
+      "item": "minecraft:dandelion"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    }
   },
-  "group": "xchara_knife_to_soul"
+  "result": {
+    "item": "uniformsouls:yellow_flower_bed",
+    "count": 1
+  }
 }

@@ -18,9 +18,11 @@ repositories {
 	// for more information about repositories.
 	mavenCentral()
 	maven {
-		url = "http://maven.kyrptonaught.dev"
+		url = 'http://maven.kyrptonaught.dev'
 		allowInsecureProtocol = true
 	}
+
+	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 	
 }
 
@@ -40,9 +42,10 @@ dependencies {
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 
-	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta32-1.16'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta32-1.16'
+	modImplementation "net.kyrptonaught:customportalapi:0.0.1-beta32-1.16"
+	include "net.kyrptonaught:customportalapi:0.0.1-beta32-1.16"
 
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.16.5:${project.geckolib_version}:dev"
 
 
 }

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "uniformsouls:titanium_quartz_ingot"
+    "item": "minecraft:elytra"
   },
   "addition": {
     "item": "uniformsouls:dragon_scale"
   },
   "result": {
-    "item": "uniformsouls:dragon_ingot"
+    "item": "uniformsouls:dragon_elytra"
   }
 }

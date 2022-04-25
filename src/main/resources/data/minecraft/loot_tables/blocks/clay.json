@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:lapis_ore",
+              "name": "minecraft:clay",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:lapis_lazuli",
+              "name": "minecraft:clay_ball",
               "functions": [
                 {
                   "function": "minecraft:set_count",

@@ -1,6 +1,4 @@
 {
   "deathScreen.respawn": "Continue",
-  "deathScreen.titleScreen": "Give Up",
-  "deathScreen.quit.confirm": "Are you sure you want to give up?",
-  "deathScreen.title": "Stay Determined!"
+  "deathScreen.titleScreen": "Give Up"
 }

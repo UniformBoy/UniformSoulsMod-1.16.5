@@ -9,23 +9,19 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:gold_ore",
+              "name": "minecraft:nether_gold_ore",
               "conditions": [
                 {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:match_tool",
-                    "predicate": {
-                      "enchantments": [
-                        {
-                          "enchantment": "uniformsouls:auto_smelt",
-                          "levels": {
-                            "min": 1,
-                            "max": 1
-                          }
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
               ]
@@ -56,12 +52,27 @@
                       {
                         "enchantment": "uniformsouls:auto_smelt",
                         "levels": {
-                          "min": 1,
-                          "max": 1
+                          "min": 1
                         }
                       }
                     ]
                   }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:gold_nugget",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "uniformsouls:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
                 }
               ]
             }

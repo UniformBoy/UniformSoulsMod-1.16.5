@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "uniformsouls:items/titanium_quartz_shovel"
+    "layer0": "uniformsouls:items/dragon_shovel"
   }
 
 }

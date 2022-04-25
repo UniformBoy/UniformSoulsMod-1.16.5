@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:coal_ore",
+              "name": "minecraft:nether_quartz_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:coal",
+              "name": "minecraft:quartz",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",

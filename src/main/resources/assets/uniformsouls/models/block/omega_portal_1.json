@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "uniformsoulsmod:blocks/omega_portal_1"
+    "all": "uniformsouls:blocks/omega_portal_1"
   }
 }

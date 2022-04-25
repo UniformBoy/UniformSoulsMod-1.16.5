@@ -20,8 +20,7 @@
                         {
                           "enchantment": "uniformsouls:auto_smelt",
                           "levels": {
-                            "min": 1,
-                            "max": 1
+                            "min": 1
                           }
                         }
                       ]
@@ -34,6 +33,11 @@
               "type": "minecraft:item",
               "name": "minecraft:iron_ingot",
               "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "uniformsouls:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
                 {
                   "function": "minecraft:apply_bonus",
                   "enchantment": "minecraft:fortune",
@@ -51,8 +55,7 @@
                       {
                         "enchantment": "uniformsouls:auto_smelt",
                         "levels": {
-                          "min": 1,
-                          "max": 1
+                          "min": 1
                         }
                       }
                     ]

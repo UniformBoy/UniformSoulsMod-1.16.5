@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:nether/netherite_armor",
+  "display": {
+    "icon": {
+      "item": "uniformsouls:titanium_quartz_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.armor.titanium_quartz_armor.title"
+    },
+    "description": {
+      "translate": "advancements.armor.titanium_quartz_armor.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "criteria": {
+    "titanium_quartz_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "uniformsouls:titanium_quartz_helmet"
+          },
+          {
+            "item": "uniformsouls:titanium_quartz_chestplate"
+          },
+          {
+            "item": "uniformsouls:titanium_quartz_leggings"
+          },
+          {
+            "item": "uniformsouls:titanium_quartz_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "titanium_quartz_armor"
+    ]
+  ]
+}

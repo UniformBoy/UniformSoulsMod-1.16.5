@@ -25,7 +25,7 @@ public abstract class DragonElytraLivingEntityMixin extends Entity {
         super(type, world);
     }
 
-    @ModifyArg(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;setFlag(IZ)V"), method = "initAi", index = 1)
+    @ModifyArg(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;setFlag(IZ)V"), method = "tickFallFlying", index = 1)
     private boolean flagSevenFix(boolean value) {
         // Mixin to overwrite check of flag 7
         boolean bl = this.getFlag(7);

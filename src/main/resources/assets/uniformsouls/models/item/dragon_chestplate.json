@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "uniformsouls:items/dragon_helmet"
+    "layer0": "uniformsouls:items/dragon_chestplate"
   }
 }
