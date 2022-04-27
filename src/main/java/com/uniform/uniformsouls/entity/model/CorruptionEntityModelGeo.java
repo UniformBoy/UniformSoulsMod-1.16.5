@@ -7,10 +7,6 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class CorruptionEntityModelGeo extends AnimatedGeoModel<CorruptionEntity> {
-    @Override
-    public void setLivingAnimations(CorruptionEntity o, Integer integer, AnimationEvent animationEvent) {
-
-    }
 
     @Override
     public Identifier getModelLocation(CorruptionEntity object) {

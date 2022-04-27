@@ -1,37 +1,31 @@
 package com.uniform.uniformsouls.entity.mob;
 
 import com.uniform.uniformsouls.UniformSouls;
-import com.uniform.uniformsouls.blocks.Corruption;
 import com.uniform.uniformsouls.entity.goals.corruption_goals.CorruptionAttackGoal;
 import com.uniform.uniformsouls.entity.passive.KindnessShield2Entity;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
-import net.minecraft.entity.ai.NavigationConditions;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.ai.pathing.MobNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.ZombieEntity;
-import net.minecraft.entity.mob.ZombieVillagerEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.nbt.NbtOps;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.*;
-import net.minecraft.world.explosion.Explosion;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -43,7 +37,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.Random;
 
 public class CorruptionEntity extends HostileEntity implements IAnimatable{
-
+    private static TrackedData<Boolean> setattacking1;
 
     public CorruptionEntity(EntityType<? extends CorruptionEntity> entityType, World world) {
         super(entityType, world);
@@ -129,13 +123,26 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
     public static DefaultAttributeContainer.Builder createcorruptionAttributes() {
         return HostileEntity.createHostileAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 50)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 15)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 1)
                 .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 1)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 80.0)
                 .add(EntityAttributes.GENERIC_ARMOR, 10)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1);
+    }
+
+    public boolean issetattacking1() {
+        return (Boolean)this.getDataTracker().get(setattacking1);
+    }
+
+    public void initDataTracker() {
+        super.initDataTracker();
+        this.getDataTracker().startTracking(setattacking1, false);
+    }
+
+    public static void setattacking1(TrackedData<Boolean> setattacking1) {
+        CorruptionEntity.setattacking1 = setattacking1;
     }
 
     @Override
@@ -163,41 +170,33 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         //geckolib
 
             private final AnimationFactory factory = new AnimationFactory(this);
-            @Override
-    public void registerControllers(AnimationData animationData) {
-                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 5, this::idle));
-                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 5, this::walk));
-                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 0, this::attack1));
-                animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "death", 0, this::death));
-            }
-
-            private <E extends IAnimatable> PlayState idle(AnimationEvent<E> event) {
-                if  (!event.isMoving())
-                    event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.idle", true));
-                return PlayState.CONTINUE;
-            }
 
     private <E extends IAnimatable> PlayState walk(AnimationEvent<E> event) {
-        if  (event.isMoving())
+        if (event.isMoving()){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.walk", true));
+        }else{
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.idle", true));
+        }
         return PlayState.CONTINUE;
     }
 
     private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
-        if  (isAttacking())
+        if (this.isAttacking()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", false));
+        }
         return PlayState.CONTINUE;
     }
-
-    private <E extends IAnimatable> PlayState death(AnimationEvent<E> event) {
-        if  (dead);
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.death", false));
-        return PlayState.CONTINUE;
-    }
-
 
     @Override
-    public  AnimationFactory getFactory() {
+    public void registerControllers(AnimationData animationData) {
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 0, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 5, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 5, this::attack1));
+
+    }
+
+    @Override
+    public AnimationFactory getFactory() {
                 return this.factory;
     }
 

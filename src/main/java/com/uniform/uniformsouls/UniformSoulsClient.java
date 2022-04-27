@@ -29,7 +29,10 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.Identifier;
+import software.bernie.example.client.renderer.entity.ExampleGeoRenderer;
+import software.bernie.example.entity.GeoExampleEntity;
 import software.bernie.example.registry.EntityRegistry;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
 import java.util.UUID;
 
@@ -65,9 +68,7 @@ public class UniformSoulsClient implements ClientModInitializer {
             return new FounderLabEntityRenderer(dispatcher);
         });
 
-        EntityRendererRegistry.INSTANCE.register(UniformSouls.CORRUPTION, (dispatcher, context) -> {
-            return new CorruptionEntityRenderer(dispatcher);
-        });
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.CORRUPTION, CorruptionEntityRenderer::new);
 
         EntityRendererRegistry.INSTANCE.register(UniformSouls.GOLEMSOULMONSTER, (dispatcher, context) -> {
             return new GolemSoulMonsterEntityRenderer(dispatcher);
