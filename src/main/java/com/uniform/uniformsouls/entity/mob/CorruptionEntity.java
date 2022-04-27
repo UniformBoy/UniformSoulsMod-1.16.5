@@ -1,17 +1,18 @@
 package com.uniform.uniformsouls.entity.mob;
 
 import com.uniform.uniformsouls.UniformSouls;
-import com.uniform.uniformsouls.entity.goals.corruption_goals.CorruptionAttackGoal;
+import com.uniform.uniformsouls.entity.goals.corruption_goals.CorruptionMeleeAttackGoal;
 import com.uniform.uniformsouls.entity.passive.KindnessShield2Entity;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
@@ -37,7 +38,8 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.Random;
 
 public class CorruptionEntity extends HostileEntity implements IAnimatable{
-    private static TrackedData<Boolean> setattacking1;
+    public static final TrackedData<Boolean> ATTACKING = DataTracker.registerData(CorruptionEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    public boolean isAttacking = false;
 
     public CorruptionEntity(EntityType<? extends CorruptionEntity> entityType, World world) {
         super(entityType, world);
@@ -47,11 +49,12 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
     public void initGoals() {
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(2, new CorruptionMeleeAttackGoal(this, 1.0D, false));
         this.initCustomGoals();
     }
 
     public void initCustomGoals() {
-        this.goalSelector.add(2, new CorruptionAttackGoal(this, 1.0D, false));
+        this.goalSelector.add(2, new CorruptionMeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
         this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, true));
@@ -132,17 +135,17 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1);
     }
 
-    public boolean issetattacking1() {
-        return (Boolean)this.getDataTracker().get(setattacking1);
-    }
-
-    public void initDataTracker() {
+    protected void initDataTracker() {
         super.initDataTracker();
-        this.getDataTracker().startTracking(setattacking1, false);
+        this.dataTracker.startTracking(ATTACKING, false);
     }
 
-    public static void setattacking1(TrackedData<Boolean> setattacking1) {
-        CorruptionEntity.setattacking1 = setattacking1;
+    public boolean getAttckingState() {
+        return this.dataTracker.get(ATTACKING);
+    }
+
+    public void setAttackingState(boolean isAttacking) {
+        this.dataTracker.set(ATTACKING, isAttacking);
     }
 
     @Override
@@ -180,18 +183,31 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         return PlayState.CONTINUE;
     }
 
+    private <E extends IAnimatable> PlayState devattack(AnimationEvent<E> event) {
+        final AnimationController animationController = event.getController();
+        //Create a builder to stack animations in.
+        CorruptionEntity entity = this;
+        AnimationBuilder builder = new AnimationBuilder();
+        if(isAttacking || entity.handSwinging){
+            builder.addAnimation("animation.corruption.attack1", false);
+        }
+        animationController.setAnimation(builder);
+        return PlayState.CONTINUE;
+}
+
     private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
-        if (this.isAttacking()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", false));
+        if (this.getDataTracker().get(ATTACKING)) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", true));
         }
         return PlayState.CONTINUE;
     }
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 0, this::walk));
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 5, this::walk));
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 5, this::attack1));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 10, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 0, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "devattack", 2, this::devattack));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 2, this::attack1));
 
     }
 
