@@ -181,7 +181,7 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
     private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> animationEvent) {
         final AnimationController animationController = animationEvent.getController();
         AnimationBuilder builder = new AnimationBuilder();
-        if (this.getDataTracker().get(ATTACKING)) {
+        if(this.getAttackingState()) {
             builder.addAnimation("animation.corruption.attack1", true);
             return PlayState.CONTINUE;
         }
