@@ -50,11 +50,6 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
         this.goalSelector.add(2, new CorruptionMeleeAttackGoal(this, 1.0D, false));
-        this.initCustomGoals();
-    }
-
-    public void initCustomGoals() {
-        this.goalSelector.add(2, new CorruptionMeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
         this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, true));
@@ -126,7 +121,7 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
     public static DefaultAttributeContainer.Builder createcorruptionAttributes() {
         return HostileEntity.createHostileAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 50)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 15)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 1)
                 .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 1)
@@ -140,7 +135,7 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         this.dataTracker.startTracking(ATTACKING, false);
     }
 
-    public boolean getAttckingState() {
+    public boolean getAttackingState() {
         return this.dataTracker.get(ATTACKING);
     }
 
@@ -183,18 +178,6 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         return PlayState.CONTINUE;
     }
 
-    private <E extends IAnimatable> PlayState devattack(AnimationEvent<E> event) {
-        final AnimationController animationController = event.getController();
-        //Create a builder to stack animations in.
-        CorruptionEntity entity = this;
-        AnimationBuilder builder = new AnimationBuilder();
-        if(isAttacking || entity.handSwinging){
-            builder.addAnimation("animation.corruption.attack1", false);
-        }
-        animationController.setAnimation(builder);
-        return PlayState.CONTINUE;
-}
-
     private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
         if (this.getDataTracker().get(ATTACKING)) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", true));
@@ -204,9 +187,8 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 10, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 20, this::walk));
         animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 0, this::walk));
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "devattack", 2, this::devattack));
         animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 2, this::attack1));
 
     }
