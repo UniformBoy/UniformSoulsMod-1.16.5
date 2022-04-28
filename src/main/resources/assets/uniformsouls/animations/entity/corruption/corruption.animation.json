@@ -307,6 +307,7 @@
 			}
 		},
 		"animation.corruption.attack1": {
+			"loop": true,
 			"animation_length": 1.33333,
 			"bones": {
 				"head": {
@@ -1432,5 +1433,6 @@
 				}
 			}
 		}
-	}
+	},
+	"geckolib_format_version": 2
 }

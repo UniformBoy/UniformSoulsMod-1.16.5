@@ -178,11 +178,15 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         return PlayState.CONTINUE;
     }
 
-    private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
+    private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> animationEvent) {
+        final AnimationController animationController = animationEvent.getController();
+        AnimationBuilder builder = new AnimationBuilder();
         if (this.getDataTracker().get(ATTACKING)) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", true));
+            builder.addAnimation("animation.corruption.attack1", true);
+            return PlayState.CONTINUE;
         }
-        return PlayState.CONTINUE;
+        animationController.setAnimation(builder);
+        return PlayState.STOP;
     }
 
     @Override
