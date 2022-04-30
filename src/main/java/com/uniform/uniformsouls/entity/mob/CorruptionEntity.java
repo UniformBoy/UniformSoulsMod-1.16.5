@@ -39,7 +39,6 @@ import java.util.Random;
 
 public class CorruptionEntity extends HostileEntity implements IAnimatable{
     public static final TrackedData<Boolean> ATTACKING = DataTracker.registerData(CorruptionEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-    public boolean isAttacking = false;
 
     public CorruptionEntity(EntityType<? extends CorruptionEntity> entityType, World world) {
         super(entityType, world);
@@ -170,25 +169,25 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
             private final AnimationFactory factory = new AnimationFactory(this);
 
     private <E extends IAnimatable> PlayState movement(AnimationEvent<E> event) {
-        if (event.isMoving()){
+       if (event.isMoving()){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.walk", true));
-        }else{
+       }else{
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.idle", true));
         }
         return PlayState.CONTINUE;
     }
 
     private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
-        if (this.getDataTracker().get(ATTACKING)) {
+        if (this.isAttacking()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", true));
         }
-        return PlayState.STOP;
+        return PlayState.CONTINUE;
     }
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "movement", 2, this::movement));
         animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 2, this::attack1));
+      //  animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "movement", 2, this::movement));
 
     }
 
