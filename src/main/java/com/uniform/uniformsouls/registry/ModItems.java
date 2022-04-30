@@ -14,6 +14,9 @@ public class ModItems {
     //Items
 
     //Soul Items
+
+    //Block Placement
+    //public static final Item JUSTICE_SOUL = new JusticeSoul(ModBlocks.CORRUPTION, new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
     public static final Item JUSTICE_SOUL = new JusticeSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
     public static final Item KINDNESS_SOUL = new KindnessSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
@@ -86,8 +89,6 @@ public class ModItems {
 
     public static final Item OVERWRITE_DETERMINATION_SOUL_2 = new OverwriteDeterminationSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
-
-
     //Button Items
     public static final Item RESET_BUTTON_1 = new ResetButton1(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
     public static final Item PAUSE_BUTTON_1 = new PauseButton1(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
@@ -95,6 +96,9 @@ public class ModItems {
     public static final Item OVERWRITE_BUTTON_1 = new OverwriteButton1(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
 
+
+    //Soul Blocks
+    public static final BlockItem JUSTICE_SOUL_BLOCK = new BlockItem(ModBlocks.JUSTICE_SOUL_BLOCK, new Item.Settings().group(UniformSouls.BLOCKS).fireproof());
 
     //Block Items
     public static final BlockItem CORRUPTION = new BlockItem(ModBlocks.CORRUPTION, new Item.Settings().group(UniformSouls.BLOCKS).fireproof());
@@ -349,6 +353,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "overwrite_button_1"), OVERWRITE_BUTTON_1);
 
 
+
+        //Soul Blocks
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "justice_soul_block"), JUSTICE_SOUL_BLOCK);
 
         //Block Items
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "corruption"), CORRUPTION);

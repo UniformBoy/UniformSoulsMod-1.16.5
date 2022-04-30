@@ -30,6 +30,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
@@ -46,6 +47,11 @@ public class DeterminationSwordSlashEntity extends ThrownEntity {
 
     public DeterminationSwordSlashEntity(EntityType<? extends DeterminationSwordSlashEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    public DeterminationSwordSlashEntity(EntityType<? extends DeterminationSwordSlashEntity> type, double x, double y, double z, World world) {
+        this(type, world);
+        this.setPosition(x, y, z);
     }
 
     @Environment(EnvType.CLIENT)
@@ -84,8 +90,13 @@ public class DeterminationSwordSlashEntity extends ThrownEntity {
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_RED, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
         }
+ this.setNoGravity(true);
 
         world.playSound(null, getX(), getY(), getZ(), UniformSouls.WOOSH_NORMAL_OUT_1_EVENT, SoundCategory.PLAYERS, 0.5F, 1.0F);
+
+        if (this.age >= 200F) {
+            this.setNoGravity(false);
+        }
 
     }
 

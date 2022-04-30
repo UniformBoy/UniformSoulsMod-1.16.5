@@ -7,6 +7,7 @@ import com.uniform.uniformsouls.registry.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
@@ -23,7 +24,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
@@ -38,11 +41,11 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.Random;
 
 public class CorruptionEntity extends HostileEntity implements IAnimatable{
-    public static final TrackedData<Boolean> ATTACKING = DataTracker.registerData(CorruptionEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     public CorruptionEntity(EntityType<? extends CorruptionEntity> entityType, World world) {
         super(entityType, world);
         this.experiencePoints = 5;
+        this.setPathfindingPenalty(PathNodeType.WATER, -1.0F);
     }
 
     public void initGoals() {
@@ -107,7 +110,7 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         boolean bl = super.tryAttack(target);
         if (bl && this.getMainHandStack().isEmpty() && target instanceof LivingEntity) {
             float f = this.world.getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
-            ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(UniformSouls.CORRUPTIONCORRUPTINGEFFECT1, 300 * (int)f));
+            ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(UniformSouls.CORRUPTIONCORRUPTINGEFFECT1, 60 * (int)f));
         }
 
         return bl;
@@ -129,17 +132,9 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1);
     }
 
-    protected void initDataTracker() {
-        super.initDataTracker();
-        this.dataTracker.startTracking(ATTACKING, false);
-    }
 
-    public boolean getAttackingState() {
-        return this.dataTracker.get(ATTACKING);
-    }
-
-    public void setAttackingState(boolean isAttacking) {
-        this.dataTracker.set(ATTACKING, isAttacking);
+    public boolean getCorruptionLastAttackTime() {
+        return this.getLastAttackTime() >= 40F;
     }
 
     @Override
@@ -168,26 +163,41 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
 
             private final AnimationFactory factory = new AnimationFactory(this);
 
-    private <E extends IAnimatable> PlayState movement(AnimationEvent<E> event) {
-       if (event.isMoving()){
+    CorruptionEntity entity = this;
+
+    private <E extends IAnimatable> PlayState walk(AnimationEvent<E> event) {
+       if (event.isMoving() && !this.handSwinging || this.getCorruptionLastAttackTime()){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.walk", true));
-       }else{
+       }
+        if(event.isMoving() && !this.handSwinging || this.getCorruptionLastAttackTime()) {
+            return PlayState.CONTINUE;
+        }
+        return PlayState.STOP;
+    }
+
+    private <E extends IAnimatable> PlayState idle(AnimationEvent<E> event) {
+        if (event.getController().getCurrentAnimation() == null){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.idle", true));
         }
         return PlayState.CONTINUE;
     }
 
     private <E extends IAnimatable> PlayState attack1(AnimationEvent<E> event) {
-        if (this.isAttacking()) {
+        if (this.handSwinging) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", true));
         }
-        return PlayState.CONTINUE;
+        if(this.handSwinging) {
+            return PlayState.CONTINUE;
+        }
+        return PlayState.STOP;
     }
+
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 2, this::attack1));
-      //  animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "movement", 2, this::movement));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 5, this::attack1));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 0, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 15, this::idle));
 
     }
 

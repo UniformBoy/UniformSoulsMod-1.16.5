@@ -550,6 +550,13 @@ public class ModBlocks {
             .strength(18000000.0F, 18000000.0F)
             .sounds(BlockSoundGroup.GRASS));
 
+    public static final Block JUSTICE_SOUL_BLOCK = new Block(FabricBlockSettings
+            .of(Material.GLASS)
+            .breakByHand(true)
+            .luminance(15)
+            .strength(1.5F,18000000.0F)
+            .sounds(BlockSoundGroup.GLASS));
+
 
 
 
@@ -616,6 +623,7 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "overwrite_determination_soul_light_block1"), OVERWRITE_DETERMINATION_SOUL_LIGHT_BLOCK1);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "teal_flower_bed"), TEAL_FLOWER_BED);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "red_flower_bed"), RED_FLOWER_BED);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "justice_soul_block"), JUSTICE_SOUL_BLOCK);
 
 
 

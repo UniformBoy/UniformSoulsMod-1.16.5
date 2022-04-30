@@ -174,6 +174,9 @@ public class UniformSoulsClient implements ClientModInitializer {
         });
 
 
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.UNIPLAYER, UniPlayerEntityRenderer::new);
+
+
 
         //Packets
 

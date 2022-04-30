@@ -2,31 +2,29 @@ package com.uniform.uniformsouls;
 
 import com.uniform.uniformsouls.effects.*;
 import com.uniform.uniformsouls.enchantments.*;
+import com.uniform.uniformsouls.entity.block.JusticeSoulBlockEntity;
 import com.uniform.uniformsouls.entity.damage.UniDamageSource;
 import com.uniform.uniformsouls.entity.misc.LightningRedEntity;
+import com.uniform.uniformsouls.entity.misc.UniPlayerEntity;
 import com.uniform.uniformsouls.entity.mob.*;
-import com.uniform.uniformsouls.entity.model.CorruptionEntityModelGeo;
 import com.uniform.uniformsouls.entity.passive.*;
 import com.uniform.uniformsouls.entity.projectile.*;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import com.uniform.uniformsouls.registry.ModItems;
 import com.uniform.uniformsouls.registry.SpawnInit;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
 import net.fabricmc.fabric.mixin.object.builder.SpawnRestrictionAccessor;
 import net.kyrptonaught.customportalapi.CustomPortalApiRegistry;
 import net.kyrptonaught.customportalapi.portal.PortalIgnitionSource;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
@@ -34,7 +32,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.structure.StructurePieceType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -44,11 +41,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
-import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
@@ -56,7 +49,7 @@ import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.GeckoLib;
 
 
-import static net.minecraft.enchantment.EnchantmentHelper.getEquipmentLevel;
+import static com.uniform.uniformsouls.registry.ModBlocks.JUSTICE_SOUL_BLOCK;
 
 
 public class UniformSouls implements ModInitializer{
@@ -601,11 +594,29 @@ public class UniformSouls implements ModInitializer{
 
 
 
+
     //Entity Misc
     public static final EntityType<LightningRedEntity> LIGHTNINGREDENTITY = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier("uniformsouls", "lightningred"),
             FabricEntityTypeBuilder.<LightningRedEntity>create(SpawnGroup.MISC, LightningRedEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.75F)).disableSaving().build());
+
+
+    public static final EntityType<UniPlayerEntity> UNIPLAYER = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "uniplayer"),
+            FabricEntityTypeBuilder.<UniPlayerEntity>create(SpawnGroup.CREATURE, UniPlayerEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.99F)).build());
+
+
+
+    //Block Entitys
+   /* public static BlockEntityType<JusticeSoulBlockEntity> JUSTICE_SOUL_BLOCK_ENTITY = Registry.register(
+            Registry.BLOCK_ENTITY_TYPE,
+            new Identifier("uniformsouls", "justice_soul_block_entity"),
+            FabricBlockEntityTypeBuilder.create(JusticeSoulBlockEntity::new, JUSTICE_SOUL_BLOCK).build(null));
+
+
+    */
 
 
     //Boss
@@ -1013,12 +1024,13 @@ public class UniformSouls implements ModInitializer{
 
         FabricDefaultAttributeRegistry.register(SOUL_DETERMINATION_1, SoulDetermination1Entity.createsoulAttributes());
 
+        FabricDefaultAttributeRegistry.register(UNIPLAYER, UniPlayerEntity.createMobAttributes());
 
 
 
-        //Entity Projectiles
+        //Block Entitys
 
-        //Entity Misc
+
 
         //Boss
 

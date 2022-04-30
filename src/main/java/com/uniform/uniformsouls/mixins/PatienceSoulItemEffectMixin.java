@@ -33,11 +33,11 @@ public abstract class PatienceSoulItemEffectMixin extends LivingEntity {
     private void hasPatienceSoulItem(CallbackInfo info) {
         boolean notFull = false;
         for (ItemStack item : getItemsHand()) {
-            if (!item.getItem().isIn(PatienceSoulTag.PATIENCE_SOUL_ITEM)) {
+            if (item.getItem().isIn(PatienceSoulTag.PATIENCE_SOUL_ITEM)) {
                 notFull = true;
             }
         }
-        if ((isSneaking())) {
+        if ((isSneaking() && notFull)) {
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 5, 0, false, false, false));
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 5, 0, false, false, false));
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 5, 0, false, false, false));

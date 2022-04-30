@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "uniformsouls:patience_soul",
-    "uniformsouls:patience_toy_knife"
+    "uniformsouls:recklessness_soul",
+    "uniformsouls:patience_toy_knife",
+    "uniformsouls:recklessness_ballistic_knife"
   ]
 }

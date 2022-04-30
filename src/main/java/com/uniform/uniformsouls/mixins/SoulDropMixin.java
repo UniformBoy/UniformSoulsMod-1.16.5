@@ -23,13 +23,15 @@ public abstract class SoulDropMixin extends Entity {
 
     @Shadow public abstract boolean isAttackable();
 
+    @Shadow private int itemAge;
+
     protected SoulDropMixin(EntityType<?> type, World world) {
         super(type, world);
     }
 
     @Inject(at = @At("TAIL"), method = "tick()V")
     private void dropItem(CallbackInfo info) {
-        // If enderite item entity has gravity, turn it off
+        // If item entity has gravity, turn it off
         if (!hasNoGravity() && !world.isClient && !getStack().isEmpty()
                 && getStack().getItem().isIn(SoulTag.SOUL_ITEM)) {
             setNoGravity(true);
@@ -38,9 +40,13 @@ public abstract class SoulDropMixin extends Entity {
             isImmuneToExplosion();
 
         }
-        // Slow down enderite item y velocity (to stop vertical spread)
+        // Slow down item y velocity (to stop vertical spread)
         if (getStack().getItem().isIn(SoulTag.SOUL_ITEM)) {
             this.setVelocity(this.getVelocity().multiply(1.0D, 0.96D, 1.0D));
         }
+        if(itemAge >= 400F) {
+            setNoGravity(false);
+        }
+
     }
 }

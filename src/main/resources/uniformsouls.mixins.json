@@ -4,6 +4,7 @@
   "package": "com.uniform.uniformsouls.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "CorruptionMeleeAttackCooldown1",
     "DragonArmorItemEffectMixin",
     "DragonArmorItemMixin",
     "DragonElytraLivingEntityMixin",
