@@ -24,6 +24,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
@@ -39,6 +40,7 @@ import java.util.Random;
 
 public class CorruptionEntity extends HostileEntity implements IAnimatable{
     public static final TrackedData<Boolean> ATTACKING = DataTracker.registerData(CorruptionEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    public Vec3d motionCalc = new Vec3d(0,0,0);
 
     public CorruptionEntity(EntityType<? extends CorruptionEntity> entityType, World world) {
         super(entityType, world);
@@ -168,10 +170,18 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
 
             private final AnimationFactory factory = new AnimationFactory(this);
 
-    private <E extends IAnimatable> PlayState movement(AnimationEvent<E> event) {
-       if (event.isMoving()){
+    CorruptionEntity entity = this;
+    boolean isMovingHorizontal = Math.sqrt(Math.pow(motionCalc.x, 2) + Math.pow(motionCalc.z, 2)) > 0.005;
+
+    private <E extends IAnimatable> PlayState walk(AnimationEvent<E> event) {
+       if (isMovingHorizontal && entity.forwardSpeed < 0){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.walk", true));
-       }else{
+       }
+        return PlayState.CONTINUE;
+    }
+
+    private <E extends IAnimatable> PlayState idle(AnimationEvent<E> event) {
+        if (event.getController().getCurrentAnimation() == null){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.idle", true));
         }
         return PlayState.CONTINUE;
@@ -181,13 +191,14 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         if (this.isAttacking()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.corruption.attack1", true));
         }
-        return PlayState.CONTINUE;
+        return PlayState.STOP;
     }
 
     @Override
     public void registerControllers(AnimationData animationData) {
         animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "attack1", 2, this::attack1));
-      //  animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "movement", 2, this::movement));
+        //animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "walk", 2, this::walk));
+        animationData.addAnimationController(new AnimationController<CorruptionEntity>(this, "idle", 10, this::idle));
 
     }
 
