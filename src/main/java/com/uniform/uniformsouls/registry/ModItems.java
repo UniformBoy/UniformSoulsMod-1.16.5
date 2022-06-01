@@ -97,8 +97,6 @@ public class ModItems {
 
 
 
-    //Soul Blocks
-    public static final BlockItem JUSTICE_SOUL_BLOCK = new BlockItem(ModBlocks.JUSTICE_SOUL_BLOCK, new Item.Settings().group(UniformSouls.BLOCKS).fireproof());
 
     //Block Items
     public static final BlockItem CORRUPTION = new BlockItem(ModBlocks.CORRUPTION, new Item.Settings().group(UniformSouls.BLOCKS).fireproof());
@@ -354,8 +352,7 @@ public class ModItems {
 
 
 
-        //Soul Blocks
-        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "justice_soul_block"), JUSTICE_SOUL_BLOCK);
+
 
         //Block Items
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "corruption"), CORRUPTION);
