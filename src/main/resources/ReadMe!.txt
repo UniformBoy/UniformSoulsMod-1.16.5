@@ -8,7 +8,7 @@ The Kindness Pan model is by: printable_models https://free3d.com/3d-model/-12-f
 
 The Bravery Glove is by printable_models https://free3d.com/3d-model/leather-boxing-gloves-v1--811353.html
 
-The Justice Pistol is by: (I can't remember if anyone know them please tell me)
+The Justice Pistol is by: (I can't remember if anyone knows them please tell me)
 
 The knife is by: frostcorestudios https://free3d.com/3d-model/kitchen-knife-769920.html
 

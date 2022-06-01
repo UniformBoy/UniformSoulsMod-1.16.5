@@ -40,7 +40,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class DeterminationSwordSlashEntity extends ThrownEntity {
+public class DeterminationSwordSlashEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "determination_sword_slash");
     private Object PlayerEntity;
@@ -90,11 +90,12 @@ public class DeterminationSwordSlashEntity extends ThrownEntity {
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_RED, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
         }
- this.setNoGravity(true);
 
         world.playSound(null, getX(), getY(), getZ(), UniformSouls.WOOSH_NORMAL_OUT_1_EVENT, SoundCategory.PLAYERS, 0.5F, 1.0F);
 
-        if (this.age >= 200F) {
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
             this.setNoGravity(false);
         }
 

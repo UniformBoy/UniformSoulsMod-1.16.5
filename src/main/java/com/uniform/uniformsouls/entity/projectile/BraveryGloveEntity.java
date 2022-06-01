@@ -25,7 +25,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class BraveryGloveEntity extends ThrownEntity {
+public class BraveryGloveEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "bravery_glove");
     private Object PlayerEntity;
@@ -69,6 +69,11 @@ public class BraveryGloveEntity extends ThrownEntity {
         super.tick();
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_ORANGE, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+        }
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
         }
 
     }

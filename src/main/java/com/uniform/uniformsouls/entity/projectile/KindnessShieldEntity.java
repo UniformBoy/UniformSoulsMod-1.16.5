@@ -27,7 +27,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class KindnessShieldEntity extends ThrownEntity {
+public class KindnessShieldEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "kindness_shield");
     private Object PlayerEntity;
@@ -71,6 +71,11 @@ public class KindnessShieldEntity extends ThrownEntity {
         super.tick();
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_GREEN, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+        }
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
         }
 
     }

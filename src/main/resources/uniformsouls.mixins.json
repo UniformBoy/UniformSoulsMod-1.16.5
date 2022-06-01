@@ -10,6 +10,7 @@
     "DragonElytraLivingEntityMixin",
     "DragonElytraPlayerEntityMixin",
     "PatienceSoulItemEffectMixin",
+    "ProjectileDrag",
     "SoulDropMixin",
     "TitaniumQuartzArmorItemEffectMixin",
     "TitaniumQuartzArmorItemMixin",

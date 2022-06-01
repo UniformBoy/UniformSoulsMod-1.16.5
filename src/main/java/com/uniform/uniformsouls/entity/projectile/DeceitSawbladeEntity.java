@@ -25,7 +25,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class DeceitSawbladeEntity extends ThrownEntity {
+public class DeceitSawbladeEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "deceit_sawblade");
     private Object PlayerEntity;
@@ -73,6 +73,11 @@ public class DeceitSawbladeEntity extends ThrownEntity {
 
         world.playSound(null, getX(), getY(), getZ(), UniformSouls.WOOSH_NORMAL_OUT_1_EVENT, SoundCategory.PLAYERS, 0.5F, 1.0F);
 
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
+        }
     }
 
     public boolean isOnFire() {

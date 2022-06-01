@@ -1,6 +1,7 @@
 package com.uniform.uniformsouls.items;
 
 import com.uniform.uniformsouls.UniformSouls;
+import com.uniform.uniformsouls.registry.ModItems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -24,18 +25,32 @@ public class AsrielSoul extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
-        ItemStack itemStack = playerEntity.getStackInHand(hand); // creates a new ItemStack instance of the user's itemStack in-hand
-        playerEntity.getItemCooldownManager().set(this, 60);
-        playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 
+        if (!playerEntity.isSneaking()) {
 
-        // playerEntity.setVelocity(playerEntity.getVelocity().x,playerEntity.getVelocity().y,2);
-        // playerEntity.setVelocity(playerEntity.getVelocity().x,2,playerEntity.getVelocity().z);
+            playerEntity.playSound(UniformSouls.ASRIEL_SOUL_SOUND_1_EVENT, 1.0F, 1.0F);
+            playerEntity.getItemCooldownManager().set(this, 60);
+            playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 
-        playerEntity.playSound(UniformSouls.ASRIEL_SOUL_SOUND_1_EVENT, 1.0F, 1.0F);
+            return TypedActionResult.success(playerEntity.getStackInHand(hand));
+        } else {
+            ItemStack itemStack = new ItemStack(ModItems.ASRIEL_CHAOS_SABER);
+            ItemStack itemStack2 = playerEntity.getStackInHand(hand);
+            itemStack2.decrement(1);
+            playerEntity.getItemCooldownManager().set(this, 50);
 
-        return TypedActionResult.success(itemStack, world.isClient());
+            playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
+            playerEntity.playSound(UniformSouls.SUMMON_SWORD_OR_SHIELD_1_EVENT, 0.5F, 1.0F);
+            if (itemStack2.isEmpty()) {
+                return TypedActionResult.success(itemStack, world.isClient());
+            } else {
+                if (!playerEntity.inventory.insertStack(itemStack.copy())) {
+                    playerEntity.dropItem(itemStack, false);
+                }
 
+                return TypedActionResult.success(itemStack2, world.isClient());
+            }
+        }
     }
 
     @Override

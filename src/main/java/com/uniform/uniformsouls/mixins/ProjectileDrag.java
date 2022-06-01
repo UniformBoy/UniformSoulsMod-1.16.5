@@ -1,5 +1,8 @@
 package com.uniform.uniformsouls.mixins;
 
+import com.uniform.uniformsouls.entity.projectile.DefaultSoulProjectile;
+import com.uniform.uniformsouls.entity.projectile.DespairSwordSlashEntity;
+import com.uniform.uniformsouls.entity.projectile.DeterminationSwordSlashEntity;
 import com.uniform.uniformsouls.misc.DragonTag;
 import com.uniform.uniformsouls.misc.TitaniumQuartzTag;
 import net.minecraft.entity.EntityType;
@@ -21,11 +24,18 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ThrownEntity.class)
-public abstract class ProjectileDrag {
+
+public abstract class ProjectileDrag{
 
     @ModifyConstant(method = "tick", constant = @Constant(floatValue = 0.99f))
     private float injected(float value) {
-        return ++value;
+        if(this instanceof DefaultSoulProjectile && ((ThrownEntity)(Object)this).hasNoGravity()){
+            return 1F;
+        }
+        if(this instanceof DefaultSoulProjectile && !((ThrownEntity)(Object)this).hasNoGravity()){
+            return 1.01F;
+        }
+        return value;
     }
 
 }

@@ -3,11 +3,14 @@ package com.uniform.uniformsouls.items;
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.entity.projectile.AsrielChaosSaberLightningEntity;
 import com.uniform.uniformsouls.entity.projectile.DeterminationSwordSlashEntity;
+import com.uniform.uniformsouls.entity.projectile.JusticeBulletEntity;
+import com.uniform.uniformsouls.registry.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -19,24 +22,38 @@ public class AsrielChaosSaber extends SwordItem {
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand); // creates a new ItemStack instance of the user's itemStack in-hand
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), UniformSouls.ASRIEL_CHAOS_SABER_LIGHTNING_1_EVENT, SoundCategory.PLAYERS, 0.75F, 2.0F); // plays a globalSoundEvent
-        user.getItemCooldownManager().set(this, 50);
+        if (!user.isSneaking()) {
+            ItemStack itemStack = user.getStackInHand(hand);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), UniformSouls.ASRIEL_CHAOS_SABER_LIGHTNING_1_EVENT, SoundCategory.PLAYERS, 0.75F, 2.0F); // plays a globalSoundEvent
+            user.getItemCooldownManager().set(this, 50);
 
+            if (!world.isClient) {
+                AsrielChaosSaberLightningEntity proj = new AsrielChaosSaberLightningEntity(UniformSouls.ASRIEL_CHAOS_SABER_LIGHTNING_ENTITY, world);
+                proj.setPos(user.getX(), user.getY() + 1.8, user.getZ());
+                proj.setOwner(user);
+                proj.setProperties(user, user.pitch, user.yaw, 0, 2.0F, 0.1F );
+                world.spawnEntity(proj);
+            }
 
-        /*
-		user.getItemCooldownManager().set(this, 5);
-		Optionally, you can add a cooldown to your item's right-click use, similar to Ender Pearls.
-		*/
+            return TypedActionResult.success(itemStack, world.isClient());
 
-        if (!world.isClient) {
-            AsrielChaosSaberLightningEntity proj = new AsrielChaosSaberLightningEntity(UniformSouls.ASRIEL_CHAOS_SABER_LIGHTNING_ENTITY, world);
-            proj.setPos(user.getX(), user.getY() + 1.8, user.getZ());
-            proj.setOwner(user);
-            proj.setProperties(user, user.pitch, user.yaw, 0, 2.0F, 0.1F );
-            world.spawnEntity(proj);
+        } else {
+            ItemStack itemStack = new ItemStack(ModItems.ASRIEL_SOUL);
+            ItemStack itemStack2 = user.getStackInHand(hand);
+            itemStack2.decrement(1);
+            user.getItemCooldownManager().set(this, 50);
+
+            user.incrementStat(Stats.USED.getOrCreateStat(this));
+            user.playSound(UniformSouls.SUMMON_SWORD_OR_SHIELD_1_EVENT, 0.5F, 1.0F);
+            if (itemStack2.isEmpty()) {
+                return TypedActionResult.success(itemStack, world.isClient());
+            } else {
+                if (!user.inventory.insertStack(itemStack.copy())) {
+                    user.dropItem(itemStack, false);
+                }
+
+                return TypedActionResult.success(itemStack2, world.isClient());
+            }
         }
-
-        return TypedActionResult.success(itemStack, world.isClient());
     }
 }

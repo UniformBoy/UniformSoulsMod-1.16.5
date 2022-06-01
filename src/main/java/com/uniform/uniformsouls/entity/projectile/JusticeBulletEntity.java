@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class JusticeBulletEntity extends ThrownEntity {
+public class JusticeBulletEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "justice_bullet");
     private Object PlayerEntity;
@@ -68,6 +68,11 @@ public class JusticeBulletEntity extends ThrownEntity {
         super.tick();
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_YELLOW, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+        }
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
         }
 
     }

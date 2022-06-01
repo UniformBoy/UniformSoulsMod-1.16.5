@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class AsrielChaosSaberLightningEntity extends ThrownEntity {
+public class AsrielChaosSaberLightningEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "asriel_chaos_saber_lightning");
     private Object PlayerEntity;
@@ -68,6 +68,11 @@ public class AsrielChaosSaberLightningEntity extends ThrownEntity {
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_WHITE, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
             this.world.addParticle(UniformSouls.ASRIEL_CHAOS_SABER_LIGHTNING, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+        }
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
         }
 
     }

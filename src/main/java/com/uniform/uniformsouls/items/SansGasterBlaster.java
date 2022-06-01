@@ -21,7 +21,7 @@ public class SansGasterBlaster extends SwordItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand); // creates a new ItemStack instance of the user's itemStack in-hand
         world.playSound(null, user.getX(), user.getY(), user.getZ(), UniformSouls.GASTERBLASTERSOUNDEFFECT_TRIM_EVENT, SoundCategory.PLAYERS, 1.0F, 1.0F); // plays a globalSoundEvent
-        user.getItemCooldownManager().set(this, 300);
+        user.getItemCooldownManager().set(this, 50);
 
         /*
 		user.getItemCooldownManager().set(this, 5);

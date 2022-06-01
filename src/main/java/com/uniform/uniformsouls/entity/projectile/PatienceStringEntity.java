@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class PatienceStringEntity extends ThrownEntity {
+public class PatienceStringEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "patience_string");
     private Object PlayerEntity;
@@ -69,6 +69,11 @@ public class PatienceStringEntity extends ThrownEntity {
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_LIGHT_BLUE, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
             this.world.addParticle(UniformSouls.PATIENCE_STRING_1, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+        }
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
         }
 
     }

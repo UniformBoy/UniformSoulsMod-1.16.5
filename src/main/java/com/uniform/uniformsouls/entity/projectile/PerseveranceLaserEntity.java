@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class PerseveranceLaserEntity extends ThrownEntity {
+public class PerseveranceLaserEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "perseverance_laser");
     private Object PlayerEntity;
@@ -69,6 +69,11 @@ public class PerseveranceLaserEntity extends ThrownEntity {
         if (this.world.isClient) {
             this.world.addParticle(UniformSouls.FLASH_PURPLE, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
             this.world.addParticle(UniformSouls.PERSEVERANCE_LASER_1, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+        }
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
         }
 
     }

@@ -25,7 +25,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-public class ImmoralityBulletEntity extends ThrownEntity {
+public class ImmoralityBulletEntity extends ThrownEntity implements DefaultSoulProjectile {
 
     public static final Identifier SPAWN_PACKET = new Identifier(UniformSouls.MOD_ID, "immorality_bullet");
     private Object PlayerEntity;
@@ -73,6 +73,11 @@ public class ImmoralityBulletEntity extends ThrownEntity {
 
         world.playSound(null, getX(), getY(), getZ(), UniformSouls.WOOSH_NORMAL_OUT_1_EVENT, SoundCategory.PLAYERS, 0.5F, 1.0F);
 
+        this.setNoGravity(true);
+
+        if (this.age >= 100F) {
+            this.setNoGravity(false);
+        }
     }
 
     public boolean isOnFire() {
