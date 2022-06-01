@@ -1,7 +1,6 @@
 package com.uniform.uniformsouls.blocks;
 
 import com.uniform.uniformsouls.UniformSouls;
-import com.uniform.uniformsouls.entity.block.JusticeSoulBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;

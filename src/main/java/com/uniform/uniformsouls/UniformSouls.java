@@ -2,7 +2,6 @@ package com.uniform.uniformsouls;
 
 import com.uniform.uniformsouls.effects.*;
 import com.uniform.uniformsouls.enchantments.*;
-import com.uniform.uniformsouls.entity.block.JusticeSoulBlockEntity;
 import com.uniform.uniformsouls.entity.damage.UniDamageSource;
 import com.uniform.uniformsouls.entity.misc.LightningRedEntity;
 import com.uniform.uniformsouls.entity.misc.UniPlayerEntity;
@@ -47,9 +46,6 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.GeckoLib;
-
-
-import static com.uniform.uniformsouls.registry.ModBlocks.JUSTICE_SOUL_BLOCK;
 
 
 public class UniformSouls implements ModInitializer{
