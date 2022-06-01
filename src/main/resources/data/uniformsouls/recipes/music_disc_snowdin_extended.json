@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "SMS",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:snow_block"
+    },
+    "S": {
+      "item": "minecraft:snowball"
+    },
+    "M": {
+      "item": "uniformsouls:music_disc_blank"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:music_disc_snowdin_extended",
+    "count": 1
+  },
+  "group": "music_disc_snowdin_extended"
+}

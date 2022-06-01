@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uniformsouls:bravery_tough_glove"
+    }
+  ],
+  "result": {
+    "item": "uniformsouls:bravery_soul",
+    "count": 1
+  },
+  "group": "bravery_glove_to_soul"
+}
