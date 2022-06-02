@@ -30,7 +30,8 @@ public class BraverySoul extends Item {
         if (!playerEntity.isSneaking()) {
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_BASEDRUM, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F + .8F));
-            playerEntity.getItemCooldownManager().set(this, 10);
+            playerEntity.getItemCooldownManager().set(this, 60);
+            playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.BRAVERYEFFECT1, 600, 4, false, false, false));
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 
             return TypedActionResult.success(playerEntity.getStackInHand(hand));

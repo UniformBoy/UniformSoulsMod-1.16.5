@@ -2,12 +2,13 @@ package com.uniform.uniformsouls.items;
 
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.registry.ModItems;
-import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.entity.projectile.FireballEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
@@ -15,7 +16,6 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -32,8 +32,19 @@ public class JusticeSoul extends Item {
         if (!playerEntity.isSneaking()) {
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_BANJO, 2.0F, 1.0F / (RANDOM.nextFloat() * .4F + .8F));
-            playerEntity.getItemCooldownManager().set(this, 10);
+            playerEntity.getItemCooldownManager().set(this, 60);
+            playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.JUSTICEEFFECT1, 600, 4, false, false, false));
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
+
+           /* if (!playerEntity.world.isClient) {
+
+                FireballEntity FireballEntity = (FireballEntity)EntityType.FIREBALL.create(playerEntity.world);
+                FireballEntity.refreshPositionAndAngles(playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), playerEntity.yaw, 0.0F);
+                FireballEntity.explosionPower = 2;
+                playerEntity.world.spawnEntity(FireballEntity);
+            }
+
+            */
 
             return TypedActionResult.success(playerEntity.getStackInHand(hand));
         } else {

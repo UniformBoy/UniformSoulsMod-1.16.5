@@ -31,13 +31,13 @@ public abstract class PatienceSoulItemEffectMixin extends LivingEntity {
 
     @Inject(at = @At("TAIL"), method = "tick")
     private void hasPatienceSoulItem(CallbackInfo info) {
-        boolean notFull = false;
+        boolean Full = false;
         for (ItemStack item : getItemsHand()) {
             if (item.getItem().isIn(PatienceSoulTag.PATIENCE_SOUL_ITEM)) {
-                notFull = true;
+                Full = true;
             }
         }
-        if ((isSneaking() && notFull)) {
+        if ((isSneaking() && Full)) {
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 5, 0, false, false, false));
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 5, 0, false, false, false));
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 5, 0, false, false, false));

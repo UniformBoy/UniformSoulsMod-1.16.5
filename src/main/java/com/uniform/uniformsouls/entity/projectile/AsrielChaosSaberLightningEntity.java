@@ -146,6 +146,14 @@ public class AsrielChaosSaberLightningEntity extends ThrownEntity implements Def
 
                 this.world.spawnEntity(areaEffectCloudEntity);
                 this.world.addParticle(UniformSouls.FLASH_WHITE, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+
+                if (!this.world.isClient) {
+
+                    LightningEntity LightningEntity = (LightningEntity)EntityType.LIGHTNING_BOLT.create(this.world);
+                    LightningEntity.refreshPositionAndAngles(this.getX(), this.getY(), this.getZ(), this.yaw, 0.0F);
+                    this.world.spawnEntity(LightningEntity);
+                }
+
                 this.remove();
             }
 
