@@ -10,12 +10,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.entity.ai.goal.Goal.Control;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.predicate.entity.EntityPredicates;
 
-public class LookWherePlayerIsLookingGoal extends Goal {
+public class LookWithPlayerGoal extends Goal {
 
     public final MobEntity mob;
     public Entity target;
@@ -25,11 +24,11 @@ public class LookWherePlayerIsLookingGoal extends Goal {
     public final Class<? extends LivingEntity> targetType;
     public final TargetPredicate targetPredicate;
 
-    public LookWherePlayerIsLookingGoal(MobEntity mob, Class<? extends LivingEntity> targetType, float range) {
+    public LookWithPlayerGoal(MobEntity mob, Class<? extends LivingEntity> targetType, float range) {
         this(mob, targetType, range, 0.02F);
     }
 
-    public LookWherePlayerIsLookingGoal(MobEntity mob, Class<? extends LivingEntity> targetType, float range, float chance) {
+    public LookWithPlayerGoal(MobEntity mob, Class<? extends LivingEntity> targetType, float range, float chance) {
         this.mob = mob;
         this.targetType = targetType;
         this.range = range;

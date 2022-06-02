@@ -37,6 +37,7 @@ public abstract class SoulDropMixin extends Entity {
             setNoGravity(true);
             setGlowing(true);
             setInvulnerable(true);
+            isInvulnerable();
             isImmuneToExplosion();
 
         }
