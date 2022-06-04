@@ -9,6 +9,7 @@
     "DragonArmorItemMixin",
     "DragonElytraLivingEntityMixin",
     "DragonElytraPlayerEntityMixin",
+    "KindnessSoulItemEffectMixin",
     "PatienceSoulItemEffectMixin",
     "ProjectileDrag",
     "SoulDropMixin",

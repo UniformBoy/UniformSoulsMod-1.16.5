@@ -2,6 +2,8 @@ package com.uniform.uniformsouls.registry;
 
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.items.*;
+import com.uniform.uniformsouls.items.soul_weapons.*;
+import com.uniform.uniformsouls.items.souls.*;
 import com.uniform.uniformsouls.materials.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;

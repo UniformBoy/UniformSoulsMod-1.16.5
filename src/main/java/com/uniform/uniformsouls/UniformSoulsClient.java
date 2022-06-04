@@ -19,16 +19,17 @@ import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.particle.FireworksSparkParticle;
 import net.minecraft.client.particle.FlameParticle;
-import net.minecraft.client.render.BufferBuilder;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.Tessellator;
-import net.minecraft.client.render.VertexFormats;
+import net.minecraft.client.render.*;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.AbstractFurnaceScreenHandler;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Matrix4f;
 import software.bernie.example.client.renderer.entity.ExampleGeoRenderer;
 import software.bernie.example.entity.GeoExampleEntity;
 import software.bernie.example.registry.EntityRegistry;
@@ -42,11 +43,29 @@ public class UniformSoulsClient implements ClientModInitializer {
     public static final Identifier SCARED_EFFECT_SCREEN_1 = new Identifier(UniformSouls.MOD_ID, "textures/misc/scaredeffectscreen1.png");
     public static final Identifier CORRUPTION_CORRUPTING_EFFECT_SCREEN_1 = new Identifier(UniformSouls.MOD_ID, "textures/misc/corruptioncorruptingeffectscreen1.png");
     public final MinecraftClient client = MinecraftClient.getInstance();
-
-
+    public static final Identifier UNI_SOUL_ICONS_TEXTURE = new Identifier(UniformSouls.MOD_ID, "textures/gui/soul_icons.png");
+    protected int x;
+    protected int y;
+    int min = 50;
+    int max = 100;
 
     @Override
     public void onInitializeClient() {
+
+        //Hud
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+        // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int i = this.x;
+            int j = this.y;
+            DrawableHelper.drawTexture(matrices, 225, 225, 0, 0, 16, 16, 32, 16);
+
+
+        });
+
+
 
         EntityRendererRegistry.INSTANCE.register(UniformSouls.CUBE, (dispatcher, context) -> {
             return new CubeEntityRenderer(dispatcher);

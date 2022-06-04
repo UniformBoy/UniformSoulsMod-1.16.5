@@ -74,8 +74,9 @@ public abstract class KindnessSoulItemEffectMixin extends LivingEntity {
 
             this.world.spawnEntity(areaEffectCloudEntity);
 
-
+            if (areaEffectCloudEntity.getDuration() <= 0) {
                 this.remove();
+            }
         }
     }
 
