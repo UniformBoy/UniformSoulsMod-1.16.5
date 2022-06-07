@@ -24,7 +24,7 @@ public class SoulType {
     }
 
     public void setCurrentMana(int value){
-        this.currentMana = value;
+        this.setCurrentMana = value;
     }
 
 
