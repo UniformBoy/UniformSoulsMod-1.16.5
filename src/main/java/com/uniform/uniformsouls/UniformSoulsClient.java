@@ -1,12 +1,14 @@
 package com.uniform.uniformsouls;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.uniform.uniformsouls.cardinal.SoulMagicIntComponent;
 import com.uniform.uniformsouls.enchantments.PureEnchantment;
 import com.uniform.uniformsouls.entity.projectile.*;
 import com.uniform.uniformsouls.entity.renderer.*;
 import com.uniform.uniformsouls.items.DragonElytra;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import com.uniform.uniformsouls.registry.ModItems;
+import com.uniform.uniformsouls.registry.SoulType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -17,23 +19,16 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.particle.FireworksSparkParticle;
 import net.minecraft.client.particle.FlameParticle;
-import net.minecraft.client.render.*;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.screen.AbstractFurnaceScreenHandler;
+import net.minecraft.client.render.BufferBuilder;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.Tessellator;
+import net.minecraft.client.render.VertexFormats;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Matrix4f;
-import software.bernie.example.client.renderer.entity.ExampleGeoRenderer;
-import software.bernie.example.entity.GeoExampleEntity;
-import software.bernie.example.registry.EntityRegistry;
-import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
 import java.util.UUID;
 
@@ -46,23 +41,49 @@ public class UniformSoulsClient implements ClientModInitializer {
     public static final Identifier UNI_SOUL_ICONS_TEXTURE = new Identifier(UniformSouls.MOD_ID, "textures/gui/soul_icons.png");
     protected int x;
     protected int y;
+    private SoulType soulType;
+    private SoulMagicIntComponent soulMagicIntComponent;
     int min = 50;
-    int max = 100;
+    int max = SoulType.DETERMINATION.getMaxMana();
+    int current = SoulType.DETERMINATION.getCurrentMana();
+    private int scaledWidth;
+    private int scaledHeight;
+
+
 
     @Override
     public void onInitializeClient() {
 
         //Hud
 
-        HudRenderCallback.EVENT.register((matrices, delta) -> {
+       HudRenderCallback.EVENT.register((matrices, delta) -> {
         // your rendering code
             RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
             this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
-            int i = this.x;
-            int j = this.y;
-            DrawableHelper.drawTexture(matrices, 225, 225, 0, 0, 16, 16, 32, 16);
+           int modifiedHeight = current * 16 / max;
+           this.scaledWidth = this.client.getWindow().getScaledWidth();
+           this.scaledHeight = this.client.getWindow().getScaledHeight();
+           int x = this.scaledWidth / 2 - 7;
+           int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.DETERMINATION_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.DETERMINATION_SWORD) || MinecraftClient.getInstance().player.isHolding(ModItems.DETERMINATION_KNIFE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 0, 0, 16, 16, 64, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 16, 16 - modifiedHeight, 16, modifiedHeight, 64, 16);
+            }
+        });
 
-
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.JUSTICE_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.JUSTICE_PISTOL)) {
+                DrawableHelper.drawTexture(matrices, x, y, 32, 0, 16, 16, 64, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 48, 16 - modifiedHeight, 16, modifiedHeight, 64, 16);
+            }
         });
 
 

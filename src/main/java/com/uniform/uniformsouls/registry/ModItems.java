@@ -12,6 +12,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
+import static com.uniform.uniformsouls.registry.SoulType.DETERMINATION;
+
 public class ModItems {
     //Items
 
@@ -31,7 +33,7 @@ public class ModItems {
 
     public static final Item INTEGRITY_SOUL = new IntegritySoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
-    public static final Item DETERMINATION_SOUL = new DeterminationSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item DETERMINATION_SOUL = new DeterminationSoul(DETERMINATION , new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
     public static final Item HATE_SOUL = new HateSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 

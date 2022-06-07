@@ -23,8 +23,12 @@
     ],
     "client": [
       "com.uniform.uniformsouls.UniformSoulsClient"
+    ],
+    "cardinal-components": [
+      "com.uniform.uniformsouls.cardinal.SoulMagicComponents"
     ]
   },
+
   "mixins": [
     "uniformsouls.mixins.json"
   ],
@@ -34,6 +38,13 @@
     "fabric": "*",
     "minecraft": "1.16.x"
   },
+
+  "custom": {
+    "cardinal-components": [
+      "uniformsouls:soul_magic"
+    ]
+  },
+
   "suggests": {
     "another-mod": "*"
   }

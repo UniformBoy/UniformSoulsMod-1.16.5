@@ -1,7 +1,6 @@
 package com.uniform.uniformsouls.items.souls;
 
 import com.uniform.uniformsouls.UniformSouls;
-import com.uniform.uniformsouls.items.BaseSoulItem;
 import com.uniform.uniformsouls.registry.ModItems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,7 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class ApathySoul extends Item implements BaseSoulItem {
+public class ApathySoul extends Item {
 
     public ApathySoul(Settings settings) {
         super(settings);

@@ -1,11 +1,13 @@
 package com.uniform.uniformsouls.items.souls;
 
 import com.uniform.uniformsouls.UniformSouls;
+import com.uniform.uniformsouls.cardinal.SoulMagicIntComponent;
 import com.uniform.uniformsouls.entity.passive.KindnessShield2Entity;
 import com.uniform.uniformsouls.entity.passive.SoulDetermination1Entity;
 import com.uniform.uniformsouls.entity.projectile.KindnessShieldEntity;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import com.uniform.uniformsouls.registry.ModItems;
+import com.uniform.uniformsouls.registry.SoulType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
@@ -35,14 +37,15 @@ import java.util.List;
 
 public class DeterminationSoul extends Item {
 
-    public DeterminationSoul(Settings settings) {
+    public DeterminationSoul(SoulType soulType, Settings settings) {
         super(settings);
     }
+    private SoulType soulType;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
 
-        if (!playerEntity.isSneaking()) {
+        if (!playerEntity.isSneaking() && SoulType.DETERMINATION.getCurrentMana() >= 100) {
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F + .8F));
             playerEntity.getItemCooldownManager().set(this, 60);
