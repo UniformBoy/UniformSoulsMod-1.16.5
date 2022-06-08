@@ -2,6 +2,7 @@ package com.uniform.uniformsouls.cardinal;
 
 import com.uniform.uniformsouls.registry.SoulType;
 import dev.onyxstudios.cca.api.v3.component.ComponentV3;
+import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import dev.onyxstudios.cca.api.v3.component.tick.ServerTickingComponent;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.MathHelper;
@@ -11,12 +12,12 @@ public interface SoulMagicIntComponent extends ComponentV3 {
     int getMaxMagic();
     int getRegenRate();
     SoulType getSoulType();
-    SoulType setSoulType();
 
     void setCurrentMagic(int value);
+    void setSoulType(SoulType type);
 }
 
-class RandomSoulMagicIntComponent implements SoulMagicIntComponent, ServerTickingComponent {
+class RandomSoulMagicIntComponent implements SoulMagicIntComponent, ServerTickingComponent, AutoSyncedComponent {
     @Override
     public int getCurrentMagic() {
 
@@ -46,9 +47,8 @@ class RandomSoulMagicIntComponent implements SoulMagicIntComponent, ServerTickin
     }
 
     @Override
-    public SoulType setSoulType() {
-
-        return this.getSoulType();
+    public void setSoulType(SoulType type) {
+        this.soulType = type;
     }
 
     @Override

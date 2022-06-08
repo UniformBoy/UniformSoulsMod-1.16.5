@@ -48,11 +48,11 @@
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [39.5, 0, 0],
-			"translation": [-15.5, 11.5, 2.5]
+			"translation": [5.25, 11.5, 2.5]
 		},
 		"thirdperson_lefthand": {
 			"rotation": [39.5, 0, 0],
-			"translation": [-15.25, 11.5, 2.5]
+			"translation": [5.25, 11.5, 2.5]
 		},
 		"firstperson_righthand": {
 			"rotation": [-24.75, 0, 0],

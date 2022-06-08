@@ -22,7 +22,7 @@ public class SoulMagicComponents implements EntityComponentInitializer {
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
         // Add the component to every PlayerEntity instance, and copy it on respawn with keepInventory
-        registry.registerForPlayers(SOUL_MAGIC, player -> new RandomSoulMagicIntComponent(), RespawnCopyStrategy.INVENTORY);
+        registry.registerForPlayers(SOUL_MAGIC, player -> new RandomSoulMagicIntComponent(), RespawnCopyStrategy.ALWAYS_COPY);
 
     }
 

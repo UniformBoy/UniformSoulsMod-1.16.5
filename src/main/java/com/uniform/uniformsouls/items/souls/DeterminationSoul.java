@@ -1,6 +1,7 @@
 package com.uniform.uniformsouls.items.souls;
 
 import com.uniform.uniformsouls.UniformSouls;
+import com.uniform.uniformsouls.cardinal.SoulMagicComponents;
 import com.uniform.uniformsouls.cardinal.SoulMagicIntComponent;
 import com.uniform.uniformsouls.entity.passive.KindnessShield2Entity;
 import com.uniform.uniformsouls.entity.passive.SoulDetermination1Entity;
@@ -35,12 +36,15 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+import static com.ibm.icu.impl.CurrencyData.provider;
+
 public class DeterminationSoul extends Item {
 
     public DeterminationSoul(SoulType soulType, Settings settings) {
         super(settings);
     }
     private SoulType soulType;
+    private SoulMagicComponents soulMagicComponents;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
