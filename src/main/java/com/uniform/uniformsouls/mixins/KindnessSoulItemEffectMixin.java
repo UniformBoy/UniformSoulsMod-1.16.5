@@ -55,7 +55,7 @@ public abstract class KindnessSoulItemEffectMixin extends LivingEntity {
             areaEffectCloudEntity.setParticleType(UniformSouls.SOUL_KINDNESS);
             areaEffectCloudEntity.setRadius(1.0F);
             areaEffectCloudEntity.setDuration(25);
-            areaEffectCloudEntity.setRadiusGrowth((2.0F - areaEffectCloudEntity.getRadius()) / (float)areaEffectCloudEntity.getDuration());
+            areaEffectCloudEntity.setRadiusGrowth((0.0F - areaEffectCloudEntity.getRadius()) / (float)areaEffectCloudEntity.getDuration());
             areaEffectCloudEntity.addEffect(new StatusEffectInstance(UniformSouls.KINDNESSEFFECT2, 20, 1));
             if (!list.isEmpty()) {
                 Iterator var5 = list.iterator();

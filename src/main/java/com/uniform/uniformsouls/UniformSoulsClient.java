@@ -66,8 +66,8 @@ public class UniformSoulsClient implements ClientModInitializer {
            int x = this.scaledWidth / 2 - 7;
            int y = this.scaledHeight - 51;
             if(MinecraftClient.getInstance().player.isHolding(ModItems.DETERMINATION_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.DETERMINATION_SWORD) || MinecraftClient.getInstance().player.isHolding(ModItems.DETERMINATION_KNIFE)) {
-                DrawableHelper.drawTexture(matrices, x, y, 0, 0, 16, 16, 64, 16);
-                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 16, 16 - modifiedHeight, 16, modifiedHeight, 64, 16);
+                DrawableHelper.drawTexture(matrices, x, y, 0, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 16, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
             }
         });
 
@@ -81,10 +81,252 @@ public class UniformSoulsClient implements ClientModInitializer {
             int x = this.scaledWidth / 2 - 7;
             int y = this.scaledHeight - 51;
             if(MinecraftClient.getInstance().player.isHolding(ModItems.JUSTICE_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.JUSTICE_PISTOL)) {
-                DrawableHelper.drawTexture(matrices, x, y, 32, 0, 16, 16, 64, 16);
-                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 48, 16 - modifiedHeight, 16, modifiedHeight, 64, 16);
+                DrawableHelper.drawTexture(matrices, x, y, 32, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 48, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
             }
         });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.KINDNESS_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.KINDNESS_FRYING_PAN)) {
+                DrawableHelper.drawTexture(matrices, x, y, 64, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 80, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.BRAVERY_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.BRAVERY_TOUGH_GLOVE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 96, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 112, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.PERSEVERANCE_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.PERSEVERANCE_TORN_NOTEBOOK)) {
+                DrawableHelper.drawTexture(matrices, x, y, 128, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 144, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.PATIENCE_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.PATIENCE_TOY_KNIFE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 160, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 176, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.INTEGRITY_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.INTEGRITY_BALLET_SHOES)) {
+                DrawableHelper.drawTexture(matrices, x, y, 192, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 208, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.FEAR_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.FEAR_SCYTHE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 224, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 240, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.MONSTER_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.SANS_GASTER_BLASTER)) {
+                DrawableHelper.drawTexture(matrices, x, y, 256, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 272, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.DESPAIR_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.DESPAIR_SWORD)) {
+                DrawableHelper.drawTexture(matrices, x, y, 288, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 304, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.IMMORALITY_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.IMMORALITY_SHOTGUN)) {
+                DrawableHelper.drawTexture(matrices, x, y, 320, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 336, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.WRATH_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.WRATH_DOUBLE_FRYING_PAN)) {
+                DrawableHelper.drawTexture(matrices, x, y, 352, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 368, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.DISHONOR_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.DISHONOR_STURDY_GLOVE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 384, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 400, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.APATHY_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.APATHY_CARELESS_JOURNAL)) {
+                DrawableHelper.drawTexture(matrices, x, y, 416, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 432, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.RECKLESSNESS_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.RECKLESSNESS_BALLISTIC_KNIFE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 448, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 464, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.DECEIT_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.DECEIT_TENNIS_SHOE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 480, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 496, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.TERROR_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.TERROR_SCYTHE)) {
+                DrawableHelper.drawTexture(matrices, x, y, 512, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 528, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+        HudRenderCallback.EVENT.register((matrices, delta) -> {
+            // your rendering code
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            this.client.getTextureManager().bindTexture(UNI_SOUL_ICONS_TEXTURE);
+            int modifiedHeight = current * 16 / max;
+            this.scaledWidth = this.client.getWindow().getScaledWidth();
+            this.scaledHeight = this.client.getWindow().getScaledHeight();
+            int x = this.scaledWidth / 2 - 7;
+            int y = this.scaledHeight - 51;
+            if(MinecraftClient.getInstance().player.isHolding(ModItems.CORRUPTED_MONSTER_SOUL) || MinecraftClient.getInstance().player.isHolding(ModItems.SANS_GASTER_BLASTER)) {
+                DrawableHelper.drawTexture(matrices, x, y, 544, 0, 16, 16, 576, 16);
+                DrawableHelper.drawTexture(matrices, x, y + 16 - modifiedHeight, 560, 16 - modifiedHeight, 16, modifiedHeight, 576, 16);
+            }
+        });
+
+
 
 
 

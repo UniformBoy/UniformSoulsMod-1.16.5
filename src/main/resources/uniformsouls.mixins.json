@@ -12,6 +12,7 @@
     "KindnessSoulItemEffectMixin",
     "PatienceSoulItemEffectMixin",
     "ProjectileDrag",
+    "SetSoulTypeDeterminationMixin",
     "SoulDropMixin",
     "TitaniumQuartzArmorItemEffectMixin",
     "TitaniumQuartzArmorItemMixin",
