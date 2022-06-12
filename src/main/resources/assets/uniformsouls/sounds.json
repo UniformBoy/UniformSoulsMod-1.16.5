@@ -251,6 +251,24 @@
       }
     ]
   },
+  "fear_scythe_slash_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/fear_scythe_slash_1",
+        "stream": false
+      }
+    ]
+  },
+  "bone_summon_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/bone_summon_1",
+        "stream": false
+      }
+    ]
+  },
   "monster_generic_death_1": {
     "category": "entitys",
     "sounds": [
@@ -274,15 +292,6 @@
     "sounds": [
       {
         "name": "uniformsouls:entitys/dark/shadow_walker_1",
-        "stream": false
-      }
-    ]
-  },
-  "fear_scythe_slash_1": {
-    "category": "attacks",
-    "sounds": [
-      {
-        "name": "uniformsouls:attacks/fear_scythe_slash_1",
         "stream": false
       }
     ]

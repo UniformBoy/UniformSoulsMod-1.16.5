@@ -3,53 +3,40 @@ package com.uniform.uniformsouls.items.souls;
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.cardinal.SoulMagicComponents;
 import com.uniform.uniformsouls.cardinal.SoulMagicIntComponent;
-import com.uniform.uniformsouls.entity.passive.KindnessShield2Entity;
-import com.uniform.uniformsouls.entity.passive.SoulDetermination1Entity;
-import com.uniform.uniformsouls.entity.projectile.KindnessShieldEntity;
-import com.uniform.uniformsouls.registry.ModBlocks;
 import com.uniform.uniformsouls.registry.ModItems;
 import com.uniform.uniformsouls.registry.SoulType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.boss.dragon.EnderDragonFight;
-import net.minecraft.entity.decoration.EndCrystalEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 
 import java.util.List;
 
-import static com.ibm.icu.impl.CurrencyData.provider;
-
 public class DeterminationSoul extends Item {
 
-    public DeterminationSoul(SoulType soulType, Settings settings) {
+    public DeterminationSoul(SoulType type, Settings settings) {
         super(settings);
     }
     private SoulType soulType;
-    private SoulMagicComponents soulMagicComponents;
+    private SoulMagicIntComponent soulMagicIntComponent;
+    private ItemStack item;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
 
-        if (!playerEntity.isSneaking() && SoulType.DETERMINATION.getCurrentMana() >= 100) {
+        if (!playerEntity.isSneaking()) {
+
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F + .8F));
             playerEntity.getItemCooldownManager().set(this, 60);
@@ -76,6 +63,7 @@ public class DeterminationSoul extends Item {
             }
         }
     }
+
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)

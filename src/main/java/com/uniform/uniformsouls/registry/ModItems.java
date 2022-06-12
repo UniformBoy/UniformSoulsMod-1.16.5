@@ -12,8 +12,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
-import static com.uniform.uniformsouls.registry.SoulType.DETERMINATION;
-
 public class ModItems {
     //Items
 
@@ -33,7 +31,7 @@ public class ModItems {
 
     public static final Item INTEGRITY_SOUL = new IntegritySoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
-    public static final Item DETERMINATION_SOUL = new DeterminationSoul(DETERMINATION , new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item DETERMINATION_SOUL = new DeterminationSoul(SoulType.DETERMINATION, new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
     public static final Item HATE_SOUL = new HateSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
@@ -92,6 +90,8 @@ public class ModItems {
     public static final Item EMPTY_SOUL_CONTAINER = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
     public static final Item OVERWRITE_DETERMINATION_SOUL_2 = new OverwriteDeterminationSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SKELETON_MONSTER_SOUL = new SkeletonMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
     //Button Items
     public static final Item RESET_BUTTON_1 = new ResetButton1(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
@@ -206,6 +206,7 @@ public class ModItems {
     public static final ToolItem TERROR_SCYTHE = new TerrorScythe(DefaultSoulToolMaterial.INSTANCE, 19, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem XCHARA_KNIFE = new XCharaKnife(DefaultSoulToolMaterial.INSTANCE, 15, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem XCHARA_KNIFE_2 = new XCharaKnife(DefaultSoulToolMaterial.INSTANCE, 15, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem SKELETON_BONE_1 = new SkeletonBone1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
 
 
 
@@ -345,6 +346,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "og_justice_soul"), OG_JUSTICE_SOUL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_soul_container"), EMPTY_SOUL_CONTAINER);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "overwrite_determination_soul_2"), OVERWRITE_DETERMINATION_SOUL_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "skeleton_monster_soul"), SKELETON_MONSTER_SOUL);
 
 
 
@@ -462,6 +464,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "terror_scythe"), TERROR_SCYTHE);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "xchara_knife"), XCHARA_KNIFE);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "xchara_knife_2"), XCHARA_KNIFE_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "skeleton_bone_1"), SKELETON_BONE_1);
 
 
 

@@ -9,15 +9,9 @@ import nerdhub.cardinal.components.api.util.RespawnCopyStrategy;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Identifier;
 
-public class SoulMagicComponents implements EntityComponentInitializer {
+public class SoulMagicComponents implements EntityComponentInitializer{
     public static final ComponentKey<SoulMagicIntComponent> SOUL_MAGIC =
             ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("uniformsouls:soul_magic"), SoulMagicIntComponent.class);
-
-    public static void useMagic(Entity provider) { // anything will work, as long as a module allows it!
-        // Retrieve a provided component
-        int magic = SOUL_MAGIC.get(provider).getCurrentMagic();
-        // Or, if the object is not guaranteed to provide that component:
-    }
 
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {

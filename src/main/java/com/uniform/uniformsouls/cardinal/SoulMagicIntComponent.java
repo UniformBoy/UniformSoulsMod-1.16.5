@@ -5,7 +5,6 @@ import dev.onyxstudios.cca.api.v3.component.ComponentV3;
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import dev.onyxstudios.cca.api.v3.component.tick.ServerTickingComponent;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.util.math.MathHelper;
 
 public interface SoulMagicIntComponent extends ComponentV3 {
     int getCurrentMagic();
@@ -15,18 +14,20 @@ public interface SoulMagicIntComponent extends ComponentV3 {
 
     void setCurrentMagic(int value);
     void setSoulType(SoulType type);
+    void decrementMagic(int value);
+    void incrementMagic(int value);
 }
 
 class RandomSoulMagicIntComponent implements SoulMagicIntComponent, ServerTickingComponent, AutoSyncedComponent {
     @Override
     public int getCurrentMagic() {
 
-        return this.soulType.getCurrentMana();
+        return this.soulType.getCurrentMagic();
     }
 
     @Override
     public int getMaxMagic() {
-        if (this.soulType != null) { return soulType.getMaxMana(); } else {
+        if (this.soulType != null) { return soulType.getMaxMagic(); } else {
             return 100;
         }
     }
@@ -52,8 +53,18 @@ class RandomSoulMagicIntComponent implements SoulMagicIntComponent, ServerTickin
     }
 
     @Override
+    public void decrementMagic(int value) {
+        soulType.decrementMagic();
+    }
+
+    @Override
+    public void incrementMagic(int value) {
+        soulType.incrementMagic();
+    }
+
+    @Override
     public void setCurrentMagic(int value) {
-        this.soulType.setCurrentMana(value);
+        this.soulType.setCurrentMagic(value);
     }
 
 
@@ -69,6 +80,7 @@ class RandomSoulMagicIntComponent implements SoulMagicIntComponent, ServerTickin
 
     @Override
     public void serverTick() {
+        this.incrementMagic(getRegenRate());
         setCurrentMagic(getCurrentMagic()+getRegenRate());
     }
 }

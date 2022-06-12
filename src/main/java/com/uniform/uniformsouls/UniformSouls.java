@@ -381,6 +381,9 @@ public class UniformSouls implements ModInitializer{
     public static final Identifier FEAR_SCYTHE_SLASH_1_ID = new Identifier("uniformsouls:fear_scythe_slash_1");
     public static SoundEvent FEAR_SCYTHE_SLASH_1_EVENT = new SoundEvent(FEAR_SCYTHE_SLASH_1_ID);
 
+    public static final Identifier BONE_SUMMON_1_ID = new Identifier("uniformsouls:bone_summon_1");
+    public static SoundEvent BONE_SUMMON_1_EVENT = new SoundEvent(BONE_SUMMON_1_ID);
+
 
 
 
@@ -468,7 +471,7 @@ public class UniformSouls implements ModInitializer{
     public static final EntityType<BoneGroundEntity> BONEGROUND = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier("uniformsouls", "boneground"),
-            FabricEntityTypeBuilder.<BoneGroundEntity>create(SpawnGroup.CREATURE, BoneGroundEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.75F)).build());
+            FabricEntityTypeBuilder.<BoneGroundEntity>create(SpawnGroup.MISC, BoneGroundEntity::new).trackedUpdateRate(2).dimensions(EntityDimensions.fixed(2.5F, 1.75F)).build());
 
     public static final EntityType<KindnessShield2Entity> KINDNESS_SHIELD2_ENTITY = Registry.register(
             Registry.ENTITY_TYPE,
@@ -583,6 +586,11 @@ public class UniformSouls implements ModInitializer{
             Registry.ENTITY_TYPE,
             new Identifier("uniformsouls", "xchara_knife_slash"),
             FabricEntityTypeBuilder.<XCharaKnifeSlashEntity>create(SpawnGroup.MISC, XCharaKnifeSlashEntity::new).dimensions(EntityDimensions.fixed(3.0F, 3.0F)).build());
+
+    public static final EntityType<BoneProjEntity> BONE_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "bone_proj"),
+            FabricEntityTypeBuilder.<BoneProjEntity>create(SpawnGroup.MISC, BoneProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
 
 
 
@@ -946,6 +954,7 @@ public class UniformSouls implements ModInitializer{
         Registry.register(Registry.SOUND_EVENT, PATIENCE_STRING_THROW_ID, PATIENCE_STRING_THROW_EVENT);
         Registry.register(Registry.SOUND_EVENT, ASRIEL_CHAOS_SABER_LIGHTNING_1_ID, ASRIEL_CHAOS_SABER_LIGHTNING_1_EVENT);
         Registry.register(Registry.SOUND_EVENT, FEAR_SCYTHE_SLASH_1_ID, FEAR_SCYTHE_SLASH_1_EVENT);
+        Registry.register(Registry.SOUND_EVENT, BONE_SUMMON_1_ID, BONE_SUMMON_1_EVENT);
 
 
 
@@ -1012,9 +1021,9 @@ public class UniformSouls implements ModInitializer{
 
         FabricDefaultAttributeRegistry.register(GOLEMSOULMONSTER, GolemSoulMonsterEntity.creategolemmonstersoulAttributes());
 
-        FabricDefaultAttributeRegistry.register(BONEGROUND, BoneGroundEntity.createMobAttributes());
-
         FabricDefaultAttributeRegistry.register(KINDNESS_SHIELD2_ENTITY, KindnessShield2Entity.createkindnessshieldAttributes());
+
+        FabricDefaultAttributeRegistry.register(BONEGROUND, BoneGroundEntity.createbonegroundAttributes());
 
         FabricDefaultAttributeRegistry.register(WRATH_SHIELD2_ENTITY, WrathShield2Entity.createwrathshieldAttributes());
 

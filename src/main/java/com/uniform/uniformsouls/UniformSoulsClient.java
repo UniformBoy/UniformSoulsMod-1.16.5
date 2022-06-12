@@ -27,6 +27,7 @@ import net.minecraft.client.render.BufferBuilder;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.render.VertexFormats;
+import net.minecraft.item.ItemStack;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.Identifier;
 
@@ -44,8 +45,23 @@ public class UniformSoulsClient implements ClientModInitializer {
     private SoulType soulType;
     private SoulMagicIntComponent soulMagicIntComponent;
     int min = 50;
-    int max = SoulType.DETERMINATION.getMaxMana();
-    int current = SoulType.DETERMINATION.getCurrentMana();
+    private ItemStack itemStack;
+    int max = this.getMaxMagic();
+    int current = this.getCurrentMagic();
+
+
+    public int getMaxMagic() {
+        if (this.soulType != null) { return soulType.getMaxMagic(); } else {
+            return 100;
+        }
+    }
+
+    public int getCurrentMagic() {
+        if (this.soulType != null) { return soulType.getCurrentMagic(); } else {
+            return 100;
+        }
+    }
+
     private int scaledWidth;
     private int scaledHeight;
 
@@ -53,6 +69,8 @@ public class UniformSoulsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
+        if (MinecraftClient.getInstance() == null) return;
 
         //Hud
 
@@ -444,6 +462,13 @@ public class UniformSoulsClient implements ClientModInitializer {
             return new XCharaKnifeSlashEntityRenderer(dispatcher);
         });
 
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.BONE_PROJ_ENTITY, (dispatcher, context) -> {
+            return new BoneProjEntityRenderer(dispatcher);
+        });
+
+
+
+
         EntityRendererRegistry.INSTANCE.register(UniformSouls.SOUL_DETERMINATION_1, (dispatcher, context) -> {
             return new SoulDetermination1EntityRenderer(dispatcher);
         });
@@ -724,6 +749,20 @@ public class UniformSoulsClient implements ClientModInitializer {
 
             context.getTaskQueue().execute(() -> {
                 XCharaKnifeSlashEntity proj = new XCharaKnifeSlashEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(BoneProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                BoneProjEntity proj = new BoneProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
                 MinecraftClient.getInstance().world.addEntity(entityID, proj);
             });
         });

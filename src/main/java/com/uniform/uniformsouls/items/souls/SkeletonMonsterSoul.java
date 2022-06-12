@@ -3,7 +3,6 @@ package com.uniform.uniformsouls.items.souls;
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.registry.ModItems;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,33 +10,29 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
 
-public class PerseveranceSoul extends Item {
+public class SkeletonMonsterSoul extends Item {
 
-    public PerseveranceSoul(Settings settings) {
+    public SkeletonMonsterSoul(Settings settings) {
         super(settings);
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
-
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand){
         if (!playerEntity.isSneaking()) {
 
-            playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_PLING, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F + .8F));
-            //playerEntity.setVelocity(playerEntity.getVelocity().add(playerEntity.getRotationVec(1F).multiply(2)));
-            playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 600, 4, false, false, false));
-            playerEntity.getItemCooldownManager().set(this, 60);
+            playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_COW_BELL, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F + .8F));
+            playerEntity.getItemCooldownManager().set(this, 10);
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 
             return TypedActionResult.success(playerEntity.getStackInHand(hand));
         } else {
-            ItemStack itemStack = new ItemStack(ModItems.PERSEVERANCE_TORN_NOTEBOOK);
+            ItemStack itemStack = new ItemStack(ModItems.SKELETON_BONE_1);
             ItemStack itemStack2 = playerEntity.getStackInHand(hand);
             itemStack2.decrement(1);
             playerEntity.getItemCooldownManager().set(this, 50);
@@ -60,7 +55,7 @@ public class PerseveranceSoul extends Item {
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
     {
         //Basic Info
-        tooltip.add(new TranslatableText("You Are Filled With Perseverance").formatted(Formatting.DARK_PURPLE));
+        tooltip.add(new TranslatableText("The Soul Of A Monster").formatted());
 
     }
 
