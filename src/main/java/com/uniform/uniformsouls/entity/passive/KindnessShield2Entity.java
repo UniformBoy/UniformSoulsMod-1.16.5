@@ -15,6 +15,7 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class KindnessShield2Entity extends PathAwareEntity {
@@ -26,14 +27,39 @@ public class KindnessShield2Entity extends PathAwareEntity {
 
     public KindnessShield2Entity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
-        this.duration = 10;
+        this.duration = 200;
+        this.noClip = true;
     }
 
     public void tick() {
         super.tick();
+        duration --;
         if (duration == 0) {
             this.remove();
         }
+    }
+
+    public void tickMovement() {
+        super.tickMovement();
+        this.setVelocity(Vec3d.ZERO);
+        if (this.onGround) {
+            this.prevBodyYaw = 0.0F;
+            this.bodyYaw = 0.0F;
+        }
+
+        if (!this.onGround) {
+            this.prevBodyYaw = 1.0F;
+            this.bodyYaw = 1.0F;
+        }
+
+    }
+
+    @Override
+    public boolean isPushable() {
+        if (!this.onGround) {
+            return true;
+        } else
+            return false;
     }
 
     public int getDuration() {

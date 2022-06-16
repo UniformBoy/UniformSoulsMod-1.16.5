@@ -55,7 +55,6 @@ public class CorruptionEntity extends HostileEntity implements IAnimatable{
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
         this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, true));
-        this.targetSelector.add(1, new FollowTargetGoal(this, KindnessShield2Entity.class, true));
         this.targetSelector.add(2, new FollowTargetGoal(this, MerchantEntity.class, false));
         this.targetSelector.add(3, new FollowTargetGoal(this, IronGolemEntity.class, true));
         this.targetSelector.add(4, new FollowTargetGoal(this, PassiveEntity.class, true));

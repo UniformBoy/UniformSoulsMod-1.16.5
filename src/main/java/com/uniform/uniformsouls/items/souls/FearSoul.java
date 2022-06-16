@@ -31,7 +31,6 @@ public class FearSoul extends Item {
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_SNARE, 2.0F, 1.0F/(RANDOM.nextFloat()*1.8F + 1.4F));
             playerEntity.getItemCooldownManager().set(this, 60);
-            playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.FEAREFFECT1, 600, 4, false, false, false));
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 
             return TypedActionResult.success(playerEntity.getStackInHand(hand));

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "uniformsouls:deepslate_tiles"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:deepslate_tile_slab",
+    "count": 6
+  }
+}

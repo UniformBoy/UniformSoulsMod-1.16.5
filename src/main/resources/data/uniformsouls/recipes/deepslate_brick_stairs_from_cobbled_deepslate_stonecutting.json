@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "uniformsouls:cobbled_deepslate"
+  },
+  "result": "uniformsouls:deepslate_brick_stairs",
+  "count": 1
+}

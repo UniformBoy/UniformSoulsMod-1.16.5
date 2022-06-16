@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "uniformsouls:block/cobbled_deepslate_slab"
+    },
+    "type=double": {
+      "model": "uniformsouls:block/cobbled_deepslate"
+    },
+    "type=top": {
+      "model": "uniformsouls:block/cobbled_deepslate_slab_top"
+    }
+  }
+}

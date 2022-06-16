@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "uniformsouls:blocks/deepslate_bricks",
+    "top": "uniformsouls:blocks/deepslate_bricks",
+    "side": "uniformsouls:blocks/deepslate_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "uniformsouls:blocks/polished_deepslate",
+    "top": "uniformsouls:blocks/polished_deepslate",
+    "side": "uniformsouls:blocks/polished_deepslate"
+  }
+}

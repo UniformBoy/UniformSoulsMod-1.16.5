@@ -2,7 +2,6 @@ package com.uniform.uniformsouls.entity.renderer;
 
 import com.uniform.uniformsouls.entity.misc.UniPlayerEntity;
 import com.uniform.uniformsouls.entity.model.UniPlayerEntityModelGeo;
-import com.uniform.uniformsouls.mixins.UniPlayerEntityRendererMixin;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;

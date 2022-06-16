@@ -38,9 +38,12 @@ public class UniformSoulsClient implements ClientModInitializer {
 
     public static final Identifier SCARED_EFFECT_SCREEN_1 = new Identifier(UniformSouls.MOD_ID, "textures/misc/scaredeffectscreen1.png");
     public static final Identifier CORRUPTION_CORRUPTING_EFFECT_SCREEN_1 = new Identifier(UniformSouls.MOD_ID, "textures/misc/corruptioncorruptingeffectscreen1.png");
+    public static final Identifier CHILLED_EFFECT_SCREEN_1 = new Identifier(UniformSouls.MOD_ID, "textures/misc/chilledeffectscreen1.png");
     public final MinecraftClient client = MinecraftClient.getInstance();
+
+    /*
     public static final Identifier UNI_SOUL_ICONS_TEXTURE = new Identifier(UniformSouls.MOD_ID, "textures/gui/soul_icons.png");
-    protected int x;
+     protected int x;
     protected int y;
     private SoulType soulType;
     private SoulMagicIntComponent soulMagicIntComponent;
@@ -67,9 +70,13 @@ public class UniformSoulsClient implements ClientModInitializer {
 
 
 
+
+     */
+
     @Override
     public void onInitializeClient() {
 
+/*
         if (MinecraftClient.getInstance() == null) return;
 
         //Hud
@@ -345,6 +352,8 @@ public class UniformSoulsClient implements ClientModInitializer {
         });
 
 
+ */
+
 
 
 
@@ -376,6 +385,10 @@ public class UniformSoulsClient implements ClientModInitializer {
 
         EntityRendererRegistry.INSTANCE.register(UniformSouls.BONEGROUND, (dispatcher, context) -> {
             return new BoneGroundEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.SPEARGROUND, (dispatcher, context) -> {
+            return new SpearGroundEntityRenderer(dispatcher);
         });
 
         EntityRendererRegistry.INSTANCE.register(UniformSouls.DETERMINATION_SWORD_SLASH_ENTITY, (dispatcher, context) -> {
@@ -465,6 +478,60 @@ public class UniformSoulsClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(UniformSouls.BONE_PROJ_ENTITY, (dispatcher, context) -> {
             return new BoneProjEntityRenderer(dispatcher);
         });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.SPEAR_PROJ_ENTITY, (dispatcher, context) -> {
+            return new SpearProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.FROST_BOMB_ENTITY, (dispatcher, context) -> {
+            return new FrostBomb1EntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.FIRE_PROJ_ENTITY, (dispatcher, context) -> {
+            return new FireProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.KINDNESS_SHEILD_PROJ_ENTITY, (dispatcher, context) -> {
+            return new KindnessShieldProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.DETERMINATION_SHEILD_PROJ_ENTITY, (dispatcher, context) -> {
+            return new DeterminationShieldProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.DETERMINATION_SHIELD2_ENTITY, (dispatcher, context) -> {
+            return new DeterminationShield2EntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.FEAR_SHEILD_PROJ_ENTITY, (dispatcher, context) -> {
+            return new FearShieldProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.FEAR_SHIELD2_ENTITY, (dispatcher, context) -> {
+            return new FearShield2EntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.GHOST_PROJ_ENTITY, (dispatcher, context) -> {
+            return new GhostProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.MONSTER_SHIELD_PROJ_ENTITY, (dispatcher, context) -> {
+            return new MonsterShieldProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.MONSTER_SHIELD2_ENTITY, (dispatcher, context) -> {
+            return new MonsterShield2EntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.ENERGY_BEAM_PROJ_ENTITY, (dispatcher, context) -> {
+            return new EnergyBeamProjEntityRenderer(dispatcher);
+        });
+
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.VEX_PET_ENTITY, (dispatcher, context) -> {
+            return new VexPetEntityRenderer(dispatcher);
+        });
+
+
 
 
 
@@ -767,6 +834,132 @@ public class UniformSoulsClient implements ClientModInitializer {
             });
         });
 
+        ClientSidePacketRegistry.INSTANCE.register(SpearProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                SpearProjEntity proj = new SpearProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(FrostBomb1Entity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                FrostBomb1Entity proj = new FrostBomb1Entity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(FireProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                FireProjEntity proj = new FireProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(KindnessShieldProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                KindnessShieldProjEntity proj = new KindnessShieldProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(DeterminationShieldProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                DeterminationShieldProjEntity proj = new DeterminationShieldProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(FearShieldProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                FearShieldProjEntity proj = new FearShieldProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(GhostProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                GhostProjEntity proj = new GhostProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(MonsterShieldProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                MonsterShieldProjEntity proj = new MonsterShieldProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
+        ClientSidePacketRegistry.INSTANCE.register(EnergyBeamProjEntity.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                EnergyBeamProjEntity proj = new EnergyBeamProjEntity(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
 
         //Armor
 
@@ -1063,6 +1256,27 @@ public class UniformSoulsClient implements ClientModInitializer {
                 RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
                 RenderSystem.disableAlphaTest();
                 this.client.getTextureManager().bindTexture(SCARED_EFFECT_SCREEN_1);
+                Tessellator tessellator = Tessellator.getInstance();
+                BufferBuilder bufferBuilder = tessellator.getBuffer();
+                bufferBuilder.begin(7, VertexFormats.POSITION_TEXTURE);
+                bufferBuilder.vertex(0.0D, (double) this.client.getWindow().getScaledHeight(), -90.0D).texture(0.0F, 1.0F).next();
+                bufferBuilder.vertex((double) this.client.getWindow().getScaledWidth(), (double) this.client.getWindow().getScaledHeight(), -90.0D).texture(1.0F, 1.0F).next();
+                bufferBuilder.vertex((double) this.client.getWindow().getScaledWidth(), 0.0D, -90.0D).texture(1.0F, 0.0F).next();
+                bufferBuilder.vertex(0.0D, 0.0D, -90.0D).texture(0.0F, 0.0F).next();
+                tessellator.draw();
+                RenderSystem.depthMask(true);
+                RenderSystem.enableDepthTest();
+                RenderSystem.enableAlphaTest();
+                RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+            }
+
+            if(client.player.hasStatusEffect(UniformSouls.CHILLEDEFFECT1)) {
+                RenderSystem.disableDepthTest();
+                RenderSystem.depthMask(false);
+                RenderSystem.defaultBlendFunc();
+                RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+                RenderSystem.disableAlphaTest();
+                this.client.getTextureManager().bindTexture(CHILLED_EFFECT_SCREEN_1);
                 Tessellator tessellator = Tessellator.getInstance();
                 BufferBuilder bufferBuilder = tessellator.getBuffer();
                 bufferBuilder.begin(7, VertexFormats.POSITION_TEXTURE);

@@ -3,8 +3,10 @@ package com.uniform.uniformsouls.items.souls;
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.registry.ModItems;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
@@ -28,8 +30,22 @@ public class ImmoralitySoul extends Item {
 
         if (!playerEntity.isSneaking()) {
 
+            if (!playerEntity.world.isClient && !playerEntity.isSneaking()) {
+
+                FireballEntity FireballEntity = (FireballEntity) EntityType.FIREBALL.create(playerEntity.world);
+                FireballEntity.refreshPositionAndAngles(playerEntity.getX(), playerEntity.getY() + 1, playerEntity.getZ(), playerEntity.yaw, 0.0F);
+                FireballEntity.explosionPower = 1;
+                playerEntity.world.spawnEntity(FireballEntity);
+
+                if(FireballEntity.age >= 600)  {
+                    FireballEntity.setVelocity(FireballEntity.getVelocity().x,FireballEntity.getVelocity().y - 5,FireballEntity.getVelocity().z);
+                }
+
+                return TypedActionResult.success(playerEntity.getStackInHand(hand));
+            }
+
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_BANJO, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F - .8F));
-            playerEntity.getItemCooldownManager().set(this, 60);
+            playerEntity.getItemCooldownManager().set(this, 0);
             playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.JUSTICEEFFECT1, 600, 6, false, false, false));
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 

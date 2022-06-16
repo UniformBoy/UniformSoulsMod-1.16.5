@@ -283,6 +283,7 @@ public class UniformSouls implements ModInitializer{
     public static final StatusEffect KINDNESSEFFECT2 = new Kindness2Effect();
     public static final StatusEffect DETERMINATIONEFFECT1 = new Determination1Effect();
     public static final StatusEffect FEAREFFECT1 = new Fear1Effect();
+    public static final StatusEffect CHILLEDEFFECT1 = new Chilled1Effect();
 
 
 
@@ -384,6 +385,9 @@ public class UniformSouls implements ModInitializer{
     public static final Identifier BONE_SUMMON_1_ID = new Identifier("uniformsouls:bone_summon_1");
     public static SoundEvent BONE_SUMMON_1_EVENT = new SoundEvent(BONE_SUMMON_1_ID);
 
+    public static final Identifier SPEAR_SUMMON_1_ID = new Identifier("uniformsouls:spear_summon_1");
+    public static SoundEvent SPEAR_SUMMON_1_EVENT = new SoundEvent(SPEAR_SUMMON_1_ID);
+
 
 
 
@@ -476,7 +480,7 @@ public class UniformSouls implements ModInitializer{
     public static final EntityType<KindnessShield2Entity> KINDNESS_SHIELD2_ENTITY = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier("uniformsouls", "kindness_shield2"),
-            FabricEntityTypeBuilder.<KindnessShield2Entity>create(SpawnGroup.CREATURE, KindnessShield2Entity::new).dimensions(EntityDimensions.fixed(2.5F, 3.8F)).build());
+            FabricEntityTypeBuilder.<KindnessShield2Entity>create(SpawnGroup.MISC, KindnessShield2Entity::new).dimensions(EntityDimensions.fixed(3.5F, 3.95F)).build());
 
     public static final EntityType<WrathShield2Entity> WRATH_SHIELD2_ENTITY = Registry.register(
             Registry.ENTITY_TYPE,
@@ -487,6 +491,32 @@ public class UniformSouls implements ModInitializer{
             Registry.ENTITY_TYPE,
             new Identifier("uniformsouls", "soul_determination_1"),
             FabricEntityTypeBuilder.<SoulDetermination1Entity>create(SpawnGroup.CREATURE, SoulDetermination1Entity::new).dimensions(EntityDimensions.fixed(0.5F, 1.5F)).build());
+
+    public static final EntityType<SpearGroundEntity> SPEARGROUND = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "spearground"),
+            FabricEntityTypeBuilder.<SpearGroundEntity>create(SpawnGroup.MISC, SpearGroundEntity::new).trackedUpdateRate(2).dimensions(EntityDimensions.fixed(2.5F, 1.75F)).build());
+
+    public static final EntityType<DeterminationShield2Entity> DETERMINATION_SHIELD2_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "determination_shield2"),
+            FabricEntityTypeBuilder.<DeterminationShield2Entity>create(SpawnGroup.MISC, DeterminationShield2Entity::new).dimensions(EntityDimensions.fixed(3.5F, 3.95F)).build());
+
+    public static final EntityType<FearShield2Entity> FEAR_SHIELD2_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "fear_shield2"),
+            FabricEntityTypeBuilder.<FearShield2Entity>create(SpawnGroup.MISC, FearShield2Entity::new).dimensions(EntityDimensions.fixed(3.5F, 3.95F)).build());
+
+    public static final EntityType<MonsterShield2Entity> MONSTER_SHIELD2_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "monster_shield2"),
+            FabricEntityTypeBuilder.<MonsterShield2Entity>create(SpawnGroup.MISC, MonsterShield2Entity::new).dimensions(EntityDimensions.fixed(3.5F, 3.95F)).build());
+
+    public static final EntityType<VexPetEntity> VEX_PET_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "vex_pet"),
+            FabricEntityTypeBuilder.<VexPetEntity>create(SpawnGroup.MISC, VexPetEntity::new).dimensions(EntityDimensions.fixed(0.3F, 0.85F)).build());
+
 
     //Entity Projectiles
 
@@ -591,6 +621,52 @@ public class UniformSouls implements ModInitializer{
             Registry.ENTITY_TYPE,
             new Identifier("uniformsouls", "bone_proj"),
             FabricEntityTypeBuilder.<BoneProjEntity>create(SpawnGroup.MISC, BoneProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
+    public static final EntityType<SpearProjEntity> SPEAR_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "spear_proj"),
+            FabricEntityTypeBuilder.<SpearProjEntity>create(SpawnGroup.MISC, SpearProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
+    public static final EntityType<FrostBomb1Entity> FROST_BOMB_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "frost_bomb_1"),
+            FabricEntityTypeBuilder.<FrostBomb1Entity>create(SpawnGroup.MISC, FrostBomb1Entity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
+    public static final EntityType<FireProjEntity> FIRE_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "fire_proj_1"),
+            FabricEntityTypeBuilder.<FireProjEntity>create(SpawnGroup.MISC, FireProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
+    public static final EntityType<KindnessShieldProjEntity> KINDNESS_SHEILD_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "kindness_shield_proj"),
+            FabricEntityTypeBuilder.<KindnessShieldProjEntity>create(SpawnGroup.MISC, KindnessShieldProjEntity::new).dimensions(EntityDimensions.fixed(2.5F, 3.8F)).build());
+
+    public static final EntityType<DeterminationShieldProjEntity> DETERMINATION_SHEILD_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "determination_shield_proj"),
+            FabricEntityTypeBuilder.<DeterminationShieldProjEntity>create(SpawnGroup.MISC, DeterminationShieldProjEntity::new).dimensions(EntityDimensions.fixed(2.5F, 3.8F)).build());
+
+    public static final EntityType<FearShieldProjEntity> FEAR_SHEILD_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "fear_shield_proj"),
+            FabricEntityTypeBuilder.<FearShieldProjEntity>create(SpawnGroup.MISC, FearShieldProjEntity::new).dimensions(EntityDimensions.fixed(2.5F, 3.8F)).build());
+
+    public static final EntityType<GhostProjEntity> GHOST_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "ghost_proj"),
+            FabricEntityTypeBuilder.<GhostProjEntity>create(SpawnGroup.MISC, GhostProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
+    public static final EntityType<MonsterShieldProjEntity> MONSTER_SHIELD_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "monster_shield_proj"),
+            FabricEntityTypeBuilder.<MonsterShieldProjEntity>create(SpawnGroup.MISC, MonsterShieldProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
+    public static final EntityType<EnergyBeamProjEntity> ENERGY_BEAM_PROJ_ENTITY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "energy_beam_proj"),
+            FabricEntityTypeBuilder.<EnergyBeamProjEntity>create(SpawnGroup.MISC, EnergyBeamProjEntity::new).dimensions(EntityDimensions.fixed(1.0F, 1.0F)).build());
+
 
 
 
@@ -805,6 +881,8 @@ public class UniformSouls implements ModInitializer{
 
     public static final DefaultParticleType ASRIEL_CHAOS_SABER_LIGHTNING = FabricParticleTypes.simple();
 
+    public static final DefaultParticleType LIGHT = FabricParticleTypes.simple();
+
 
 
 
@@ -913,6 +991,7 @@ public class UniformSouls implements ModInitializer{
         Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "kindness2"), KINDNESSEFFECT2);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "determination1"), DETERMINATIONEFFECT1);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "fear1"), FEAREFFECT1);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "chilled1"), CHILLEDEFFECT1);
 
 
 
@@ -955,6 +1034,7 @@ public class UniformSouls implements ModInitializer{
         Registry.register(Registry.SOUND_EVENT, ASRIEL_CHAOS_SABER_LIGHTNING_1_ID, ASRIEL_CHAOS_SABER_LIGHTNING_1_EVENT);
         Registry.register(Registry.SOUND_EVENT, FEAR_SCYTHE_SLASH_1_ID, FEAR_SCYTHE_SLASH_1_EVENT);
         Registry.register(Registry.SOUND_EVENT, BONE_SUMMON_1_ID, BONE_SUMMON_1_EVENT);
+        Registry.register(Registry.SOUND_EVENT, SPEAR_SUMMON_1_ID, SPEAR_SUMMON_1_EVENT);
 
 
 
@@ -1029,7 +1109,17 @@ public class UniformSouls implements ModInitializer{
 
         FabricDefaultAttributeRegistry.register(SOUL_DETERMINATION_1, SoulDetermination1Entity.createsoulAttributes());
 
+        FabricDefaultAttributeRegistry.register(SPEARGROUND, SpearGroundEntity.createspeargroundAttributes());
+
+        FabricDefaultAttributeRegistry.register(DETERMINATION_SHIELD2_ENTITY, DeterminationShield2Entity.createdeterminationshieldAttributes());
+
+        FabricDefaultAttributeRegistry.register(FEAR_SHIELD2_ENTITY, FearShield2Entity.createfearshieldAttributes());
+
+        FabricDefaultAttributeRegistry.register(MONSTER_SHIELD2_ENTITY, MonsterShield2Entity.createmonstershieldAttributes());
+
         FabricDefaultAttributeRegistry.register(UNIPLAYER, UniPlayerEntity.createMobAttributes());
+
+        FabricDefaultAttributeRegistry.register(VEX_PET_ENTITY, VexPetEntity.createvexpetAttributes());
 
 
 

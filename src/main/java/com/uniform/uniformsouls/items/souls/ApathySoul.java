@@ -29,8 +29,7 @@ public class ApathySoul extends Item {
         if (!playerEntity.isSneaking()) {
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_PLING, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F - .8F));
-            //playerEntity.setVelocity(playerEntity.getVelocity().add(playerEntity.getRotationVec(1F).multiply(2.5)));
-            playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 600, 6, false, false, false));
+            playerEntity.setVelocity(playerEntity.getVelocity().add(playerEntity.getRotationVec(1F).multiply(2.5)));
             playerEntity.getItemCooldownManager().set(this, 60);
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 

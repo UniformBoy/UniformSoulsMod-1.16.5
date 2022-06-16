@@ -93,6 +93,25 @@ public class ModItems {
 
     public static final Item SKELETON_MONSTER_SOUL = new SkeletonMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
+    public static final Item SPEAR_MONSTER_SOUL = new SpearMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item FROST_MONSTER_SOUL = new FrostMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item FLAME_MONSTER_SOUL = new FlameMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item GHOST_MONSTER_SOUL = new GhostMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item DEFENSE_MONSTER_SOUL = new DefenseMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item METALIC_MONSTER_SOUL = new MetalicMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item MOBILITY_MONSTER_SOUL = new MobilityMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item MOBILITY_MONSTER_SOUL_2 = new MobilityMonsterSoul2(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+
+
+
     //Button Items
     public static final Item RESET_BUTTON_1 = new ResetButton1(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
     public static final Item PAUSE_BUTTON_1 = new PauseButton1(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
@@ -159,6 +178,27 @@ public class ModItems {
     public static final BlockItem OVERWRITE_DETERMINATION_SOUL_LIGHT_BLOCK1 = new BlockItem(ModBlocks.OVERWRITE_DETERMINATION_SOUL_LIGHT_BLOCK1, new Item.Settings().group(UniformSouls.BLOCKS).fireproof());
     public static final BlockItem TEAL_FLOWER_BED = new BlockItem(ModBlocks.TEAL_FLOWER_BED, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem RED_FLOWER_BED = new BlockItem(ModBlocks.RED_FLOWER_BED, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE = new BlockItem(ModBlocks.DEEPSLATE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem COBBLED_DEEPSLATE = new BlockItem(ModBlocks.COBBLED_DEEPSLATE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem POLISHED_DEEPSLATE = new BlockItem(ModBlocks.POLISHED_DEEPSLATE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_BRICKS = new BlockItem(ModBlocks.DEEPSLATE_BRICKS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_TILES = new BlockItem(ModBlocks.DEEPSLATE_TILES, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem CHISELED_DEEPSLATE = new BlockItem(ModBlocks.CHISELED_DEEPSLATE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem CRACKED_DEEPSLATE_BRICKS = new BlockItem(ModBlocks.CRACKED_DEEPSLATE_BRICKS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem CRACKED_DEEPSLATE_TILES = new BlockItem(ModBlocks.CRACKED_DEEPSLATE_TILES, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem COBBLED_DEEPSLATE_SLAB = new BlockItem(ModBlocks.COBBLED_DEEPSLATE_SLAB, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_BRICK_SLAB = new BlockItem(ModBlocks.DEEPSLATE_BRICK_SLAB, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem POLISHED_DEEPSLATE_SLAB = new BlockItem(ModBlocks.POLISHED_DEEPSLATE_SLAB, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_TILE_SLAB = new BlockItem(ModBlocks.DEEPSLATE_TILE_SLAB, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem COBBLED_DEEPSLATE_STAIRS = new BlockItem(ModBlocks.COBBLED_DEEPSLATE_STAIRS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_BRICK_STAIRS = new BlockItem(ModBlocks.DEEPSLATE_BRICK_STAIRS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_TILE_STAIRS = new BlockItem(ModBlocks.DEEPSLATE_TILE_STAIRS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem POLISHED_DEEPSLATE_STAIRS = new BlockItem(ModBlocks.POLISHED_DEEPSLATE_STAIRS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem COBBLED_DEEPSLATE_WALL = new BlockItem(ModBlocks.COBBLED_DEEPSLATE_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_BRICK_WALL = new BlockItem(ModBlocks.DEEPSLATE_BRICK_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem DEEPSLATE_TILE_WALL = new BlockItem(ModBlocks.DEEPSLATE_TILE_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem POLISHED_DEEPSLATE_WALL = new BlockItem(ModBlocks.POLISHED_DEEPSLATE_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem UNI_LIGHT_BLOCK = new BlockItem(ModBlocks.UNI_LIGHT_BLOCK, new Item.Settings().group(UniformSouls.BLOCKS));
 
 
 
@@ -207,6 +247,14 @@ public class ModItems {
     public static final ToolItem XCHARA_KNIFE = new XCharaKnife(DefaultSoulToolMaterial.INSTANCE, 15, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem XCHARA_KNIFE_2 = new XCharaKnife(DefaultSoulToolMaterial.INSTANCE, 15, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem SKELETON_BONE_1 = new SkeletonBone1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem SPEAR_1 = new Spear1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem FROST_BOMB_1 = new FrostBomb1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem FLAME_STAFF_1 = new FlameStaff1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem GHOST_WEAPON_1 = new GhostWeapon1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem MONSTER_SHIELD_1 = new MonsterShield1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem ENERGY_BEAM_1 = new EnergyBeam1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem ANCIENT_TOME = new AncientTome(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem DIRTY_SHOES = new DirtyShoes(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
 
 
 
@@ -347,6 +395,14 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_soul_container"), EMPTY_SOUL_CONTAINER);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "overwrite_determination_soul_2"), OVERWRITE_DETERMINATION_SOUL_2);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "skeleton_monster_soul"), SKELETON_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "spear_monster_soul"), SPEAR_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "frost_monster_soul"), FROST_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "flame_monster_soul"), FLAME_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "ghost_monster_soul"), GHOST_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "defense_monster_soul"),DEFENSE_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "metalic_monster_soul"),METALIC_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "mobility_monster_soul"),MOBILITY_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "mobility_monster_soul_2"),MOBILITY_MONSTER_SOUL_2);
 
 
 
@@ -417,6 +473,27 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "overwrite_determination_soul_light_block1"), OVERWRITE_DETERMINATION_SOUL_LIGHT_BLOCK1);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "teal_flower_bed"), TEAL_FLOWER_BED);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "red_flower_bed"), RED_FLOWER_BED);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate"), DEEPSLATE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate"), COBBLED_DEEPSLATE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "polished_deepslate"), POLISHED_DEEPSLATE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_bricks"), DEEPSLATE_BRICKS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_tiles"), DEEPSLATE_TILES);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "chiseled_deepslate"), CHISELED_DEEPSLATE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "cracked_deepslate_bricks"), CRACKED_DEEPSLATE_BRICKS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "cracked_deepslate_tiles"), CRACKED_DEEPSLATE_TILES);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate_slab"), COBBLED_DEEPSLATE_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_brick_slab"), DEEPSLATE_BRICK_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_slab"), POLISHED_DEEPSLATE_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_slab"), DEEPSLATE_TILE_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate_stairs"), COBBLED_DEEPSLATE_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_brick_stairs"), DEEPSLATE_BRICK_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_stairs"), DEEPSLATE_TILE_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_stairs"), POLISHED_DEEPSLATE_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate_wall"), COBBLED_DEEPSLATE_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_brick_wall"), DEEPSLATE_BRICK_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_wall"), DEEPSLATE_TILE_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_wall"), POLISHED_DEEPSLATE_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "uni_light_block"), UNI_LIGHT_BLOCK);
 
 
 
@@ -465,6 +542,14 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "xchara_knife"), XCHARA_KNIFE);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "xchara_knife_2"), XCHARA_KNIFE_2);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "skeleton_bone_1"), SKELETON_BONE_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "spear_1"), SPEAR_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "frost_bomb_1"), FROST_BOMB_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "flame_staff_1"), FLAME_STAFF_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "ghost_weapon_1"), GHOST_WEAPON_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "monster_shield_1"), MONSTER_SHIELD_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "energy_beam_1"), ENERGY_BEAM_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "ancient_tome"), ANCIENT_TOME);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "dirty_shoes"), DIRTY_SHOES);
 
 
 

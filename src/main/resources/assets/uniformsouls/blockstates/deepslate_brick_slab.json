@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "uniformsouls:block/deepslate_brick_slab"
+    },
+    "type=double": {
+      "model": "uniformsouls:block/deepslate_bricks"
+    },
+    "type=top": {
+      "model": "uniformsouls:block/deepslate_brick_slab_top"
+    }
+  }
+}

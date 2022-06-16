@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "level=0": {
+      "model": "uniformsouls:block/light_00"
+    },
+    "level=1": {
+      "model": "uniformsouls:block/light_01"
+    },
+    "level=10": {
+      "model": "uniformsouls:block/light_10"
+    },
+    "level=11": {
+      "model": "uniformsouls:block/light_11"
+    },
+    "level=12": {
+      "model": "uniformsouls:block/light_12"
+    },
+    "level=13": {
+      "model": "uniformsouls:block/light_13"
+    },
+    "level=14": {
+      "model": "uniformsouls:block/light_14"
+    },
+    "level=15": {
+      "model": "uniformsouls:block/light_15"
+    },
+    "level=2": {
+      "model": "uniformsouls:block/light_02"
+    },
+    "level=3": {
+      "model": "uniformsouls:block/light_03"
+    },
+    "level=4": {
+      "model": "uniformsouls:block/light_04"
+    },
+    "level=5": {
+      "model": "uniformsouls:block/light_05"
+    },
+    "level=6": {
+      "model": "uniformsouls:block/light_06"
+    },
+    "level=7": {
+      "model": "uniformsouls:block/light_07"
+    },
+    "level=8": {
+      "model": "uniformsouls:block/light_08"
+    },
+    "level=9": {
+      "model": "uniformsouls:block/light_09"
+    }
+  }
+}

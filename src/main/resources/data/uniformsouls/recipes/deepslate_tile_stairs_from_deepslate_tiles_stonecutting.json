@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "uniformsouls:deepslate_tiles"
+  },
+  "result": "uniformsouls:deepslate_tile_stairs",
+  "count": 1
+}

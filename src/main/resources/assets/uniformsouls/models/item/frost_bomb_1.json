@@ -1,0 +1,62 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "uniformsouls:items/frost_bomb_1",
+		"particle": "uniformsouls:items/frost_bomb_1"
+	},
+	"elements": [
+		{
+			"name": "left_arm",
+			"from": [6, 1, 6],
+			"to": [10, 13, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-90.25, 0, 0],
+			"translation": [0, -2, 0.75],
+			"scale": [1.11328, 0.4668, 1.17188]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-90.25, 0, 0],
+			"translation": [0, -2, 0.75],
+			"scale": [1.11328, 0.4668, 1.17188]
+		},
+		"firstperson_righthand": {
+			"rotation": [-30.75, 0, 0],
+			"translation": [3.5, 2.5, -1],
+			"scale": [1.11328, 0.4668, 1.17188]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-30.75, 0, 0],
+			"translation": [3.5, 2.5, -1],
+			"scale": [1.11328, 0.4668, 1.17188]
+		},
+		"ground": {
+			"rotation": [-90.25, 0, 0],
+			"translation": [0, 0.5, 0.75],
+			"scale": [1.11328, 0.4668, 1.17188]
+		},
+		"gui": {
+			"rotation": [-90.25, 0, 0],
+			"translation": [0, 0, 0.75],
+			"scale": [2, 2, 2]
+		},
+		"head": {
+			"translation": [0, 12.75, 0]
+		},
+		"fixed": {
+			"rotation": [-90.25, 0, 0],
+			"translation": [-0.25, 0.5, 0.75],
+			"scale": [1.11328, 0.4668, 1.17188]
+		}
+	}
+}

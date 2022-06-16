@@ -87,11 +87,11 @@ public class BoneGroundEntity extends PathAwareEntity {
     }
 
     public SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.BLOCK_BONE_BLOCK_PLACE;
+        return null;
     }
 
     public SoundEvent getDeathSound() {
-        return SoundEvents.BLOCK_BONE_BLOCK_BREAK;
+        return null;
     }
 
 
@@ -103,7 +103,7 @@ public class BoneGroundEntity extends PathAwareEntity {
 
     public static DefaultAttributeContainer.Builder createbonegroundAttributes() {
         return PassiveEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 100)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 9999)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE,10)
                 .add(EntityAttributes.GENERIC_ARMOR, 0);
     }

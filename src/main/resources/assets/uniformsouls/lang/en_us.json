@@ -48,7 +48,15 @@
   "item.uniformsouls.og_justice_soul": "§eOg Soul Of Justice",
   "item.uniformsouls.empty_soul_container": "§8Empty Soul Container",
   "item.uniformsouls.overwrite_determination_soul_2": "§4Soul §3Of §4Determi§3nation",
-  "item.uniformsouls.skeleton_monster_soul": "Skeleton Monster Soul",
+  "item.uniformsouls.skeleton_monster_soul": "Monster Soul (Bone Magic)",
+  "item.uniformsouls.spear_monster_soul": "Monster Soul (Spear Magic)",
+  "item.uniformsouls.frost_monster_soul": "Monster Soul (Frost Magic)",
+  "item.uniformsouls.flame_monster_soul": "Monster Soul (Flame Magic)",
+  "item.uniformsouls.ghost_monster_soul": "Monster Soul (Ghost Magic)",
+  "item.uniformsouls.defense_monster_soul": "Monster Soul (Defense Magic)",
+  "item.uniformsouls.metalic_monster_soul": "Monster Soul (Energetic Magic)",
+  "item.uniformsouls.mobility_monster_soul": "Monster Soul (Dash Magic)",
+  "item.uniformsouls.mobility_monster_soul_2": "Monster Soul (Mobility Magic)",
 
   "item.uniformsouls.reset_button_1": "§6Reset",
   "item.uniformsouls.pause_button_1": "§6Pause",
@@ -114,6 +122,14 @@
   "item.uniformsouls.xchara_knife": "§3§kX§r§4Chara §3Knife",
   "item.uniformsouls.xchara_knife_2": "§3§kX§r§4Chara §3Knife",
   "item.uniformsouls.skeleton_bone_1": "Skeleton Bone",
+  "item.uniformsouls.spear_1": "Spear",
+  "item.uniformsouls.frost_bomb_1": "Frost Glove",
+  "item.uniformsouls.flame_staff_1": "Flame Staff",
+  "item.uniformsouls.ghost_weapon_1": "Ghost",
+  "item.uniformsouls.monster_shield_1": "Monster Shield",
+  "item.uniformsouls.energy_beam_1": "Ball Of Energy",
+  "item.uniformsouls.ancient_tome": "Ancient Tome",
+  "item.uniformsouls.dirty_shoes": "Dirty Shoes",
 
   "item.uniformsouls.flint_and_diamond": "Flint And Diamond",
   "item.uniformsouls.titanium_quartz_pickaxe": "Titanium Rainbow Quartz Pickaxe",
@@ -225,6 +241,27 @@
   "block.uniformsouls.overwrite_determination_soul_light_block1": "Overwrite Determination Soul Light Block",
   "block.uniformsouls.teal_flower_bed": "Teal Flower Bed",
   "block.uniformsouls.red_flower_bed": "Red Flower Bed",
+  "block.uniformsouls.deepslate": "Deepslate",
+  "block.uniformsouls.cobbled_deepslate": "Cobbled Deepslate",
+  "block.uniformsouls.polished_deepslate": "Polished Deepslate",
+  "block.uniformsouls.deepslate_bricks": "Deepslate Bricks",
+  "block.uniformsouls.deepslate_tiles": "Deepslate Tiles",
+  "block.uniformsouls.chiseled_deepslate": "Chiseled Deepslate",
+  "block.uniformsouls.cracked_deepslate_bricks": "Cracked Deepslate Bricks",
+  "block.uniformsouls.cracked_deepslate_tiles": "Cracked Deepslate Tiles",
+  "block.uniformsouls.cobbled_deepslate_slab": "Cobbled Deepslate Slab",
+  "block.uniformsouls.deepslate_brick_slab": "Deepslate Brick Slab",
+  "block.uniformsouls.polished_deepslate_slab": "Polished Deepslate Slab",
+  "block.uniformsouls.deepslate_tile_slab": "Deepslate Tile Slab",
+  "block.uniformsouls.cobbled_deepslate_stairs": "Cobbled Deepslate Stairs",
+  "block.uniformsouls.deepslate_brick_stairs": "Deepslate Brick Stairs",
+  "block.uniformsouls.deepslate_tile_stairs": "Deepslate Tile Stairs",
+  "block.uniformsouls.polished_deepslate_stairs": "Polished Deepslate Stairs",
+  "block.uniformsouls.cobbled_deepslate_wall": "Cobbled Deepslate Wall",
+  "block.uniformsouls.deepslate_brick_wall": "Deepslate Brick Wall",
+  "block.uniformsouls.deepslate_tile_wall": "Deepslate Tile Wall",
+  "block.uniformsouls.polished_deepslate_wall": "Polished Deepslate Wall",
+  "block.uniformsouls.uni_light_block": "Light",
 
 
 
@@ -255,6 +292,7 @@
   "entity.uniformsouls.wrath_shield2": "Wrath Shield Stationary",
   "entity.uniformsouls.terror_scythe_slash": "Terror Scythe Slash",
   "entity.uniformsouls.xchara_knife_slash": "XChara Knife Slash",
+  "entity.uniformsouls.vex_pet": "Vex",
 
 
 
@@ -287,6 +325,7 @@
   "effect.uniformsouls.kindness2": "Kindness",
   "effect.uniformsouls.determination1": "Determination",
   "effect.uniformsouls.fear1": "Fear",
+  "effect.uniformsouls.chilled1": "Chilled",
 
 
 

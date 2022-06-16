@@ -69,7 +69,20 @@
     "uniformsouls:hate_sword",
     "uniformsouls:hate_torn_notebook",
     "uniformsouls:hate_tough_glove",
-    "uniformsouls:hate_toy_knife"
-
+    "uniformsouls:hate_toy_knife",
+    "uniformsouls:skeleton_monster_soul",
+    "uniformsouls:spear_monster_soul",
+    "uniformsouls:frost_monster_soul",
+    "uniformsouls:flame_monster_soul",
+    "uniformsouls:ghost_monster_soul",
+    "uniformsouls:defense_monster_soul",
+    "uniformsouls:metalic_monster_soul",
+    "uniformsouls:skeleton_bone_1",
+    "uniformsouls:spear_1",
+    "uniformsouls:frost_bomb_1",
+    "uniformsouls:flame_staff_1",
+    "uniformsouls:ghost_weapon_1",
+    "uniformsouls:monster_shield_1",
+    "uniformsouls:energy_beam_1"
   ]
 }

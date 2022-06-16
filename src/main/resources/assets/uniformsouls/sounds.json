@@ -269,6 +269,15 @@
       }
     ]
   },
+  "spear_summon_1": {
+    "category": "attacks",
+    "sounds": [
+      {
+        "name": "uniformsouls:attacks/spear_summon_1",
+        "stream": false
+      }
+    ]
+  },
   "monster_generic_death_1": {
     "category": "entitys",
     "sounds": [

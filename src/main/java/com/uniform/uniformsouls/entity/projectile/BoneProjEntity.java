@@ -119,7 +119,7 @@ public class BoneProjEntity extends ThrownEntity implements DefaultSoulProjectil
             if (!this.world.isClient) {
                 world.createExplosion(this, getX(), getY(), getZ(), 2, Explosion.DestructionType.NONE);
                 List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand(4.0D, 2.0D, 4.0D));
-                world.playSound(null, this.getX(), this.getY(), this.getZ(), UniformSouls.BONE_SUMMON_1_EVENT, SoundCategory.PLAYERS, 3F, 1F); // plays a globalSoundEvent
+                world.playSound(null, this.getX(), this.getY(), this.getZ(), UniformSouls.BONE_SUMMON_1_EVENT, SoundCategory.PLAYERS, 2F, 1F); // plays a globalSoundEvent
                 BoneGroundEntity boneGroundEntity = UniformSouls.BONEGROUND.create(this.world);
                 boneGroundEntity.refreshPositionAndAngles(this.getX(), this.getY(), this.getZ(), this.yaw, 0.0F);
                 this.world.spawnEntity(boneGroundEntity);

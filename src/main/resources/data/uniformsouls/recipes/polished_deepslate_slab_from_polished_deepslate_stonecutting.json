@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "uniformsouls:polished_deepslate"
+  },
+  "result": "uniformsouls:polished_deepslate_slab",
+  "count": 2
+}

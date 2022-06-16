@@ -550,6 +550,119 @@ public class ModBlocks {
             .strength(18000000.0F, 18000000.0F)
             .sounds(BlockSoundGroup.GRASS));
 
+    public static final Block DEEPSLATE = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block COBBLED_DEEPSLATE = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block POLISHED_DEEPSLATE = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block DEEPSLATE_BRICKS = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block DEEPSLATE_TILES = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block CHISELED_DEEPSLATE = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block CRACKED_DEEPSLATE_BRICKS = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block CRACKED_DEEPSLATE_TILES = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block COBBLED_DEEPSLATE_SLAB = new UniSlabBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block DEEPSLATE_BRICK_SLAB = new UniSlabBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block POLISHED_DEEPSLATE_SLAB = new UniSlabBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block DEEPSLATE_TILE_SLAB = new UniSlabBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block COBBLED_DEEPSLATE_STAIRS = new UniStairsBlock(COBBLED_DEEPSLATE
+            .getDefaultState(), AbstractBlock.Settings.copy(COBBLED_DEEPSLATE));
+
+    public static final Block DEEPSLATE_BRICK_STAIRS = new UniStairsBlock(DEEPSLATE_BRICKS
+            .getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_BRICKS));
+
+    public static final Block DEEPSLATE_TILE_STAIRS = new UniStairsBlock(DEEPSLATE_TILES
+            .getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_TILES));
+
+    public static final Block POLISHED_DEEPSLATE_STAIRS = new UniStairsBlock(POLISHED_DEEPSLATE
+            .getDefaultState(), AbstractBlock.Settings.copy(POLISHED_DEEPSLATE));
+
+    public static final Block COBBLED_DEEPSLATE_WALL = new UniWallBlock(AbstractBlock.Settings.copy(COBBLED_DEEPSLATE));
+
+    public static final Block DEEPSLATE_BRICK_WALL = new UniWallBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICKS));
+
+    public static final Block DEEPSLATE_TILE_WALL = new UniWallBlock(AbstractBlock.Settings.copy(DEEPSLATE_TILES));
+
+    public static final Block POLISHED_DEEPSLATE_WALL = new UniWallBlock(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE));
+
+    public static final Block UNI_LIGHT_BLOCK = new UniLightBlock(AbstractBlock
+            .Settings.of(Material.AIR)
+            .strength(-1.0F, 3600000.8F)
+            .dropsNothing()
+            .nonOpaque()
+            .luminance(UniLightBlock.STATE_TO_LUMINANCE));
+
+
+
 
 
 
@@ -616,6 +729,27 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "overwrite_determination_soul_light_block1"), OVERWRITE_DETERMINATION_SOUL_LIGHT_BLOCK1);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "teal_flower_bed"), TEAL_FLOWER_BED);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "red_flower_bed"), RED_FLOWER_BED);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate"), DEEPSLATE);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate"), COBBLED_DEEPSLATE);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "polished_deepslate"), POLISHED_DEEPSLATE);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_bricks"), DEEPSLATE_BRICKS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_tiles"), DEEPSLATE_TILES);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "chiseled_deepslate"), CHISELED_DEEPSLATE);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "cracked_deepslate_bricks"), CRACKED_DEEPSLATE_BRICKS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "cracked_deepslate_tiles"), CRACKED_DEEPSLATE_TILES);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate_slab"), COBBLED_DEEPSLATE_SLAB);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_brick_slab"), DEEPSLATE_BRICK_SLAB);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_slab"), POLISHED_DEEPSLATE_SLAB);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_slab"), DEEPSLATE_TILE_SLAB);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate_stairs"), COBBLED_DEEPSLATE_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_brick_stairs"), DEEPSLATE_BRICK_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_stairs"), DEEPSLATE_TILE_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_stairs"), POLISHED_DEEPSLATE_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "cobbled_deepslate_wall"), COBBLED_DEEPSLATE_WALL);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_brick_wall"), DEEPSLATE_BRICK_WALL);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_wall"), DEEPSLATE_TILE_WALL);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_wall"), POLISHED_DEEPSLATE_WALL);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "uni_light_block"), UNI_LIGHT_BLOCK);
 
 
 

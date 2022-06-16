@@ -30,8 +30,7 @@ public class PerseveranceSoul extends Item {
         if (!playerEntity.isSneaking()) {
 
             playerEntity.playSound(SoundEvents.BLOCK_NOTE_BLOCK_PLING, 2.0F, 1.0F/(RANDOM.nextFloat()*.4F + .8F));
-            //playerEntity.setVelocity(playerEntity.getVelocity().add(playerEntity.getRotationVec(1F).multiply(2)));
-            playerEntity.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 600, 4, false, false, false));
+            playerEntity.setVelocity(playerEntity.getVelocity().add(playerEntity.getRotationVec(1F).multiply(2)));
             playerEntity.getItemCooldownManager().set(this, 60);
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
 
