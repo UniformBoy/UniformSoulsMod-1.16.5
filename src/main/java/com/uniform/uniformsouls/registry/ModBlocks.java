@@ -724,10 +724,134 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.STONE));
 
     public static final Block RED_LEAVES = new Block(FabricBlockSettings
+            .of(Material.LEAVES)
+            .breakByTool(FabricToolTags.SHEARS, 0)
+            .strength(0.2F, 0.5F)
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block SNOWDIN_GRASS = new Block(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakByTool(FabricToolTags.SHOVELS, 0)
+            .strength(0.6F, 2.5F)
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block SNOWDIN_DIRT = new Block(FabricBlockSettings
+            .of(Material.SOIL)
+            .breakByTool(FabricToolTags.SHOVELS, 0)
+            .strength(0.7F, 2.5F)
+            .sounds(BlockSoundGroup.GRAVEL));
+
+    public static final Block SNOWDIN_PATH_1 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block WATERFALL_GROUND = new Block(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakByTool(FabricToolTags.SHOVELS, 0)
+            .strength(0.6F, 2.5F)
+            .sounds(BlockSoundGroup.GRAVEL));
+
+    public static final Block WATERFALL_WALL_1 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block WATERFALL_WALL_2 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block HOTLAND_GROUND = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block HOTLAND_GROUND_CRACK = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block HOTLAND_PIPE_TURN = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block HOTLAND_PIPE_STRAIGHT = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block HOTLAND_PIPE_TURN_2 = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block HOTLAND_PIPE_STRAIGHT_2 = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block HOTLAND_ARROW = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block NH_WALL = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block NH_GROUND = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block GRAY_LEAVES = new Block(FabricBlockSettings
             .of(Material.SOLID_ORGANIC)
             .breakByTool(FabricToolTags.SHEARS, 0)
             .strength(0.6F, 2.5F)
             .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block LEAVES_1 = new Block(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakByTool(FabricToolTags.SHEARS, 0)
+            .strength(0.6F, 2.5F)
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block HOTLAND_CONVEYOR = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+
+
 
 
 
@@ -829,6 +953,24 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "path_r_2"), PATH_R_2);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "path_r_3"), PATH_R_3);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "red_leaves"), RED_LEAVES);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "snowdin_grass"), SNOWDIN_GRASS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "snowdin_dirt"), SNOWDIN_DIRT);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "snowdin_path_1"), SNOWDIN_PATH_1);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "waterfall_ground"), WATERFALL_GROUND);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "waterfall_wall_1"), WATERFALL_WALL_1);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "waterfall_wall_2"), WATERFALL_WALL_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_ground"), HOTLAND_GROUND);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_ground_crack"), HOTLAND_GROUND_CRACK);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_turn"), HOTLAND_PIPE_TURN);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_straight"), HOTLAND_PIPE_STRAIGHT);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_turn_2"), HOTLAND_PIPE_TURN_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_straight_2"), HOTLAND_PIPE_STRAIGHT_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_arrow"), HOTLAND_ARROW);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "nh_wall"), NH_WALL);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "nh_ground"), NH_GROUND);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "gray_leaves"), GRAY_LEAVES);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "leaves_1"), LEAVES_1);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "hotland_conveyor"), HOTLAND_CONVEYOR);
 
 
 

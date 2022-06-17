@@ -75,7 +75,12 @@ public class UniformSouls implements ModInitializer{
 
     //Blocks Group
 
-    public static final ItemGroup BLOCKS = FabricItemGroupBuilder.create(
+    public static final ItemGroup BLOCKS = FabricItemGroupBuilder.build(
+                    new Identifier(MOD_ID, "blocks"), () -> new ItemStack(ModItems.MONSTER_SOUL_LIGHT_BLOCK1));
+
+
+
+    /* public static final ItemGroup BLOCKS = FabricItemGroupBuilder.create(
                     new Identifier(MOD_ID, "blocks"))
             .icon(() -> new ItemStack(ModBlocks.MONSTER_SOUL_LIGHT_BLOCK1))
             .appendItems(stacks -> {
@@ -108,6 +113,8 @@ public class UniformSouls implements ModInitializer{
                 stacks.add(new ItemStack(ModBlocks.AETHER_CLOUD_BLOCK_WHITE_1));
             })
             .build();
+
+     */
 
     //Soul Combat Group
 

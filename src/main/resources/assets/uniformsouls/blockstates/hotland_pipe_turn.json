@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "uniformsouls:block/hotland_pipe_turn",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "uniformsouls:block/hotland_pipe_turn",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "uniformsouls:block/hotland_pipe_turn"
+    },
+    "facing=west": {
+      "model": "uniformsouls:block/hotland_pipe_turn",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "uniformsouls:blocks/hotland_ground_side",
+		"down": "uniformsouls:blocks/hotland_ground_side",
+		"up": "uniformsouls:blocks/hotland_ground_top",
+		"east": "uniformsouls:blocks/hotland_ground_side",
+		"west": "uniformsouls:blocks/hotland_ground_side",
+		"overlay": "uniformsouls:blocks/hotland_ground_side",
+		"north": "uniformsouls:blocks/hotland_ground_side",
+		"south": "uniformsouls:blocks/hotland_ground_side"
+	}
+}

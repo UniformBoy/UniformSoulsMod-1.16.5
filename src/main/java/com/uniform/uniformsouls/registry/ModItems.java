@@ -209,6 +209,28 @@ public class ModItems {
     public static final BlockItem PATH_R_2 = new BlockItem(ModBlocks.PATH_R_2, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem PATH_R_3 = new BlockItem(ModBlocks.PATH_R_3, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem RED_LEAVES = new BlockItem(ModBlocks.RED_LEAVES, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem SNOWDIN_GRASS = new BlockItem(ModBlocks.SNOWDIN_GRASS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem SNOWDIN_DIRT = new BlockItem(ModBlocks.SNOWDIN_DIRT, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem SNOWDIN_PATH_1 = new BlockItem(ModBlocks.SNOWDIN_PATH_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GROUND = new BlockItem(ModBlocks.WATERFALL_GROUND, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WALL_1 = new BlockItem(ModBlocks.WATERFALL_WALL_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WALL_2 = new BlockItem(ModBlocks.WATERFALL_WALL_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_GROUND = new BlockItem(ModBlocks.HOTLAND_GROUND, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_GROUND_CRACK = new BlockItem(ModBlocks.HOTLAND_GROUND_CRACK, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_PIPE_TURN = new BlockItem(ModBlocks.HOTLAND_PIPE_TURN, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_PIPE_STRAIGHT = new BlockItem(ModBlocks.HOTLAND_PIPE_STRAIGHT, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_PIPE_TURN_2 = new BlockItem(ModBlocks.HOTLAND_PIPE_TURN_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_PIPE_STRAIGHT_2 = new BlockItem(ModBlocks.HOTLAND_PIPE_STRAIGHT_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_ARROW = new BlockItem(ModBlocks.HOTLAND_ARROW, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem NH_WALL = new BlockItem(ModBlocks.NH_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem NH_GROUND = new BlockItem(ModBlocks.NH_GROUND, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem GRAY_LEAVES = new BlockItem(ModBlocks.GRAY_LEAVES, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem LEAVES_1 = new BlockItem(ModBlocks.LEAVES_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_CONVEYOR = new BlockItem(ModBlocks.HOTLAND_CONVEYOR, new Item.Settings().group(UniformSouls.BLOCKS));
+
+
+
+
 
 
     //Tool Items
@@ -513,6 +535,25 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "path_r_2"), PATH_R_2);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "path_r_3"), PATH_R_3);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "red_leaves"), RED_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "snowdin_grass"), SNOWDIN_GRASS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "snowdin_dirt"), SNOWDIN_DIRT);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "snowdin_path_1"), SNOWDIN_PATH_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_ground"), WATERFALL_GROUND);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_wall_1"), WATERFALL_WALL_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_wall_2"), WATERFALL_WALL_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_ground"), HOTLAND_GROUND);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_ground_crack"), HOTLAND_GROUND_CRACK);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_turn"), HOTLAND_PIPE_TURN);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_straight"), HOTLAND_PIPE_STRAIGHT);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_turn_2"), HOTLAND_PIPE_TURN_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_pipe_straight_2"), HOTLAND_PIPE_STRAIGHT_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_arrow"), HOTLAND_ARROW);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "nh_wall"), NH_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "nh_ground"), NH_GROUND);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "gray_leaves"), GRAY_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "leaves_1"), LEAVES_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_conveyor"), HOTLAND_CONVEYOR);
+
 
 
 

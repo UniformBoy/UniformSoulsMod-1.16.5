@@ -1,0 +1,13 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "uniformsouls:blocks/snowdin_grass_side",
+		"down": "uniformsouls:blocks/snowdin_dirt",
+		"up": "uniformsouls:blocks/snowdin_grass",
+		"east": "uniformsouls:blocks/snowdin_grass_side",
+		"west": "uniformsouls:blocks/snowdin_grass_side",
+		"overlay": "uniformsouls:blocks/snowdin_grass_side",
+		"north": "uniformsouls:blocks/snowdin_grass_side",
+		"south": "uniformsouls:blocks/snowdin_grass_side"
+	}
+}
