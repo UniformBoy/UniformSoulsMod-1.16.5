@@ -661,6 +661,75 @@ public class ModBlocks {
             .nonOpaque()
             .luminance(UniLightBlock.STATE_TO_LUMINANCE));
 
+    public static final Block START_GRASS = new Block(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakByTool(FabricToolTags.SHOVELS, 0)
+            .strength(0.6F, 2.5F)
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block START_PATH_1 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block START_PATH_2 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block START_PATH_3 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block RUINS_BRICKS = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block RUINS_BRICKS_2 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block PATH_R_1 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block PATH_R_2 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block PATH_R_3 = new Block(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 0)
+            .requiresTool()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.STONE));
+
+    public static final Block RED_LEAVES = new Block(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakByTool(FabricToolTags.SHEARS, 0)
+            .strength(0.6F, 2.5F)
+            .sounds(BlockSoundGroup.GRASS));
+
+
 
 
 
@@ -750,7 +819,16 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_wall"), DEEPSLATE_TILE_WALL);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_wall"), POLISHED_DEEPSLATE_WALL);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "uni_light_block"), UNI_LIGHT_BLOCK);
-
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "start_grass"), START_GRASS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "start_path_1"), START_PATH_1);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "start_path_2"), START_PATH_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "start_path_3"), START_PATH_3);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "ruins_bricks"), RUINS_BRICKS);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "ruins_bricks_2"), RUINS_BRICKS_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "path_r_1"), PATH_R_1);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "path_r_2"), PATH_R_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "path_r_3"), PATH_R_3);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "red_leaves"), RED_LEAVES);
 
 
 

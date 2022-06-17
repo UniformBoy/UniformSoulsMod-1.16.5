@@ -199,7 +199,16 @@ public class ModItems {
     public static final BlockItem DEEPSLATE_TILE_WALL = new BlockItem(ModBlocks.DEEPSLATE_TILE_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem POLISHED_DEEPSLATE_WALL = new BlockItem(ModBlocks.POLISHED_DEEPSLATE_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem UNI_LIGHT_BLOCK = new BlockItem(ModBlocks.UNI_LIGHT_BLOCK, new Item.Settings().group(UniformSouls.BLOCKS));
-
+    public static final BlockItem START_GRASS = new BlockItem(ModBlocks.START_GRASS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem START_PATH_1 = new BlockItem(ModBlocks.START_PATH_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem START_PATH_2 = new BlockItem(ModBlocks.START_PATH_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem START_PATH_3 = new BlockItem(ModBlocks.START_PATH_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem RUINS_BRICKS = new BlockItem(ModBlocks.RUINS_BRICKS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem RUINS_BRICKS_2 = new BlockItem(ModBlocks.RUINS_BRICKS_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem PATH_R_1 = new BlockItem(ModBlocks.PATH_R_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem PATH_R_2 = new BlockItem(ModBlocks.PATH_R_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem PATH_R_3 = new BlockItem(ModBlocks.PATH_R_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem RED_LEAVES = new BlockItem(ModBlocks.RED_LEAVES, new Item.Settings().group(UniformSouls.BLOCKS));
 
 
     //Tool Items
@@ -494,6 +503,16 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "deepslate_tile_wall"), DEEPSLATE_TILE_WALL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "polished_deepslate_wall"), POLISHED_DEEPSLATE_WALL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "uni_light_block"), UNI_LIGHT_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "start_grass"), START_GRASS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "start_path_1"), START_PATH_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "start_path_2"), START_PATH_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "start_path_3"), START_PATH_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "ruins_bricks"), RUINS_BRICKS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "ruins_bricks_2"), RUINS_BRICKS_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "path_r_1"), PATH_R_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "path_r_2"), PATH_R_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "path_r_3"), PATH_R_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "red_leaves"), RED_LEAVES);
 
 
 

@@ -261,7 +261,16 @@
   "block.uniformsouls.deepslate_brick_wall": "Deepslate Brick Wall",
   "block.uniformsouls.deepslate_tile_wall": "Deepslate Tile Wall",
   "block.uniformsouls.polished_deepslate_wall": "Polished Deepslate Wall",
-  "block.uniformsouls.uni_light_block": "Light",
+  "block.uniformsouls.start_grass": "Start Grass",
+  "block.uniformsouls.start_path_1": "Start Path 1",
+  "block.uniformsouls.start_path_2": "Start Path 2",
+  "block.uniformsouls.start_path_3": "Start Path 3",
+  "block.uniformsouls.ruins_bricks": "Ruins Bricks",
+  "block.uniformsouls.ruins_bricks_2": "Ruins Bricks 2",
+  "block.uniformsouls.path_r_1": "Ruins Path 1",
+  "block.uniformsouls.path_r_2": "Ruins Path 2",
+  "block.uniformsouls.path_r_3": "Ruins Path 3",
+  "block.uniformsouls.red_leaves": "Red Leaves",
 
 
 
