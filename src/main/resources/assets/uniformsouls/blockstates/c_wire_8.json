@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "uniformsouls:block/c_wire_8",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "uniformsouls:block/c_wire_8",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "uniformsouls:block/c_wire_8"
+    },
+    "facing=west": {
+      "model": "uniformsouls:block/c_wire_8",
+      "y": 90
+    }
+  }
+}

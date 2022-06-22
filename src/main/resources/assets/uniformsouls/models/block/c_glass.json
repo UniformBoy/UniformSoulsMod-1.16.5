@@ -1,0 +1,13 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "uniformsouls:blocks/c_glass",
+		"down": "uniformsouls:blocks/air",
+		"up": "uniformsouls:blocks/air",
+		"east": "uniformsouls:blocks/c_glass",
+		"west": "uniformsouls:blocks/c_glass",
+		"overlay": "uniformsouls:blocks/c_glass",
+		"north": "uniformsouls:blocks/c_glass",
+		"south": "uniformsouls:blocks/c_glass"
+	}
+}

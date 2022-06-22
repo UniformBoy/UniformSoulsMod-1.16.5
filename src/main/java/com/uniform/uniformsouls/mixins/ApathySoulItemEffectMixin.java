@@ -6,6 +6,7 @@ import com.uniform.uniformsouls.misc.BraverySoulTag;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -37,8 +38,12 @@ public abstract class ApathySoulItemEffectMixin extends LivingEntity {
                 Full = true;
             }
         }
-        if ((isSneaking() && Full)) {
-            this.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 600, 6, false, false, false));
+
+        if (Full) {
+            this.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 40, 0, false, false, false));
+            if (isSneaking()) {
+                this.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 600, 6, false, false, false));
+            }
         }
     }
 

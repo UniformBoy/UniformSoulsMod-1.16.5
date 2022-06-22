@@ -1,0 +1,14 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "uniformsouls:blocks/c_bridge_left_2",
+    "down": "uniformsouls:blocks/c_bridge_left_2",
+    "up": "uniformsouls:blocks/c_bridge_left_2",
+    "east": "uniformsouls:blocks/c_bridge_side",
+    "west": "uniformsouls:blocks/c_bridge_side",
+    "overlay": "uniformsouls:blocks/c_bridge_side",
+    "north": "uniformsouls:blocks/c_bridge_side",
+    "south": "uniformsouls:blocks/c_bridge_side"
+  }
+}
+}

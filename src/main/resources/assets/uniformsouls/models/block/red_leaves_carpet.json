@@ -1,0 +1,6 @@
+{
+	"parent": "block/carpet",
+	"textures": {
+		"wool": "uniformsouls:blocks/red_leaves"
+	}
+}

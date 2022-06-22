@@ -109,6 +109,12 @@ public class ModItems {
 
     public static final Item MOBILITY_MONSTER_SOUL_2 = new MobilityMonsterSoul2(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
+    public static final Item JUSTICE_MONSTER_SOUL = new JusticeMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item BRAVERY_MONSTER_SOUL = new BraveryMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item PATIENCE_MONSTER_SOUL = new PatienceMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
 
 
 
@@ -227,7 +233,73 @@ public class ModItems {
     public static final BlockItem GRAY_LEAVES = new BlockItem(ModBlocks.GRAY_LEAVES, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem LEAVES_1 = new BlockItem(ModBlocks.LEAVES_1, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem HOTLAND_CONVEYOR = new BlockItem(ModBlocks.HOTLAND_CONVEYOR, new Item.Settings().group(UniformSouls.BLOCKS));
-
+    public static final BlockItem TL_GROUND = new BlockItem(ModBlocks.TL_GROUND, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem TL_WALL_1 = new BlockItem(ModBlocks.TL_WALL_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem TL_WALL_2 = new BlockItem(ModBlocks.TL_WALL_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem NH_GROUND_2 = new BlockItem(ModBlocks.NH_GROUND_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem NH_GROUND_3 = new BlockItem(ModBlocks.NH_GROUND_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem BLACK_1 = new BlockItem(ModBlocks.BLACK_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_PIPE = new BlockItem(ModBlocks.C_PIPE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_PIPE_DAMAGED = new BlockItem(ModBlocks.C_PIPE_DAMAGED, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_PIPE_END = new BlockItem(ModBlocks.C_PIPE_END, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_PIPE_START = new BlockItem(ModBlocks.C_PIPE_START, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_PIPE_2 = new BlockItem(ModBlocks.C_PIPE_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_1 = new BlockItem(ModBlocks.C_WIRE_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_2 = new BlockItem(ModBlocks.C_WIRE_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_3 = new BlockItem(ModBlocks.C_WIRE_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_4 = new BlockItem(ModBlocks.C_WIRE_4, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WALL_1 = new BlockItem(ModBlocks.C_WALL_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WALL_2 = new BlockItem(ModBlocks.C_WALL_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WALL_3 = new BlockItem(ModBlocks.C_WALL_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WALL_4 = new BlockItem(ModBlocks.C_WALL_4, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_GROUND_1 = new BlockItem(ModBlocks.C_GROUND_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_VOID = new BlockItem(ModBlocks.C_VOID, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_TALL_GRASS = new BlockItem(ModBlocks.WATERFALL_TALL_GRASS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GRASS = new BlockItem(ModBlocks.WATERFALL_GRASS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_MUSHROOMS = new BlockItem(ModBlocks.WATERFALL_MUSHROOMS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_CRYSTALS_1 = new BlockItem(ModBlocks.WATERFALL_CRYSTALS_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_CRYSTALS_2 = new BlockItem(ModBlocks.WATERFALL_CRYSTALS_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_CRYSTALS_3 = new BlockItem(ModBlocks.WATERFALL_CRYSTALS_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_CRYSTALS_4 = new BlockItem(ModBlocks.WATERFALL_CRYSTALS_4, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GROUND_CRACKED = new BlockItem(ModBlocks.WATERFALL_GROUND_CRACKED, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GROUND_2 = new BlockItem(ModBlocks.WATERFALL_GROUND_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GROUND_3 = new BlockItem(ModBlocks.WATERFALL_GROUND_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GROUND_4 = new BlockItem(ModBlocks.WATERFALL_GROUND_4, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_GROUND_5 = new BlockItem(ModBlocks.WATERFALL_GROUND_5, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WATER = new BlockItem(ModBlocks.WATERFALL_WATER, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem ECHO_FLOWER = new BlockItem(ModBlocks.ECHO_FLOWER, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem SNOWDIN_FLOWER = new BlockItem(ModBlocks.SNOWDIN_FLOWER, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WOOD_SLAB = new BlockItem(ModBlocks.WATERFALL_WOOD_SLAB, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WOOD_WALL = new BlockItem(ModBlocks.WATERFALL_WOOD_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WOOD_SLAB_2 = new BlockItem(ModBlocks.WATERFALL_WOOD_SLAB_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem WATERFALL_WOOD_WALL_2 = new BlockItem(ModBlocks.WATERFALL_WOOD_WALL_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_PLATE = new BlockItem(ModBlocks.C_WIRE_PLATE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_GLASS = new BlockItem(ModBlocks.C_GLASS, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_GLASS_2 = new BlockItem(ModBlocks.C_GLASS_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_BRIDGE_LEFT = new BlockItem(ModBlocks.C_BRIDGE_LEFT, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_BRIDGE_RIGHT = new BlockItem(ModBlocks.C_BRIDGE_RIGHT, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem HOTLAND_WIRE = new BlockItem(ModBlocks.HOTLAND_WIRE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_5 = new BlockItem(ModBlocks.C_WIRE_5, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_6 = new BlockItem(ModBlocks.C_WIRE_6, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_PLATE_2 = new BlockItem(ModBlocks.C_WIRE_PLATE_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem ARCH_PURPLE_1 = new BlockItem(ModBlocks.ARCH_PURPLE_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem ARCH_PURPLE_2 = new BlockItem(ModBlocks.ARCH_PURPLE_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem ARCH_GRAY_1 = new BlockItem(ModBlocks.ARCH_GRAY_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem ARCH_GRAY_2 = new BlockItem(ModBlocks.ARCH_GRAY_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem LAB_WALL = new BlockItem(ModBlocks.LAB_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem LAB_GROUND = new BlockItem(ModBlocks.LAB_GROUND, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem LAB_GROUND_2 = new BlockItem(ModBlocks.LAB_GROUND_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem VINE = new BlockItem(ModBlocks.VINE, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem RED_LEAVES_CARPET = new BlockItem(ModBlocks.RED_LEAVES_CARPET, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem GREY_LEAVES_CARPET = new BlockItem(ModBlocks.GREY_LEAVES_CARPET, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem SPIKES_1 = new BlockItem(ModBlocks.SPIKES_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem SPIKES_2 = new BlockItem(ModBlocks.SPIKES_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_CARPET = new BlockItem(ModBlocks.C_CARPET, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_WALL = new BlockItem(ModBlocks.C_WIRE_WALL, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_7 = new BlockItem(ModBlocks.C_WIRE_7, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_WIRE_8 = new BlockItem(ModBlocks.C_WIRE_8, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_BRIDGE_LEFT_2 = new BlockItem(ModBlocks.C_BRIDGE_LEFT_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem C_BRIDGE_RIGHT_2 = new BlockItem(ModBlocks.C_BRIDGE_RIGHT_2, new Item.Settings().group(UniformSouls.BLOCKS));
 
 
 
@@ -286,6 +358,9 @@ public class ModItems {
     public static final ToolItem ENERGY_BEAM_1 = new EnergyBeam1(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem ANCIENT_TOME = new AncientTome(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem DIRTY_SHOES = new DirtyShoes(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem EMPTY_GUN = new EmptyGun(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem DURABLE_GLOVE = new DurableGlove(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem STOIC_KNIFE = new StoicKnife(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
 
 
 
@@ -434,6 +509,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "metalic_monster_soul"),METALIC_MONSTER_SOUL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "mobility_monster_soul"),MOBILITY_MONSTER_SOUL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "mobility_monster_soul_2"),MOBILITY_MONSTER_SOUL_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "justice_monster_soul"),JUSTICE_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "bravery_monster_soul"),BRAVERY_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "patience_monster_soul"),PATIENCE_MONSTER_SOUL);
 
 
 
@@ -553,6 +631,75 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "gray_leaves"), GRAY_LEAVES);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "leaves_1"), LEAVES_1);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_conveyor"), HOTLAND_CONVEYOR);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "tl_ground"), TL_GROUND);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "tl_wall_1"), TL_WALL_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "tl_wall_2"), TL_WALL_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "nh_ground_2"), NH_GROUND_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "nh_ground_3"), NH_GROUND_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "black_1"), BLACK_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_pipe"), C_PIPE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_pipe_damaged"), C_PIPE_DAMAGED);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_pipe_end"), C_PIPE_END);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_pipe_start"), C_PIPE_START);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_pipe_2"), C_PIPE_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_1"), C_WIRE_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_2"), C_WIRE_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_3"), C_WIRE_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_4"), C_WIRE_4);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wall_1"), C_WALL_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wall_2"), C_WALL_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wall_3"), C_WALL_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wall_4"), C_WALL_4);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_ground_1"), C_GROUND_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_void"), C_VOID);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_tall_grass"), WATERFALL_TALL_GRASS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_grass"), WATERFALL_GRASS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_mushrooms"), WATERFALL_MUSHROOMS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_crystals_1"), WATERFALL_CRYSTALS_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_crystals_2"), WATERFALL_CRYSTALS_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_crystals_3"), WATERFALL_CRYSTALS_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_crystals_4"), WATERFALL_CRYSTALS_4);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_ground_cracked"), WATERFALL_GROUND_CRACKED);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_ground_2"), WATERFALL_GROUND_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_ground_3"), WATERFALL_GROUND_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_ground_4"), WATERFALL_GROUND_4);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_ground_5"), WATERFALL_GROUND_5);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_water"), WATERFALL_WATER);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "echo_flower"), ECHO_FLOWER);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "snowdin_flower"), SNOWDIN_FLOWER);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_wood_slab"), WATERFALL_WOOD_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_wood_wall"), WATERFALL_WOOD_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_wood_slab_2"), WATERFALL_WOOD_SLAB_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "waterfall_wood_wall_2"), WATERFALL_WOOD_WALL_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_plate"), C_WIRE_PLATE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_glass"), C_GLASS);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_glass_2"), C_GLASS_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_bridge_left"), C_BRIDGE_LEFT);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_bridge_right"), C_BRIDGE_RIGHT);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hotland_wire"), HOTLAND_WIRE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_5"), C_WIRE_5);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_6"), C_WIRE_6);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_plate_2"), C_WIRE_PLATE_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "arch_purple_1"),ARCH_PURPLE_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "arch_purple_2"), ARCH_PURPLE_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "arch_gray_1"), ARCH_GRAY_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "arch_gray_2"), ARCH_GRAY_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "lab_wall"), LAB_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "lab_ground"), LAB_GROUND);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "lab_ground_2"), LAB_GROUND_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "vine"), VINE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "red_leaves_carpet"), RED_LEAVES_CARPET);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "gray_leaves_carpet"), GREY_LEAVES_CARPET);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "spikes_1"), SPIKES_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "spikes_2"), SPIKES_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_carpet"), C_CARPET);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_wall"), C_WIRE_WALL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_7"), C_WIRE_7);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_8"), C_WIRE_8);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_bridge_left_2"), C_BRIDGE_LEFT_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_bridge_right_2"), C_BRIDGE_RIGHT_2);
+
+
 
 
 
@@ -610,6 +757,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "energy_beam_1"), ENERGY_BEAM_1);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "ancient_tome"), ANCIENT_TOME);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "dirty_shoes"), DIRTY_SHOES);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_gun"), EMPTY_GUN);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "durable_glove"), DURABLE_GLOVE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "stoic_knife"), STOIC_KNIFE);
 
 
 

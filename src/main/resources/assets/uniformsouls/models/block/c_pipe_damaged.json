@@ -1,0 +1,13 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "uniformsouls:blocks/c_redpipe_side_damaged",
+		"down": "uniformsouls:blocks/c_redpipe_side_damaged",
+		"up": "uniformsouls:blocks/c_ground_1_top",
+		"east": "uniformsouls:blocks/c_redpipe_side_damaged",
+		"west": "uniformsouls:blocks/c_redpipe_side_damaged",
+		"overlay": "uniformsouls:blocks/c_redpipe_side_damaged",
+		"north": "uniformsouls:blocks/c_redpipe_side_damaged",
+		"south": "uniformsouls:blocks/c_redpipe_side_damaged"
+	}
+}

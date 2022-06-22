@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "uniformsouls:blocks/c_bridge_right",
+    "top": "uniformsouls:blocks/c_bridge_right",
+    "side": "uniformsouls:blocks/c_bridge_side"
+  }
+}

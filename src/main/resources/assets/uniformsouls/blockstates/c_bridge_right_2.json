@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "type=bottom,facing=east": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab",
+      "y": 270
+    },
+    "type=bottom,facing=north": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab",
+      "y": 180
+    },
+    "type=bottom,facing=south": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab"
+    },
+    "type=bottom,facing=west": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab",
+      "y": 90
+    },
+    "type=double,facing=east": {
+      "model": "uniformsouls:block/c_bridge_right_2",
+      "y": 270
+    },
+    "type=double,facing=north": {
+      "model": "uniformsouls:block/c_bridge_right_2",
+      "y": 180
+    },
+    "type=double,facing=south": {
+      "model": "uniformsouls:block/c_bridge_right_2"
+    },
+    "type=double,facing=west": {
+      "model": "uniformsouls:block/c_bridge_right_2",
+      "y": 90
+    },
+    "type=top,facing=east": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab_top",
+      "y": 270
+    },
+    "type=top,facing=north": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab_top",
+      "y": 180
+    },
+    "type=top,facing=south": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab_top"
+    },
+    "type=top,facing=west": {
+      "model": "uniformsouls:block/c_bridge_right_2_slab_top",
+      "y": 90
+    }
+  }
+}

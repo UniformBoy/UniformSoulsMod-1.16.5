@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "uniformsouls:block/spikes_1"
+    },
+    "powered=true": {
+      "model": "uniformsouls:block/spikes_1_down"
+    }
+  }
+}

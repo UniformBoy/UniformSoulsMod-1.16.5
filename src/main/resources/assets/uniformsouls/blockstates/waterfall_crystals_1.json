@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "uniformsouls:block/waterfall_crystals_1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "uniformsouls:block/waterfall_crystals_1"
+    },
+    "facing=south": {
+      "model": "uniformsouls:block/waterfall_crystals_1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "uniformsouls:block/waterfall_crystals_1",
+      "y": 270
+    }
+  }
+}

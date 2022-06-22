@@ -77,12 +77,22 @@
     "uniformsouls:ghost_monster_soul",
     "uniformsouls:defense_monster_soul",
     "uniformsouls:metalic_monster_soul",
+    "uniformsouls:mobility_monster_soul",
+    "uniformsouls:mobility_monster_soul_2",
+    "uniformsouls:justice_monster_soul",
+    "uniformsouls:bravery_monster_soul",
+    "uniformsouls:patience_monster_soul",
     "uniformsouls:skeleton_bone_1",
     "uniformsouls:spear_1",
     "uniformsouls:frost_bomb_1",
     "uniformsouls:flame_staff_1",
     "uniformsouls:ghost_weapon_1",
     "uniformsouls:monster_shield_1",
-    "uniformsouls:energy_beam_1"
+    "uniformsouls:energy_beam_1",
+    "uniformsouls:ancient_tome",
+    "uniformsouls:dirty_shoes",
+    "uniformsouls:empty_gun",
+    "uniformsouls:durable_glove",
+    "uniformsouls:stoic_knife"
   ]
 }

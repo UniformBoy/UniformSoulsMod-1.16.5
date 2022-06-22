@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "uniformsouls:block/arch_gray_1_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "uniformsouls:block/arch_gray_1"
+    },
+    "axis=z": {
+      "model": "uniformsouls:block/arch_gray_1_horizontal",
+      "x": 90
+    }
+  }
+}

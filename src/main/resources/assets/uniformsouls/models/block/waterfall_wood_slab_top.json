@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "uniformsouls:blocks/waterfall_wood",
+    "top": "uniformsouls:blocks/waterfall_wood",
+    "side": "uniformsouls:blocks/waterfall_wood"
+  }
+}

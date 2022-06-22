@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "uniformsouls:blocks/echo_flower"
+	}
+}

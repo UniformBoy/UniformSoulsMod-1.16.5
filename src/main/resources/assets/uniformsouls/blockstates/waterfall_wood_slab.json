@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "uniformsouls:block/waterfall_wood_slab"
+    },
+    "type=double": {
+      "model": "uniformsouls:block/waterfall_wood"
+    },
+    "type=top": {
+      "model": "uniformsouls:block/waterfall_wood_slab_top"
+    }
+  }
+}
