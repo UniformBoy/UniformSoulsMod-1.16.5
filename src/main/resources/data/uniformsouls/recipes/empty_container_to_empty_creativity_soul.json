@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CS",
+    "EIB",
+    "DAL"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:grindstone"
+    },
+    "C": {
+      "item": "minecraft:cartography_table"
+    },
+    "S": {
+      "item": "minecraft:smithing_table"
+    },
+    "E": {
+      "item": "minecraft:enchanting_table"
+    },
+    "I": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "B": {
+      "item": "minecraft:brewing_stand"
+    },
+    "D": {
+      "item": "minecraft:cauldron"
+    },
+    "A": {
+      "item": "minecraft:anvil"
+    },
+    "L": {
+      "item": "minecraft:stonecutter"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_creativity_soul",
+    "count": 1
+  }
+}

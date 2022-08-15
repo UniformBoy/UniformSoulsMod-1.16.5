@@ -1094,7 +1094,7 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.GRAVEL));
 
     public static final Block WATERFALL_WATER = new Block(FabricBlockSettings
-            .of(Material.WATER)
+            .of(Material.STONE)
             .breakByTool(FabricToolTags.PICKAXES, 0)
             .requiresTool()
             .strength(3.0F, 45.0F)
@@ -1330,6 +1330,58 @@ public class ModBlocks {
             .strength(3.0F, 45.0F)
             .sounds(BlockSoundGroup.METAL));
 
+    public static final Block VENT_FAN = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 2)
+            .requiresTool()
+            .nonOpaque()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block TV = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 2)
+            .requiresTool()
+            .nonOpaque()
+            .strength(3.0F, 45.0F)
+            .sounds(BlockSoundGroup.METAL));
+
+    public static final Block BUTTERCUP_1 = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakInstantly()
+            .nonOpaque()
+            .noCollision()
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block BUTTERCUP_2 = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakInstantly()
+            .nonOpaque()
+            .noCollision()
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block BUTTERCUP_3 = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakInstantly()
+            .nonOpaque()
+            .noCollision()
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block TL_BUTTERCUP = new GlazedTerracottaBlock(FabricBlockSettings
+            .of(Material.SOLID_ORGANIC)
+            .breakInstantly()
+            .nonOpaque()
+            .noCollision()
+            .sounds(BlockSoundGroup.GRASS));
+
+    public static final Block VINE_GRAY = new VineBlock(AbstractBlock.Settings
+            .of(Material.REPLACEABLE_PLANT)
+            .noCollision()
+            .nonOpaque()
+            .ticksRandomly()
+            .strength(0.2F)
+            .sounds(BlockSoundGroup.VINE));
+
 
 
 
@@ -1512,6 +1564,13 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "c_wire_8"), C_WIRE_8);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "c_bridge_left_2"), C_BRIDGE_LEFT_2);
         Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "c_bridge_right_2"), C_BRIDGE_RIGHT_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "vent_fan"), VENT_FAN);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "tv"), TV);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "buttercup_1"), BUTTERCUP_1);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "buttercup_2"), BUTTERCUP_2);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "buttercup_3"), BUTTERCUP_3);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "tl_buttercup"), TL_BUTTERCUP);
+        Registry.register(Registry.BLOCK, new Identifier(UniformSouls.MOD_ID, "vine_gray"), VINE_GRAY);
 
 
 

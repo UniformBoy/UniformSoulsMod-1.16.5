@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "uniformsouls:items/hate_vile"
+  }
+
+}

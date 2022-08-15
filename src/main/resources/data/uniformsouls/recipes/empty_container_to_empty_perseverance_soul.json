@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#DI",
+    "NLT",
+    "HXA"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_helmet"
+    },
+    "D": {
+      "item": "minecraft:diamond_helmet"
+    },
+    "I": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "N": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "L": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "T": {
+      "item": "minecraft:diamond_boots"
+    },
+    "H": {
+      "item": "minecraft:iron_leggings"
+    },
+    "X": {
+      "item": "minecraft:diamond_leggings"
+    },
+    "A": {
+      "item": "minecraft:iron_boots"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_perseverance_soul",
+    "count": 1
+  }
+}

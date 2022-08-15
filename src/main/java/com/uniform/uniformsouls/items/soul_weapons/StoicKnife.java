@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
@@ -30,6 +31,10 @@ public class StoicKnife extends SwordItem {
         } else {
             ItemStack itemStack = new ItemStack(ModItems.PATIENCE_MONSTER_SOUL);
             ItemStack itemStack2 = playerEntity.getStackInHand(hand);
+            NbtCompound nbtCompound = itemStack2.getTag();
+            if (nbtCompound != null) {
+                itemStack.setTag(nbtCompound.copy());
+            }
             itemStack2.decrement(1);
             playerEntity.getItemCooldownManager().set(this, 50);
 

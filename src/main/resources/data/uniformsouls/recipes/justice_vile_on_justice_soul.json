@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_justice_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:justice_vile"
+  },
+  "result": {
+    "item": "uniformsouls:justice_soul"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#F#",
+    "SIE",
+    "#G#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:feather"
+    },
+    "F": {
+      "item": "minecraft:firework_rocket"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "I": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "E": {
+      "item": "minecraft:sugar_cane"
+    },
+    "G": {
+      "item": "minecraft:golden_pickaxe"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_integrity_soul",
+    "count": 1
+  }
+}

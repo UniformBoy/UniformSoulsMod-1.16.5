@@ -10,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
@@ -57,6 +58,10 @@ public class JusticeSoul extends Item {
         else {
                 ItemStack itemStack = new ItemStack(ModItems.JUSTICE_PISTOL);
                 ItemStack itemStack2 = playerEntity.getStackInHand(hand);
+            NbtCompound nbtCompound = itemStack2.getTag();
+            if (nbtCompound != null) {
+                itemStack.setTag(nbtCompound.copy());
+            }
                 itemStack2.decrement(1);
                 playerEntity.getItemCooldownManager().set(this, 50);
 

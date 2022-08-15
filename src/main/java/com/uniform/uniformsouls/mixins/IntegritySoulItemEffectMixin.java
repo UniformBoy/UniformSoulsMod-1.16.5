@@ -6,6 +6,7 @@ import com.uniform.uniformsouls.misc.IntegritySoulTag;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -37,8 +38,11 @@ public abstract class IntegritySoulItemEffectMixin extends LivingEntity {
                 Full = true;
             }
         }
-        if ((isSneaking() && Full)) {
-            this.addStatusEffect(new StatusEffectInstance(UniformSouls.INTEGRITYEFFECT1, 600, 4, false, false, false));
+        if (Full) {
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.INTEGRITYEFFECT1, 40, 1, false, false, false));
+            if (isSneaking()) {
+                this.addStatusEffect(new StatusEffectInstance(UniformSouls.INTEGRITYEFFECT1, 600, 4, false, false, false));
+            }
         }
     }
 

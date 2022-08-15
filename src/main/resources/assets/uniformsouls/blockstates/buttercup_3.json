@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "uniformsouls:block/buttercup_3",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "uniformsouls:block/buttercup_3",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "uniformsouls:block/buttercup_3"
+    },
+    "facing=west": {
+      "model": "uniformsouls:block/buttercup_3",
+      "y": 90
+    }
+  }
+}

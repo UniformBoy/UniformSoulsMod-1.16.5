@@ -45,37 +45,40 @@ public abstract class KindnessSoulItemEffectMixin extends LivingEntity {
                 Full = true;
             }
         }
-        if (isSneaking() && Full && !this.world.isClient) {
-            List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand(4.0D, 2.0D, 4.0D));
-            AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(this.world, this.getX(), this.getY(), this.getZ());
-            if (this instanceof LivingEntity) {
-                areaEffectCloudEntity.setOwner((LivingEntity)this);
-            }
+        if (Full) {
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.KINDNESSEFFECT1, 40, 1, false, false, false));
 
-            areaEffectCloudEntity.setParticleType(UniformSouls.SOUL_KINDNESS);
-            areaEffectCloudEntity.setRadius(1.5F);
-            areaEffectCloudEntity.setDuration(15);
-            areaEffectCloudEntity.setRadiusGrowth((0.0F - areaEffectCloudEntity.getRadius()) / (float)areaEffectCloudEntity.getDuration());
-            areaEffectCloudEntity.addEffect(new StatusEffectInstance(UniformSouls.KINDNESSEFFECT2, 20, 0));
-            if (!list.isEmpty()) {
-                Iterator var5 = list.iterator();
+            if (isSneaking() && !this.world.isClient) {
+                List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox().expand(4.0D, 2.0D, 4.0D));
+                AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(this.world, this.getX(), this.getY(), this.getZ());
+                if (this instanceof LivingEntity) {
+                    areaEffectCloudEntity.setOwner((LivingEntity) this);
+                }
+
+                areaEffectCloudEntity.setParticleType(UniformSouls.SOUL_KINDNESS);
+                areaEffectCloudEntity.setRadius(1.5F);
+                areaEffectCloudEntity.setDuration(15);
+                areaEffectCloudEntity.setRadiusGrowth((0.0F - areaEffectCloudEntity.getRadius()) / (float) areaEffectCloudEntity.getDuration());
+                areaEffectCloudEntity.addEffect(new StatusEffectInstance(UniformSouls.KINDNESSEFFECT2, 20, 0));
+                if (!list.isEmpty()) {
+                    Iterator var5 = list.iterator();
 
 
-
-                while(var5.hasNext()) {
-                    LivingEntity livingEntity = (LivingEntity)var5.next();
-                    double d = this.squaredDistanceTo(livingEntity);
-                    if (d < 16.0D) {
-                        areaEffectCloudEntity.setPosition(livingEntity.getX(), livingEntity.getY(), livingEntity.getZ());
-                        break;
+                    while (var5.hasNext()) {
+                        LivingEntity livingEntity = (LivingEntity) var5.next();
+                        double d = this.squaredDistanceTo(livingEntity);
+                        if (d < 16.0D) {
+                            areaEffectCloudEntity.setPosition(livingEntity.getX(), livingEntity.getY(), livingEntity.getZ());
+                            break;
+                        }
                     }
                 }
-            }
 
-            this.world.spawnEntity(areaEffectCloudEntity);
+                this.world.spawnEntity(areaEffectCloudEntity);
 
-            if (areaEffectCloudEntity.getDuration() <= 0) {
-                this.remove();
+                if (areaEffectCloudEntity.getDuration() <= 0) {
+                    this.remove();
+                }
             }
         }
     }

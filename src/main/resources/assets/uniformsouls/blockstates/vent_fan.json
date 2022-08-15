@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "uniformsouls:block/vent_fan",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "uniformsouls:block/vent_fan",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "uniformsouls:block/vent_fan"
+    },
+    "facing=west": {
+      "model": "uniformsouls:block/vent_fan",
+      "y": 90
+    }
+  }
+}

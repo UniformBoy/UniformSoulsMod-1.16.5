@@ -38,8 +38,11 @@ public abstract class DeterminationSoulItemEffectMixin extends LivingEntity {
                 Full = true;
             }
         }
-        if ((isSneaking() && Full)) {
-            this.addStatusEffect(new StatusEffectInstance(UniformSouls.DETERMINATIONEFFECT1, 600, 4, false, false, false));
+        if (Full) {
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.DETERMINATIONEFFECT1, 40, 1, false, false, false));
+            if (isSneaking()) {
+                this.addStatusEffect(new StatusEffectInstance(UniformSouls.DETERMINATIONEFFECT1, 600, 4, false, false, false));
+            }
         }
     }
 

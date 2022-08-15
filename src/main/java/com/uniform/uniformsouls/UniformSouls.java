@@ -8,6 +8,7 @@ import com.uniform.uniformsouls.entity.misc.UniPlayerEntity;
 import com.uniform.uniformsouls.entity.mob.*;
 import com.uniform.uniformsouls.entity.passive.*;
 import com.uniform.uniformsouls.entity.projectile.*;
+import com.uniform.uniformsouls.entity.rideable.UniCartDefault;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import com.uniform.uniformsouls.registry.ModItems;
 import com.uniform.uniformsouls.registry.SpawnInit;
@@ -291,6 +292,7 @@ public class UniformSouls implements ModInitializer{
     public static final StatusEffect DETERMINATIONEFFECT1 = new Determination1Effect();
     public static final StatusEffect FEAREFFECT1 = new Fear1Effect();
     public static final StatusEffect CHILLEDEFFECT1 = new Chilled1Effect();
+    public static final StatusEffect CREATIVITYEFFECT1 = new Creativity1Effect();
 
 
 
@@ -353,6 +355,18 @@ public class UniformSouls implements ModInitializer{
 
     public static final Identifier ANOTHER_MEDIUM_ID = new Identifier("uniformsouls:another_medium");
     public static SoundEvent ANOTHER_MEDIUM_EVENT = new SoundEvent(ANOTHER_MEDIUM_ID);
+
+    public static final Identifier CORE_ID = new Identifier("uniformsouls:core");
+
+    public static SoundEvent CORE_EVENT = new SoundEvent(CORE_ID);
+
+    public static final Identifier HEART_ACHE_ID = new Identifier("uniformsouls:heart_ache");
+
+    public static SoundEvent HEART_ACHE_EVENT = new SoundEvent(HEART_ACHE_ID);
+
+    public static final Identifier OVERWRITE_XCHARA_ID = new Identifier("uniformsouls:overwrite_xchara");
+
+    public static SoundEvent OVERWRITE_XCHARA_EVENT = new SoundEvent(OVERWRITE_XCHARA_ID);
 
 
 
@@ -677,6 +691,11 @@ public class UniformSouls implements ModInitializer{
 
 
 
+    //Rideable Entity
+    public static final EntityType<UniCartDefault> UNI_CART_DEFAULT = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier("uniformsouls", "unicartdefault"),
+            FabricEntityTypeBuilder.<UniCartDefault>create(SpawnGroup.MISC, UniCartDefault::new).dimensions(EntityDimensions.fixed(0.98F, 0.7F)).build());
 
 
 
@@ -999,6 +1018,7 @@ public class UniformSouls implements ModInitializer{
         Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "determination1"), DETERMINATIONEFFECT1);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "fear1"), FEAREFFECT1);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "chilled1"), CHILLEDEFFECT1);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(UniformSouls.MOD_ID, "creativity1"), CREATIVITYEFFECT1);
 
 
 
@@ -1025,6 +1045,9 @@ public class UniformSouls implements ModInitializer{
         Registry.register(Registry.SOUND_EVENT, FRISK_TRUE_LOVE_NITRO_ID, FRISK_TRUE_LOVE_NITRO_EVENT);
         Registry.register(Registry.SOUND_EVENT, UNDERTALE_EXTENDED_ID, UNDERTALE_EXTENDED_EVENT);
         Registry.register(Registry.SOUND_EVENT, ANOTHER_MEDIUM_ID, ANOTHER_MEDIUM_EVENT);
+        Registry.register(Registry.SOUND_EVENT, CORE_ID, CORE_EVENT);
+        Registry.register(Registry.SOUND_EVENT, HEART_ACHE_ID, HEART_ACHE_EVENT);
+        Registry.register(Registry.SOUND_EVENT, OVERWRITE_XCHARA_ID, OVERWRITE_XCHARA_EVENT);
 
 
 

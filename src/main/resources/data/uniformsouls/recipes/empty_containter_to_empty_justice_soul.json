@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#SI",
+    "GDB",
+    "MQE"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wooden_sword"
+    },
+    "S": {
+      "item": "minecraft:stone_sword"
+    },
+    "I": {
+      "item": "minecraft:iron_sword"
+    },
+    "G": {
+      "item": "minecraft:golden_sword"
+    },
+    "D": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "B": {
+      "item": "minecraft:diamond_sword"
+    },
+    "M": {
+      "item": "minecraft:iron_axe"
+    },
+    "Q": {
+      "item": "minecraft:shield"
+    },
+    "E": {
+      "item": "minecraft:bow"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_justice_soul",
+    "count": 1
+  }
+}

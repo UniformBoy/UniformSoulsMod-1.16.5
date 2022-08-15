@@ -38,8 +38,11 @@ public abstract class BraverySoulItemEffectMixin extends LivingEntity {
                 Full = true;
             }
         }
-        if ((isSneaking() && Full)) {
-            this.addStatusEffect(new StatusEffectInstance(UniformSouls.BRAVERYEFFECT1, 600, 4, false, false, false));
+        if (Full) {
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.BRAVERYEFFECT1, 40, 1, false, false, false));
+            if (isSneaking()) {
+                this.addStatusEffect(new StatusEffectInstance(UniformSouls.BRAVERYEFFECT1, 600, 4, false, false, false));
+            }
         }
     }
 

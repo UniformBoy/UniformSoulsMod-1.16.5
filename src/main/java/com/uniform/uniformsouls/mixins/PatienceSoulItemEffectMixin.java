@@ -1,5 +1,6 @@
 package com.uniform.uniformsouls.mixins;
 
+import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.misc.DragonTag;
 import com.uniform.uniformsouls.misc.PatienceSoulTag;
 import net.minecraft.entity.EntityType;
@@ -37,11 +38,13 @@ public abstract class PatienceSoulItemEffectMixin extends LivingEntity {
                 Full = true;
             }
         }
-        if ((isSneaking() && Full)) {
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 5, 0, false, false, false));
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 5, 0, false, false, false));
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 5, 0, false, false, false));
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 5, 0, false, false, false));
+        if (Full) {
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.PATIENCEEFFECT1, 40, 1, false, false, false));
+            if (isSneaking()) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 5, 0, false, false, false));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 5, 0, false, false, false));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 5, 0, false, false, false));
+            }
         }
     }
 

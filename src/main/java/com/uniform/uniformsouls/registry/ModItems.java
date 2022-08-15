@@ -1,5 +1,6 @@
 package com.uniform.uniformsouls.registry;
 
+import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import com.uniform.uniformsouls.UniformSouls;
 import com.uniform.uniformsouls.items.*;
 import com.uniform.uniformsouls.items.soul_weapons.*;
@@ -17,8 +18,6 @@ public class ModItems {
 
     //Soul Items
 
-    //Block Placement
-    //public static final Item JUSTICE_SOUL = new JusticeSoul(ModBlocks.CORRUPTION, new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
     public static final Item JUSTICE_SOUL = new JusticeSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
     public static final Item KINDNESS_SOUL = new KindnessSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
@@ -115,6 +114,63 @@ public class ModItems {
 
     public static final Item PATIENCE_MONSTER_SOUL = new PatienceMonsterSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
+    public static final Item CREATIVITY_SOUL = new CreativitySoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item TRAITLESS_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_JUSTICE_SOUL = new EmptyJusticeSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_KINDNESS_SOUL = new EmptyKindnessSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_PERSEVERANCE_SOUL = new EmptyPerseveranceSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_BRAVERY_SOUL = new EmptyBraverySoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_PATIENCE_SOUL = new EmptyPatienceSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_INTEGRITY_SOUL = new EmptyIntegritySoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_CREATIVITY_SOUL = new EmptyCreativitySoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item EMPTY_FEAR_SOUL = new EmptyFearSoul(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_JUSTICE_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_KINDNESS_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_PERSEVERANCE_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_BRAVERY_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_PATIENCE_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_INTEGRITY_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_DETERMINATION_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_FEAR_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item SHATTERED_CREATIVITY_SOUL = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+
+
+    //Soul Viles
+    public static final Item JUSTICE_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item KINDNESS_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item BRAVERY_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item PERSEVERANCE_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item PATIENCE_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item INTEGRITY_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item DETERMINATION_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item SMALL_DETERMINATION_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item FEAR_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item CREATIVITY_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item HATE_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item AGONY_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item LUST_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+    public static final Item CONTEMPT_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
+
+    public static final Item ANIMOSITY_VILE = new Item(new FabricItemSettings().group(UniformSouls.SOULS).maxCount(1).fireproof());
 
 
 
@@ -300,6 +356,13 @@ public class ModItems {
     public static final BlockItem C_WIRE_8 = new BlockItem(ModBlocks.C_WIRE_8, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem C_BRIDGE_LEFT_2 = new BlockItem(ModBlocks.C_BRIDGE_LEFT_2, new Item.Settings().group(UniformSouls.BLOCKS));
     public static final BlockItem C_BRIDGE_RIGHT_2 = new BlockItem(ModBlocks.C_BRIDGE_RIGHT_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem VENT_FAN = new BlockItem(ModBlocks.VENT_FAN, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem TV = new BlockItem(ModBlocks.TV, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem BUTTERCUP_1 = new BlockItem(ModBlocks.BUTTERCUP_1, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem BUTTERCUP_2 = new BlockItem(ModBlocks.BUTTERCUP_2, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem BUTTERCUP_3 = new BlockItem(ModBlocks.BUTTERCUP_3, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem TL_BUTTERCUP = new BlockItem(ModBlocks.TL_BUTTERCUP, new Item.Settings().group(UniformSouls.BLOCKS));
+    public static final BlockItem VINE_GRAY = new BlockItem(ModBlocks.VINE_GRAY, new Item.Settings().group(UniformSouls.BLOCKS));
 
 
 
@@ -330,7 +393,7 @@ public class ModItems {
     public static final ToolItem BRAVERY_TOUGH_GLOVE = new BraveryToughGlove(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem SANS_GASTER_BLASTER = new SansGasterBlaster(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem ASRIEL_CHAOS_SABER = new AsrielChaosSaber(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
-    public static final ToolItem DETERMINATION_KNIFE = new DeterminationKnife(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final ToolItem DETERMINATION_KNIFE = new DeterminationKnife(DefaultSoulToolMaterial.INSTANCE, 14, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem HATE_SWORD = new DeterminationSword(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem HATE_SCYTHE = new FearScythe(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem HATE_PISTOL = new JusticePistol(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
@@ -361,6 +424,14 @@ public class ModItems {
     public static final ToolItem EMPTY_GUN = new EmptyGun(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem DURABLE_GLOVE = new DurableGlove(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
     public static final ToolItem STOIC_KNIFE = new StoicKnife(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new Item.Settings().group(UniformSouls.COMBAT).fireproof());
+    public static final Item CREATIVITY_BATTLE_AXE = new CreativityBattleAxe(DefaultSoulToolMaterial.INSTANCE, 9, -2.4F, new FabricItemSettings().maxDamage(-1).group(UniformSouls.SOULS).fireproof(), -1, 0, Items.STICK);
+
+
+
+    //Soul Shields
+    // FabricShieldItem(settings.maxDamage(durability), cooldownTicks, enchantability, repairItem)
+    public static final Item DETERMINATION_SHIELD = new FabricShieldItem(new FabricItemSettings().maxDamage(-1).group(UniformSouls.SOULS).fireproof(), -1, 0, Items.STICK);
+    public static final Item FEAR_SHIELD = new FabricShieldItem(new FabricItemSettings().maxDamage(-1).group(UniformSouls.SOULS).fireproof(), -1, 0, Items.STICK);
 
 
 
@@ -420,6 +491,12 @@ public class ModItems {
     public static final Item MUSIC_DISC_WATERFALL_EXTENDED = new MusicDisc(6, UniformSouls.WATERFALL_EXTENDED_EVENT, new Item.Settings().group(UniformSouls.MUSIC).maxCount(1));
     public static final Item MUSIC_DISC_UNDERTALE = new MusicDisc(7, UniformSouls.UNDERTALE_EXTENDED_EVENT, new Item.Settings().group(UniformSouls.MUSIC).maxCount(1));
     public static final Item MUSIC_DISC_ANOTHER_MEDIUM = new MusicDisc(8, UniformSouls.ANOTHER_MEDIUM_EVENT, new Item.Settings().group(UniformSouls.MUSIC).maxCount(1));
+
+    public static final Item MUSIC_DISC_CORE = new MusicDisc(9, UniformSouls.CORE_EVENT, new Item.Settings().group(UniformSouls.MUSIC).maxCount(1));
+
+    public static final Item MUSIC_DISC_HEART_ACHE = new MusicDisc(10, UniformSouls.HEART_ACHE_EVENT, new Item.Settings().group(UniformSouls.MUSIC).maxCount(1));
+
+    public static final Item MUSIC_DISC_OVERWRITE_XCHARA = new MusicDisc(11, UniformSouls.OVERWRITE_XCHARA_EVENT, new Item.Settings().group(UniformSouls.MUSIC).maxCount(1));
 
 
 
@@ -512,6 +589,44 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "justice_monster_soul"),JUSTICE_MONSTER_SOUL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "bravery_monster_soul"),BRAVERY_MONSTER_SOUL);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "patience_monster_soul"),PATIENCE_MONSTER_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "creativity_soul"),CREATIVITY_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "traitless_soul"),TRAITLESS_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_justice_soul"), EMPTY_JUSTICE_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_kindness_soul"), EMPTY_KINDNESS_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_patience_soul"), EMPTY_PATIENCE_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_perseverance_soul"), EMPTY_PERSEVERANCE_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_bravery_soul"), EMPTY_BRAVERY_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_integrity_soul"), EMPTY_INTEGRITY_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_creativity_soul"), EMPTY_CREATIVITY_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_fear_soul"), EMPTY_FEAR_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_justice_soul"), SHATTERED_JUSTICE_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_kindness_soul"), SHATTERED_KINDNESS_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_patience_soul"), SHATTERED_PATIENCE_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_perseverance_soul"), SHATTERED_PERSEVERANCE_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_bravery_soul"), SHATTERED_BRAVERY_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_integrity_soul"), SHATTERED_INTEGRITY_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_determination_soul"), SHATTERED_DETERMINATION_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_fear_soul"), SHATTERED_FEAR_SOUL);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "shattered_creativity_soul"), SHATTERED_CREATIVITY_SOUL);
+
+
+
+        //Soul Viles
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "justice_vile"), JUSTICE_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "kindness_vile"), KINDNESS_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "bravery_vile"), BRAVERY_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "perseverance_vile"), PERSEVERANCE_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "patience_vile"), PATIENCE_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "integrity_vile"), INTEGRITY_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "determination_vile"), DETERMINATION_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "small_determination_vile"), SMALL_DETERMINATION_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "fear_vile"), FEAR_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "creativity_vile"), CREATIVITY_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "hate_vile"), HATE_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "agony_vile"), AGONY_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "lust_vile"), LUST_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "contempt_vile"), CONTEMPT_VILE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "animosity_vile"), ANIMOSITY_VILE);
 
 
 
@@ -698,6 +813,13 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_wire_8"), C_WIRE_8);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_bridge_left_2"), C_BRIDGE_LEFT_2);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "c_bridge_right_2"), C_BRIDGE_RIGHT_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "vent_fan"), VENT_FAN);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "tv"), TV);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "buttercup_1"), BUTTERCUP_1);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "buttercup_2"), BUTTERCUP_2);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "buttercup_3"), BUTTERCUP_3);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "tl_buttercup"), TL_BUTTERCUP);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "vine_gray"), VINE_GRAY);
 
 
 
@@ -760,7 +882,14 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "empty_gun"), EMPTY_GUN);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "durable_glove"), DURABLE_GLOVE);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "stoic_knife"), STOIC_KNIFE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "creativity_battle_axe"), CREATIVITY_BATTLE_AXE);
 
+
+
+
+        //Soul Shields
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "determination_shield"), DETERMINATION_SHIELD);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "fear_shield"), FEAR_SHIELD);
 
 
 
@@ -817,6 +946,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "music_disc_waterfall_extended"), MUSIC_DISC_WATERFALL_EXTENDED);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "music_disc_undertale"), MUSIC_DISC_UNDERTALE);
         Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "music_disc_another_medium"), MUSIC_DISC_ANOTHER_MEDIUM);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "music_disc_core"), MUSIC_DISC_CORE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "music_disc_heart_ache"), MUSIC_DISC_HEART_ACHE);
+        Registry.register(Registry.ITEM, new Identifier(UniformSouls.MOD_ID, "music_disc_overwrite_xchara"), MUSIC_DISC_OVERWRITE_XCHARA);
 
 
 

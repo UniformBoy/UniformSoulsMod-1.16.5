@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_patience_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:patience_vile"
+  },
+  "result": {
+    "item": "uniformsouls:patience_soul"
+  }
+}

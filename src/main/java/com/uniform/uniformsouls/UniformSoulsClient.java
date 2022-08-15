@@ -5,6 +5,7 @@ import com.uniform.uniformsouls.cardinal.SoulMagicIntComponent;
 import com.uniform.uniformsouls.enchantments.PureEnchantment;
 import com.uniform.uniformsouls.entity.projectile.*;
 import com.uniform.uniformsouls.entity.renderer.*;
+import com.uniform.uniformsouls.entity.rideable.UniCartDefault;
 import com.uniform.uniformsouls.items.DragonElytra;
 import com.uniform.uniformsouls.registry.ModBlocks;
 import com.uniform.uniformsouls.registry.ModItems;
@@ -531,6 +532,10 @@ public class UniformSoulsClient implements ClientModInitializer {
             return new VexPetEntityRenderer(dispatcher);
         });
 
+        EntityRendererRegistry.INSTANCE.register(UniformSouls.UNI_CART_DEFAULT, (dispatcher, context) -> {
+            return new UniCartDefaultEntityRenderer<>(dispatcher);
+        });
+
 
 
 
@@ -960,6 +965,20 @@ public class UniformSoulsClient implements ClientModInitializer {
             });
         });
 
+        ClientSidePacketRegistry.INSTANCE.register(UniCartDefault.SPAWN_PACKET, (context, packet) -> {
+            double x = packet.readDouble();
+            double y = packet.readDouble();
+            double z = packet.readDouble();
+
+            int entityID = packet.readInt();
+            UUID entityUUID = packet.readUuid();
+
+            context.getTaskQueue().execute(() -> {
+                UniCartDefault proj = new UniCartDefault(MinecraftClient.getInstance().world, x, y, z, entityID, entityUUID);
+                MinecraftClient.getInstance().world.addEntity(entityID, proj);
+            });
+        });
+
 
         //Armor
 
@@ -1250,6 +1269,7 @@ public class UniformSoulsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.C_GLASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.C_GLASS_2, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VINE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VINE_GRAY, RenderLayer.getCutout());
 
         HudRenderCallback.EVENT.register((matrix, delta)-> {
 

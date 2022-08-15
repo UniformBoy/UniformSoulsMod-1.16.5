@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_creativity_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:creativity_vile"
+  },
+  "result": {
+    "item": "uniformsouls:creativity_soul"
+  }
+}

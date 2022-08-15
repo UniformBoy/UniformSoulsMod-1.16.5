@@ -40,6 +40,7 @@ public abstract class ImmoralitySoulItemEffectMixin extends LivingEntity {
         }
         if (Full) {
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 40, 0, false, false, false));
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.JUSTICEEFFECT1, 40, 4, false, false, false));
             if (isSneaking()) {
                 this.addStatusEffect(new StatusEffectInstance(UniformSouls.JUSTICEEFFECT1, 600, 6, false, false, false));
             }

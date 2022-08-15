@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_fear_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:fear_vile"
+  },
+  "result": {
+    "item": "uniformsouls:fear_soul"
+  }
+}

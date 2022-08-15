@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "uniformsouls:corruption_soul"
-    },
-    {
-      "item": "uniformsouls:kindness_soul"
-    }
-  ],
-  "result": {
-    "item": "uniformsouls:wrath_soul",
-    "count": 1
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:kindness_soul"
   },
-  "group": "corruption_kindness"
+  "addition": {
+    "item": "uniformsouls:hate_vile"
+  },
+  "result": {
+    "item": "uniformsouls:wrath_soul"
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_integrity_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:integrity_vile"
+  },
+  "result": {
+    "item": "uniformsouls:integrity_soul"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:determination_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:hate_vile"
+  },
+  "result": {
+    "item": "uniformsouls:despair_soul"
+  }
+}

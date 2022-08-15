@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "uniformsouls:corruption_soul"
-    },
-    {
-      "item": "uniformsouls:integrity_soul"
-    }
-  ],
-  "result": {
-    "item": "uniformsouls:deceit_soul",
-    "count": 1
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:integrity_soul"
   },
-  "group": "corruption_integrity"
+  "addition": {
+    "item": "uniformsouls:hate_vile"
+  },
+  "result": {
+    "item": "uniformsouls:deceit_soul"
+  }
 }

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#BP",
+    "DOC",
+    "LJG"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:white_tulip"
+    },
+    "B": {
+      "item": "minecraft:blue_orchid"
+    },
+    "P": {
+      "item": "minecraft:poppy"
+    },
+    "D": {
+      "item": "minecraft:dandelion"
+    },
+    "O": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "C": {
+      "item": "minecraft:cornflower"
+    },
+    "L": {
+      "item": "minecraft:lily_of_the_valley"
+    },
+    "J": {
+      "item": "minecraft:lilac"
+    },
+    "G": {
+      "item": "minecraft:peony"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_kindness_soul",
+    "count": 1
+  }
+}

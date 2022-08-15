@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "uniformsouls:corruption_soul"
-    },
-    {
-      "item": "uniformsouls:bravery_soul"
-    }
-  ],
-  "result": {
-    "item": "uniformsouls:dishonor_soul",
-    "count": 1
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:bravery_soul"
   },
-  "group": "corruption_bravery"
+  "addition": {
+    "item": "uniformsouls:hate_vile"
+  },
+  "result": {
+    "item": "uniformsouls:dishonor_soul"
+  }
 }

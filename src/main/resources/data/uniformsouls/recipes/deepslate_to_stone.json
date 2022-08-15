@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "uniformsouls:deepslate"
+  },
+  "result": "minecraft:stone",
+  "count": 1
+}

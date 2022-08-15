@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_bravery_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:bravery_vile"
+  },
+  "result": {
+    "item": "uniformsouls:bravery_soul"
+  }
+}

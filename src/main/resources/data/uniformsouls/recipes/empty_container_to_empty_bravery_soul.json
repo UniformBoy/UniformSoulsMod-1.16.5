@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "GFB",
+    " T "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:golden_sword"
+    },
+    "G": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "F": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "T": {
+      "item": "minecraft:totem_of_undying"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_bravery_soul",
+    "count": 1
+  }
+}

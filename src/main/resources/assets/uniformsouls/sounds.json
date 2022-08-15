@@ -125,6 +125,33 @@
       }
     ]
   },
+  "core": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/core",
+        "stream": false
+      }
+    ]
+  },
+  "heart_ache": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/heart_ache",
+        "stream": false
+      }
+    ]
+  },
+  "overwrite_xchara": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "uniformsouls:records/overwrite_xchara",
+        "stream": false
+      }
+    ]
+  },
   "yourbestfriend_extended": {
     "category": "record",
     "sounds": [

@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "uniformsouls:corruption_soul"
-    },
-    {
-      "item": "uniformsouls:patience_soul"
-    }
-  ],
-  "result": {
-    "item": "uniformsouls:recklessness_soul",
-    "count": 1
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:patience_soul"
   },
-  "group": "corruption_patience"
+  "addition": {
+    "item": "uniformsouls:hate_vile"
+  },
+  "result": {
+    "item": "uniformsouls:recklessness_soul"
+  }
 }

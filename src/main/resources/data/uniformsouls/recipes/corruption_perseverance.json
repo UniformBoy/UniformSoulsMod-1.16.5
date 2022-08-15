@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "uniformsouls:corruption_soul"
-    },
-    {
-      "item": "uniformsouls:perseverance_soul"
-    }
-  ],
-  "result": {
-    "item": "uniformsouls:apathy_soul",
-    "count": 1
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:perseverance_soul"
   },
-  "group": "corruption_perseverance"
+  "addition": {
+    "item": "uniformsouls:hate_vile"
+  },
+  "result": {
+    "item": "uniformsouls:apathy_soul"
+  }
 }

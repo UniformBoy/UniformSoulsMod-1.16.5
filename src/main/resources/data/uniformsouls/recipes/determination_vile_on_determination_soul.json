@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_determination_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:determination_vile"
+  },
+  "result": {
+    "item": "uniformsouls:determination_soul"
+  }
+}

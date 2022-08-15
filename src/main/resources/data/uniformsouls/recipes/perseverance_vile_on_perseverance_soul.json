@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_perseverance_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:perseverance_vile"
+  },
+  "result": {
+    "item": "uniformsouls:perseverance_soul"
+  }
+}

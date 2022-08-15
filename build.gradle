@@ -28,6 +28,8 @@ repositories {
 		name = 'Ladysnake Mods'
 		url = 'https://ladysnake.jfrog.io/artifactory/mods'
 	}
+
+	maven { url = 'https://jitpack.io' }
 	
 }
 
@@ -59,6 +61,8 @@ dependencies {
 	modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:2.8.3"
 
 	include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:2.8.3"
+
+	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.4.5-1.16"
 
 }
 

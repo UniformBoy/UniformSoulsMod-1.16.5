@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "uniformsouls:empty_kindness_soul"
+  },
+  "addition": {
+    "item": "uniformsouls:kindness_vile"
+  },
+  "result": {
+    "item": "uniformsouls:kindness_soul"
+  }
+}

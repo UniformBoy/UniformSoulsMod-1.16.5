@@ -40,6 +40,7 @@ public abstract class PerseveranceSoulItemEffectMixin extends LivingEntity {
         }
         if (Full) {
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 40, 0, false, false, false));
+            this.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 40, 1, false, false, false));
             if (isSneaking()) {
                 this.addStatusEffect(new StatusEffectInstance(UniformSouls.PERSEVERANCEEFFECT1, 600, 4, false, false, false));
             }

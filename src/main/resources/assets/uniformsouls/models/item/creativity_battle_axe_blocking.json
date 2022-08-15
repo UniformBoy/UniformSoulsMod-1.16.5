@@ -1,0 +1,26 @@
+{
+  "parent": "uniformsouls:item/creativity_battle_axe",
+  "gui-light": "front",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [-119.5, 38.75, 73],
+      "translation": [-5.5, 7, 1.25],
+      "scale": [1.5, 1.5, 0.8]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-135.25, 22.29, -167.63],
+      "translation": [-2.75, 8.5, 0],
+      "scale": [1.5, 1.5, 0.8]
+    },
+    "firstperson_righthand": {
+      "rotation": [8.79, -28.56, -4.17],
+      "translation": [1.75, 2.5, -1.25],
+      "scale": [1, 1, 0.8]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-174.64, 9.94, 177.29],
+      "translation": [2, 3.5, -3],
+      "scale": [1, 1, 0.8]
+    }
+  }
+}

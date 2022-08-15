@@ -10,6 +10,7 @@ import net.minecraft.entity.projectile.SmallFireballEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
@@ -41,6 +42,10 @@ public class FlameStaff1 extends SwordItem {
         } else {
             ItemStack itemStack = new ItemStack(ModItems.FLAME_MONSTER_SOUL);
             ItemStack itemStack2 = user.getStackInHand(hand);
+            NbtCompound nbtCompound = itemStack2.getTag();
+            if (nbtCompound != null) {
+                itemStack.setTag(nbtCompound.copy());
+            }
             itemStack2.decrement(1);
             user.getItemCooldownManager().set(this, 50);
 

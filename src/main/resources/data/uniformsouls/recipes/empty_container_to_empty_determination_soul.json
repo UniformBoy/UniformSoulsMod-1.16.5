@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "NTO",
+    "#F#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "D": {
+      "item": "minecraft:dragon_breath"
+    },
+    "N": {
+      "item": "minecraft:netherite_chestplate"
+    },
+    "T": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "O": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "minecraft:fire_coral_block"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_determination_soul",
+    "count": 1
+  }
+}

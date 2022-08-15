@@ -6,6 +6,7 @@ import com.uniform.uniformsouls.entity.projectile.JusticeBulletEntity;
 import com.uniform.uniformsouls.registry.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -39,6 +40,10 @@ public class DeterminationSword extends SwordItem {
         } else {
             ItemStack itemStack = new ItemStack(ModItems.DETERMINATION_SOUL);
             ItemStack itemStack2 = user.getStackInHand(hand);
+            NbtCompound nbtCompound = itemStack2.getTag();
+            if (nbtCompound != null) {
+                itemStack.setTag(nbtCompound.copy());
+            }
             itemStack2.decrement(1);
             user.getItemCooldownManager().set(this, 50);
 

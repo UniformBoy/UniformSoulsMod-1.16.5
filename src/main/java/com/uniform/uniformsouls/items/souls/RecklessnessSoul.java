@@ -6,6 +6,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
@@ -35,6 +36,10 @@ public class RecklessnessSoul extends Item {
         } else {
             ItemStack itemStack = new ItemStack(ModItems.RECKLESSNESS_BALLISTIC_KNIFE);
             ItemStack itemStack2 = playerEntity.getStackInHand(hand);
+            NbtCompound nbtCompound = itemStack2.getTag();
+            if (nbtCompound != null) {
+                itemStack.setTag(nbtCompound.copy());
+            }
             itemStack2.decrement(1);
             playerEntity.getItemCooldownManager().set(this, 50);
 

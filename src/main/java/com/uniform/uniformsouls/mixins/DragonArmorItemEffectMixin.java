@@ -34,8 +34,11 @@ public abstract class DragonArmorItemEffectMixin extends LivingEntity {
                 notFull = true;
             }
         }
-        if (notFull == false && (isSneaking())) {
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 5, 0, false, false, false));
+        if (notFull == false) {
+            this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 5, 0, false, false, false));
+            if (isSneaking()) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 5, 0, false, false, false));
+            }
         }
     }
 

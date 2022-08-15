@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "RQN",
+    "#B#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "D": {
+      "item": "minecraft:dragon_breath"
+    },
+    "R": {
+      "item": "minecraft:netherite_chestplate"
+    },
+    "Q": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "minecraft:brain_coral_block"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_fear_soul",
+    "count": 1
+  }
+}

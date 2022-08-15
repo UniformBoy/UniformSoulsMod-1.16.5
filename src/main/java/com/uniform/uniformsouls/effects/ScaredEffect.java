@@ -71,5 +71,9 @@ public class ScaredEffect extends StatusEffect {
             entity.removeStatusEffect(UniformSouls.PERSEVERANCEEFFECT1);
         }
 
+        if (entity.hasStatusEffect(UniformSouls.CREATIVITYEFFECT1)) {
+            entity.removeStatusEffect(UniformSouls.CREATIVITYEFFECT1);
+        }
+
     }
 }

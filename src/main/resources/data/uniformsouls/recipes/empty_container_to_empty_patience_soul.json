@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#SV",
+    "GLC",
+    "QNH"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bone"
+    },
+    "S": {
+      "item": "minecraft:scute"
+    },
+    "V": {
+      "item": "minecraft:spider_eye"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "L": {
+      "item": "uniformsouls:empty_soul_container"
+    },
+    "C": {
+      "item": "minecraft:clock"
+    },
+    "Q": {
+      "item": "minecraft:string"
+    },
+    "N": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "H": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "item": "uniformsouls:empty_patience_soul",
+    "count": 1
+  }
+}

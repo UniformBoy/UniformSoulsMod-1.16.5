@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
@@ -32,6 +33,10 @@ public class AncientTome extends SwordItem {
         } else {
             ItemStack itemStack = new ItemStack(ModItems.MOBILITY_MONSTER_SOUL);
             ItemStack itemStack2 = playerEntity.getStackInHand(hand);
+            NbtCompound nbtCompound = itemStack2.getTag();
+            if (nbtCompound != null) {
+                itemStack.setTag(nbtCompound.copy());
+            }
             itemStack2.decrement(1);
             playerEntity.getItemCooldownManager().set(this, 50);
 

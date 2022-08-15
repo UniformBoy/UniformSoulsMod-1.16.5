@@ -25,7 +25,7 @@ public class Justice1Effect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof Entity) {
-            this.addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "22653B89-116E-49DC-9B6B-9971489B5BE5", 0.15000000596046448D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+            this.addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "648D7064-6A60-4F59-8ABE-C2C23A6DD7A9", 0.35000000596046448D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
         }
 
         if (entity.hasStatusEffect(UniformSouls.JUSDEBUFFEFFECT1)) {
